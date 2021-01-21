@@ -102,13 +102,7 @@ export const questions = [
           лицензии MIT. Это значит, что вы можете свободно использовать код и отдельные элементы
           дизайн-системы, если сохраните копирайт Gazprom Neft PJSC.
         </Text>
-        <Text
-          as="a"
-          view="link"
-          href="http://consta.gazprom-neft.ru/content/licence_mit.pdf"
-          size="xl"
-          display="block"
-        >
+        <Text as="a" view="link" href="/static/licence_mit.pdf" size="xl" display="block">
           Посмотреть все условия
         </Text>
       </>
