@@ -109,7 +109,7 @@ export const questions = [
     ),
   },
   {
-    title: 'На каких условиях можно использовать дизайн-систему?',
+    title: 'Как принять участие в разработке?',
     answer: (
       <>
         <Text as="p" size="xl" className="decorator decorator_indent-b_m">
