@@ -26,7 +26,7 @@ export const AboutVideo: React.FC = () => {
         <iframe
           className={cnAboutVideo('YouTube')}
           title={cnAboutVideo('YouTube')}
-          src="https://www.youtube.com/embed/lJIrF4YjHfQ?autoplay=1"
+          src="https://www.youtube.com/embed/ebZeLi3cfI4?autoplay=1"
           frameBorder="0"
           allowFullScreen
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
