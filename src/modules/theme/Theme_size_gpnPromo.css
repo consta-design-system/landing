@@ -1,0 +1,21 @@
+.Theme_size_gpnPromo {
+  /* Размер текста */
+  --size-text-2xs: clamp(10px, 1.1vw, 12px);
+  --size-text-xs: clamp(12px, 1.3vw, 14px);
+  --size-text-s: clamp(14px, 1.5vw, 16px);
+  --size-text-m: clamp(16px, 1.8vw, 18px);
+  --size-text-l: clamp(18px, 2vw, 20px);
+  --size-text-xl: clamp(20px, 2.5vw, 24px);
+  --size-text-2xl: clamp(24px, 3vw, 28px);
+  --size-text-3xl: clamp(28px, 3.5vw, 48px);
+  --size-text-4xl: clamp(32px, 4vw, 64px);
+  --size-text-5xl: clamp(36px, 5.5vw, 72px);
+  --size-text-6xl: clamp(40px, 7vw, 96px);
+
+  /* Межстрочный интервал */
+  --line-height-text-2xs: 1em;
+  --line-height-text-xs: 1.2em;
+  --line-height-text-s: 1.4em;
+  --line-height-text-m: 1.5em;
+  --line-height-text-l: 1.6em;
+}

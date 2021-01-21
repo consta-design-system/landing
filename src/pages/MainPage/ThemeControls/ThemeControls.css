@@ -1,0 +1,42 @@
+.Consta--ThemeControls {
+  --radius: 12px;
+  overflow: hidden;
+  margin-right: calc(-1 * var(--space-xs));
+  margin-left: calc(-1 * var(--space-xs));
+  border-radius: var(--radius);
+  box-shadow: 0 27px 80px rgba(var(--color-nums-shadow), 0.09),
+    0 11px 33px rgba(var(--color-nums-shadow), 0.06),
+    0 6px 18px rgba(var(--color-nums-shadow), 0.05), 0 3px 10px rgba(var(--color-nums-shadow), 0.04),
+    0 1px 5px rgba(var(--color-nums-shadow), 0.03), 0 0.7px 2px rgba(var(--color-nums-shadow), 0.02);
+
+  @media (min-width: 720px) {
+    --radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &-PresetList,
+  &-Settings {
+    padding: var(--space-xl) var(--space-l);
+
+    @media (min-width: 720px) {
+      padding: var(--space-2xl);
+    }
+
+    @media (min-width: 1200px) {
+      padding: var(--space-3xl);
+    }
+  }
+
+  &-PresetList {
+    background-color: var(--color-bg-default);
+  }
+
+  &-Settings {
+    background-color: var(--color-bg-secondary);
+  }
+
+  &-ChoiceGroup {
+    background: var(--color-bg-default);
+  }
+}

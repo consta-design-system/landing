@@ -1,0 +1,7 @@
+.Consta--Themes {
+  position: relative;
+
+  &-Title {
+    max-width: 14ch;
+  }
+}

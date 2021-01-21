@@ -1,0 +1,11 @@
+.Consta--Why {
+  &-Title {
+    max-width: 14ch;
+  }
+
+  &-Image {
+    height: 128px;
+    margin-bottom: var(--space-m);
+    transform: translateX(-4%);
+  }
+}

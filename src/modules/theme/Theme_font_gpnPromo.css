@@ -1,0 +1,11 @@
+.Theme_font_gpnPromo {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
+  --font-mono: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: var(--font-primary);
+
+  .Text_weight_bold {
+    font-weight: 800;
+  }
+}

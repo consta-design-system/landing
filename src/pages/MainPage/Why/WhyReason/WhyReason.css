@@ -1,0 +1,7 @@
+.Consta--WhyReason {
+  &-Image {
+    height: 128px;
+    margin-bottom: var(--space-m);
+    transform: translateX(-4%);
+  }
+}

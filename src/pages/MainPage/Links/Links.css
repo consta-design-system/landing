@@ -1,0 +1,98 @@
+.Consta--Links {
+  &-Title {
+    max-width: 18ch;
+  }
+
+  &-List {
+    --radius: 12px;
+    overflow: hidden;
+    margin-right: calc(-1 * var(--space-xs));
+    margin-left: calc(-1 * var(--space-xs));
+    border-radius: var(--radius);
+    box-shadow: 0 27px 80px rgba(var(--color-nums-shadow), 0.09),
+      0 11px 33px rgba(var(--color-nums-shadow), 0.06),
+      0 6px 18px rgba(var(--color-nums-shadow), 0.05),
+      0 3px 10px rgba(var(--color-nums-shadow), 0.04),
+      0 1px 5px rgba(var(--color-nums-shadow), 0.03),
+      0 0.7px 2px rgba(var(--color-nums-shadow), 0.02);
+
+    @media (min-width: 720px) {
+      --radius: 16px;
+    }
+  }
+
+  & &-Logo {
+    width: 32px;
+    height: 32px;
+    margin-bottom: var(--space-2xl);
+    transform: translateX(-10%);
+
+    @media (min-width: 720px) {
+      position: absolute;
+      left: var(--space-xl);
+      width: 48px;
+      height: 48px;
+    }
+
+    @media (min-width: 1024px) {
+      position: static;
+    }
+  }
+
+  &-Card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-xl) var(--space-l) var(--space-l);
+    background-color: var(--bg-color);
+    text-decoration: none;
+
+    @media (min-width: 720px) {
+      padding: var(--space-2xl) var(--space-xl) var(--space-2xl) 33%;
+    }
+
+    @media (min-width: 1024px) {
+      padding: var(--space-2xl) var(--space-xl) var(--space-2xl);
+    }
+
+    @media (min-width: 1200px) {
+      padding: var(--space-xl) var(--space-2xl) var(--space-2xl);
+    }
+
+    &_view_Storybook {
+      --bg-color: var(--color-bg-link);
+    }
+
+    &_view_Figma {
+      --bg-color: var(--color-bg-secondary);
+    }
+
+    &_view_Github {
+      --bg-color: var(--color-bg-default);
+    }
+  }
+
+  &-CardFooter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-More,
+  &-Arrow {
+    transition: transform 0.3s;
+  }
+
+  &-Card:hover &-Arrow {
+    transform: translateX(var(--space-m));
+  }
+
+  &-Card:hover &-CardTitle span {
+    background-size: 1px 1em;
+    box-shadow: inset 0 -0.12em var(--color-bg-ghost);
+  }
+
+  &-Card:hover &-Title::before {
+    transform: scaleX(1);
+  }
+}

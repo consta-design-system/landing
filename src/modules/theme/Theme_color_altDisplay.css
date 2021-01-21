@@ -1,0 +1,68 @@
+/* stylelint-disable */
+.Theme_color_altDisplay {
+  /* //////////////////////////////
+  // Цвета фонов /////////////// */
+  --color-bg-default: rgb(22, 22, 38);
+  --color-bg-secondary: hsl(240, 41%, 15%);
+  --color-bg-brand: rgb(184, 11, 11);
+  --color-bg-link: rgb(184, 11, 11);
+  --color-bg-border: rgba(255, 255, 255, 0.2);
+  --color-bg-stripe: rgba(246, 251, 253, 0.05);
+  --color-bg-ghost: rgba(246, 251, 253, 0.08);
+  --color-bg-tone: rgba(0, 22, 31, 0.85);
+  --color-bg-soft: rgba(255, 255, 255, 0.9);
+  --color-bg-system: rgb(75, 89, 99);
+  --color-bg-normal: rgb(10, 165, 255);
+  --color-bg-success: rgb(34, 195, 142);
+  --color-bg-caution: rgb(242, 201, 76);
+  --color-bg-warning: rgb(243, 139, 0);
+  --color-bg-alert: rgb(245, 77, 77);
+  --color-bg-critical: rgb(51, 0, 15);
+  --color-typo-primary: rgb(235, 235, 255);
+  --color-typo-secondary: rgba(245, 245, 255, 0.6);
+  --color-typo-ghost: rgba(245, 245, 255, 0.3);
+  --color-typo-brand: rgb(184, 11, 11);
+  --color-typo-system: rgb(99, 120, 136);
+  --color-typo-normal: rgb(0, 155, 245);
+  --color-typo-success: rgb(15, 174, 121);
+  --color-typo-caution: rgb(248, 199, 53);
+  --color-typo-warning: rgb(230, 130, 0);
+  --color-typo-alert: rgb(237, 69, 69);
+  --color-typo-critical: rgb(97, 0, 29);
+  --color-typo-link: rgb(241, 14, 22);
+  --color-typo-link-minor: rgb(184, 111, 114);
+  --color-typo-link-hover: rgb(245, 81, 87);
+  --color-nums-shadow: 0, 0, 0;
+  --color-scroll-bg: rgba(246, 251, 253, 0.06);
+  --color-scroll-thumb: rgba(246, 251, 253, 0.24);
+  --color-scroll-thumb-hover: rgba(246, 251, 253, 0.32);
+  --color-control-bg-default: rgb(22, 22, 38);
+  --color-control-typo-default: rgba(245, 245, 255, 0.8);
+  --color-control-typo-placeholder: rgba(245, 245, 255, 0.35);
+  --color-control-bg-border-default: rgba(246, 251, 253, 0.28);
+  --color-control-bg-border-default-hover: rgba(246, 251, 253, 0.52);
+  --color-control-bg-border-focus: rgb(231, 13, 13);
+  --color-control-bg-focus: rgba(184, 11, 11, 0.4);
+  --color-control-bg-active: rgba(184, 11, 11, 0.8);
+  --color-control-bg-primary: rgb(184, 11, 11);
+  --color-control-bg-primary-hover: rgb(227, 13, 13);
+  --color-control-typo-primary: rgb(255, 255, 255);
+  --color-control-typo-primary-hover: rgb(255, 255, 255);
+  --color-control-bg-secondary: rgba(22, 22, 38, 0);
+  --color-control-bg-border-secondary: rgb(184, 11, 11);
+  --color-control-bg-border-secondary-hover: rgb(227, 13, 13);
+  --color-control-typo-secondary: rgb(241, 14, 22);
+  --color-control-typo-secondary-hover: rgb(245, 81, 87);
+  --color-control-bg-ghost: rgba(246, 251, 253, 0.16);
+  --color-control-bg-ghost-hover: rgba(246, 251, 253, 0.23);
+  --color-control-typo-ghost: rgba(245, 245, 255, 0.75);
+  --color-control-typo-ghost-hover: rgba(245, 245, 255, 0.9);
+  --color-control-bg-clear: rgba(246, 251, 253, 0);
+  --color-control-bg-clear-hover: rgba(246, 251, 253, 0.23);
+  --color-control-typo-clear: rgba(245, 245, 255, 0.75);
+  --color-control-typo-clear-hover: rgba(245, 245, 255, 0.9);
+  --color-control-bg-disable: rgba(246, 251, 253, 0.16);
+  --color-control-bg-border-disable: rgba(246, 251, 253, 0);
+  --color-control-typo-disable: rgba(245, 245, 255, 0.24);
+}
+/* stylelint-enable */

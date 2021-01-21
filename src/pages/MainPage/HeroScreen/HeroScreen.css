@@ -1,0 +1,45 @@
+.Consta--HeroScreen {
+  position: relative;
+  z-index: 1;
+
+  &-Logo {
+    --logo-color-1: var(--color-bg-normal);
+    --logo-color-2: var(--color-bg-link);
+    max-width: clamp(200px, 30vw, 340px);
+  }
+
+  &-Content {
+    max-width: 600px;
+
+    @media (min-width: 720px) {
+      width: 55%;
+    }
+  }
+
+  &-PictureFrame {
+    display: block;
+    margin: 16% calc(-1 * 5vw) 0;
+
+    @media (min-width: 720px) {
+      position: absolute;
+      z-index: -1;
+      top: 60%;
+      left: 50%;
+      width: 50vw;
+      margin: 0;
+      transform: translate(0, -50%);
+    }
+
+    @media (min-width: 1024px) {
+      left: 55%;
+      width: 60vw;
+      max-width: 840px;
+      transform: translate(-20%, -50%);
+    }
+
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

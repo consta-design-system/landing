@@ -1,0 +1,8 @@
+.Consta--HeaderContainer {
+  & .Consta--Header {
+    &-Logo {
+      --logo-color-1: var(--color-typo-link);
+      --logo-color-2: var(--color-typo-link);
+    }
+  }
+}

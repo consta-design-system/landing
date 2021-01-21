@@ -1,0 +1,85 @@
+.Consta--ShowroomSlider {
+  --shift: 0;
+  position: relative;
+  width: 100%;
+  padding: var(--space-2xl) 0;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    width: 24px;
+    height: 80%;
+    background: rgba(var(--color-nums-shadow), 0.3);
+    border-radius: 50%;
+    filter: blur(16px);
+  }
+
+  &::before {
+    left: -8px;
+  }
+
+  &::after {
+    right: -8px;
+  }
+
+  &-Row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: var(--control-height-m);
+
+    &:not(:last-child) {
+      margin-bottom: var(--col-gap-two-thirds);
+    }
+
+    & > * {
+      margin-right: var(--col-gap-third);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(2n) {
+      .Consta--ShowroomSlider-Group {
+        animation-direction: alternate-reverse;
+      }
+    }
+  }
+
+  &-Group {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    animation-name: Consta--ShowroomSlider-Animate;
+    animation-duration: 1s;
+    animation-play-state: paused;
+    animation-timing-function: linear;
+    animation-delay: calc(var(--delay) * -1s);
+    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
+    will-change: scroll-position;
+    animation-fill-mode: both;
+
+    & > * {
+      margin-right: var(--col-gap-third);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@keyframes Consta--ShowroomSlider-Animate {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

@@ -1,0 +1,9 @@
+.Consta--Variety {
+  &-Title {
+    max-width: 14ch;
+  }
+
+  &-Showroom {
+    position: relative;
+  }
+}
