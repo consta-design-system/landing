@@ -9,6 +9,7 @@ import { LinksCard } from './LinksCard/LinksCard';
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
+import { constaFigma, constaGitHub, constaUikitButton } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 export const cnLinks = cn('Links');
@@ -33,7 +34,7 @@ export const Links: React.FC = () => {
           view="storybook"
           icon={IconStorybook}
           title="Витрина компонентов и документация"
-          href="https://consta-uikit.vercel.app/"
+          href={constaUikitButton}
           description="Как использовать дизайн-систему, темы и описание компонентов. Тут можно поиграться с размерами, цветами и другими параметрами компонентов."
         />
         <LinksCard
@@ -41,7 +42,7 @@ export const Links: React.FC = () => {
           view="figma"
           icon={IconFigma}
           title="Библиотека в Figma"
-          href="https://www.figma.com/@Consta"
+          href={constaFigma}
           description="Набор компонентов для создания макетов проекта в Figma Community. Отправьте эту ссылку дизайнеру — он разберётся."
         />
         <LinksCard
@@ -49,7 +50,7 @@ export const Links: React.FC = () => {
           view="github"
           icon={IconGithub}
           title="React-библиотека"
-          href="https://github.com/gazprom-neft/consta-uikit"
+          href={constaGitHub}
           description="NPM пакет с библиотекой на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
         />
       </div>

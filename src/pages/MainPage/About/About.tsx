@@ -12,6 +12,7 @@ import { AboutVideo } from './AboutVideo/AboutVideo';
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
+import { constaFigma, constaGitHub, constaUikit, licenceMit } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnAbout = cn('About');
@@ -90,7 +91,7 @@ export const About: React.FC = () => {
 
       <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_2xl'])}>
         <a
-          href="https://consta-uikit.vercel.app/"
+          href={constaUikit}
           className={cnLinks('Item', { to: 'Storybook' }, [themeClassNames.color.accent])}
         >
           <div className={cnLinks('Content', ['tpl-grid tpl-grid_l-ratio_1-1'])}>
@@ -117,7 +118,7 @@ export const About: React.FC = () => {
         </a>
 
         <a
-          href="https://www.figma.com/@Consta"
+          href={constaFigma}
           className={cnLinks('Item', { to: 'Figma' }, [themeClassNames.color.invert])}
         >
           <div className={cnLinks('Content')}>
@@ -142,7 +143,7 @@ export const About: React.FC = () => {
         </a>
 
         <a
-          href="https://github.com/gazprom-neft/consta-uikit"
+          href={constaGitHub}
           className={cnLinks('Item', { to: 'Github' }, [themeClassNames.color.invert])}
         >
           <div className={cnLinks('Content')}>
@@ -173,7 +174,7 @@ export const About: React.FC = () => {
         <Text size="l" view="secondary" as="p">
           Дизайн-систему можно использовать бесплатно, она распространяется ПАО «Газпром нефть» на
           условиях открытой 
-          <Text href="/static/licence_mit.pdf" size="l" view="link" as="a">
+          <Text href={licenceMit} size="l" view="link" as="a">
             лицензии MIT
           </Text>
           .

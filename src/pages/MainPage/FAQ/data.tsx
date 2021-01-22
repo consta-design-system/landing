@@ -1,6 +1,16 @@
 import React from 'react';
 import { Text } from '@consta/uikit/Text';
 
+import {
+  constaFigma,
+  constaGitHub,
+  constaUikit,
+  constaUikitDevelopContributors,
+  email,
+  licenceMit,
+  mailTo,
+} from '@/modules/api/links';
+
 export const questions = [
   {
     title: 'Для каких задач подходит дизайн-система?',
@@ -54,11 +64,11 @@ export const questions = [
         </Text>
         <Text as="p" size="xl" className="decorator decorator_indent-b_m">
           Если вы запускаете веб-проект и готовы вести разработку на React, разработчики могут{' '}
-          <Text as="a" view="link" href="https://github.com/gazprom-neft/consta-uikit" size="xl">
+          <Text as="a" view="link" href={constaUikit} target="_blank" size="xl">
             подключить нашу библиотеку
           </Text>{' '}
           с элементами интерфейса. Если нет, дизайнеры могут собрать макет интерфейса на основе{' '}
-          <Text as="a" view="link" href="https://www.figma.com/@Consta" size="xl">
+          <Text as="a" view="link" href={constaFigma} target="_blank" size="xl">
             шаблонов в Figma
           </Text>
           .
@@ -68,7 +78,7 @@ export const questions = [
         </Text>
         <Text as="p" size="xl">
           Всё в открытом доступе. Вы можете посмотреть{' '}
-          <Text as="a" view="link" href="https://github.com/gazprom-neft/consta-uikit" size="xl">
+          <Text as="a" view="link" href={constaGitHub} target="_blank" size="xl">
             исходный код нашей библиотеки на GitHub
           </Text>{' '}
           и предложить изменения.
@@ -81,12 +91,7 @@ export const questions = [
     answer: (
       <Text as="p" size="xl">
         Отлично, отправьте им ссылку на 
-        <Text
-          as="a"
-          view="link"
-          href="https://consta-uikit.vercel.app/?path=/story/common-about--page"
-          size="xl"
-        >
+        <Text as="a" view="link" href={constaUikit} target="_blank" size="xl">
           описание дизайн-системы
         </Text>
         . Все ресурсы публичные, можно использовать и «внутри» компании, и «снаружи».
@@ -102,7 +107,7 @@ export const questions = [
           лицензии MIT. Это значит, что вы можете свободно использовать код и отдельные элементы
           дизайн-системы, если сохраните копирайт Gazprom Neft PJSC.
         </Text>
-        <Text as="a" view="link" href="/static/licence_mit.pdf" size="xl" display="block">
+        <Text as="a" view="link" href={licenceMit} target="_blank" size="xl" display="block">
           Посмотреть все условия
         </Text>
       </>
@@ -119,7 +124,8 @@ export const questions = [
         <Text
           as="a"
           view="link"
-          href="https://consta-uikit.vercel.app/?path=/docs/common-develop-contributors--page"
+          href={constaUikitDevelopContributors}
+          target="_blank"
           size="xl"
           display="block"
         >
@@ -158,12 +164,7 @@ export const questions = [
           </li>
           <li>
             Разработчики собирают интерфейс на основе макета — берут код компонентов дизайн-системы{' '}
-            <Text
-              as="a"
-              view="link"
-              href="https://consta-uikit.vercel.app/?path=/docs/common-develop-contributors--page"
-              size="xl"
-            >
+            <Text as="a" view="link" href={constaGitHub} target="_blank" size="xl">
               в нашем проекте на GitHub
             </Text>
             , встраивают в свой проект, оживляют с помощью скриптов и подключают к бэкенду
@@ -191,13 +192,8 @@ export const questions = [
         </Text>
         <Text as="p" size="xl">
           Если есть вопросы, пишите нам:{' '}
-          <Text
-            as="a"
-            view="link"
-            href="https://consta-uikit.vercel.app/?path=/docs/common-develop-contributors--page"
-            size="xl"
-          >
-            design@gazprom-neft.ru
+          <Text as="a" view="link" href={mailTo} size="xl">
+            {email}
           </Text>
         </Text>
       </>

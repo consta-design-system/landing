@@ -6,6 +6,7 @@ import { IconForward } from '@consta/uikit/IconForward';
 import { Text } from '@consta/uikit/Text';
 import { TextField } from '@consta/uikit/TextField';
 
+import { email, mailTo } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnFooter = cn('Footer');
@@ -52,9 +53,9 @@ export const Footer: React.FC = () => {
             as="p"
           >
             {'Напишите нам на '}
-            <Text as="a" href="mailto:design@gazprom-neft.ru" size="2xl" view="link">
-              {'design@gazprom-neft.ru '}
-            </Text>
+            <Text as="a" href={mailTo} size="2xl" view="link">
+              {email}
+            </Text>{' '}
             или через форму слева
           </Text>
         </div>

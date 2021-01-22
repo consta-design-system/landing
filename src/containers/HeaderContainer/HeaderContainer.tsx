@@ -9,6 +9,7 @@ import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
 import ConstaLogo from '@/images/ConstaLogo2.image.svg';
 import GPNLogo from '@/images/GPNLogo.image.svg';
+import { constaFigma, constaGitHub, constaUikitButton } from '@/modules/api/links';
 import { fixedAtom } from '@/modules/header';
 import { cn } from '@/utils/bem';
 
@@ -24,17 +25,17 @@ export const HeaderContainer: React.FC = () => {
       menu={[
         {
           label: 'Компоненты',
-          link: 'https://consta-uikit.vercel.app/',
+          link: constaUikitButton,
           icon: IconStorybook,
         },
         {
           label: 'Figma',
-          link: 'https://www.figma.com/@Consta',
+          link: constaFigma,
           icon: IconFigma,
         },
         {
           label: 'Github',
-          link: 'https://github.com/gazprom-neft/consta-uikit',
+          link: constaGitHub,
           icon: IconGithub,
         },
       ]}

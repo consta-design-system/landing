@@ -5,6 +5,7 @@ import { Button } from '@consta/uikit/Button';
 import { Text } from '@consta/uikit/Text';
 import { useTheme } from '@consta/uikit/Theme';
 
+import { allProjects } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnProjects = cn('Projects');
@@ -37,7 +38,7 @@ export const Projects: React.FC = () => {
         </Text>
         <Button
           as="a"
-          href="#"
+          href={allProjects}
           size="l"
           label="Посмотреть проекты"
           className={cnProjects('Button')}
