@@ -12,7 +12,7 @@ import { AboutVideo } from './AboutVideo/AboutVideo';
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
-import { constaFigma, constaGitHub, constaUikit, licenceMit } from '@/modules/api/links';
+import { constaFigma, constaGitHub, constaUikitButton, licenceMit } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnAbout = cn('About');
@@ -91,7 +91,7 @@ export const About: React.FC = () => {
 
       <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_2xl'])}>
         <a
-          href={constaUikit}
+          href={constaUikitButton}
           className={cnLinks('Item', { to: 'Storybook' }, [themeClassNames.color.accent])}
         >
           <div className={cnLinks('Content', ['tpl-grid tpl-grid_l-ratio_1-1'])}>

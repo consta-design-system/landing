@@ -27,7 +27,7 @@ import HeroImage_375_3x_display from '@/images/HeroImage/Display/HeroImage_375_3
 import HeroImage_720_1x_display from '@/images/HeroImage/Display/HeroImage_720_1x.jpg';
 import HeroImage_720_2x_display from '@/images/HeroImage/Display/HeroImage_720_2x.jpg';
 import HeroImage_720_3x_display from '@/images/HeroImage/Display/HeroImage_720_3x.jpg';
-import { constaFigma, constaGitHub, constaUikit } from '@/modules/api/links';
+import { constaFigma, constaGitHub, constaUikitButton } from '@/modules/api/links';
 import { setFixedAction } from '@/modules/header';
 import { cn } from '@/utils/bem';
 
@@ -85,7 +85,7 @@ export const HeroScreen: React.FC = () => {
             <div className="decorator decorator_distribute_left">
               <Button
                 as="a"
-                href={constaUikit}
+                href={constaUikitButton}
                 label="Компоненты"
                 size="l"
                 className="decorator decorator_indent-r_xs"
