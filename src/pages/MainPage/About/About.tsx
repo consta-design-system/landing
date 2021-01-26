@@ -157,7 +157,7 @@ export const About: React.FC = () => {
               Разработчикам
             </Text>
             <Text className={cnLinks('Text', ['decorator decorator_indent-b_s'])} size="xl" as="p">
-              Библиотека компонентов в виде NPM пакета на Github.
+              Библиотека компонентов в виде NPM-пакета на GitHub
             </Text>
             <AboutVersionPackage />
           </div>
@@ -177,7 +177,6 @@ export const About: React.FC = () => {
           <Text href={licenceMit} size="l" view="link" as="a">
             лицензии MIT
           </Text>
-          .
         </Text>
       </div>
     </section>

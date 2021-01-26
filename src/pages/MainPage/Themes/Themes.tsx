@@ -21,7 +21,7 @@ export const Themes: React.FC = () => {
         as="h3"
         lineHeight="2xs"
       >
-        Гибкая тематизация
+        Переключайте темы
       </Text>
       <Text
         className={cnThemes(null, ['decorator decorator_indent-b_4xl'])}
@@ -29,8 +29,8 @@ export const Themes: React.FC = () => {
         view="secondary"
         as="p"
       >
-        Наша библиотека Consta обладает гибкой и очень лёгкой тематизацией. Посмотрите и убедитесь
-        в этом сами, переключая варианты тем на этой странице.
+        С библиотекой Consta можно мгновенно поменять внешний вид проекта — цвета, шрифты, отступы и
+        не только. Просто нажмите на кнопку и посмотрите, как меняется эта страница.
       </Text>
 
       <div className={cnThemes('Controls', ['decorator decorator_indent-b_2xl'])}>

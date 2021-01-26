@@ -14,7 +14,7 @@
 
   &-Menu {
     display: flex;
-    justify-content: end;
+    align-content: flex-end;
   }
 
   &-Item:not(:first-child) {

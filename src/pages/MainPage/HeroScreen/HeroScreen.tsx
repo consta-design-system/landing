@@ -68,7 +68,7 @@ export const HeroScreen: React.FC = () => {
               display="block"
               lineHeight="xs"
             >
-              Дизайн&#8209;система для быстрой разработки интерфейса.
+              Дизайн‑система для быстрой разработки интерфейсов
             </Text>
           </Text>
           <div className={cnHeroScreen('Links')}>

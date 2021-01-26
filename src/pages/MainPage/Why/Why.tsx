@@ -55,7 +55,7 @@ export const Why: React.FC = () => {
         as="h3"
         lineHeight="2xs"
       >
-        Зачем вам дизайн&#8209;система?
+        Зачем вам дизайн-система
       </Text>
       <div className="tpl-grid tpl-grid_m-ratio_1-1 tpl-grid_col-gap_full tpl-grid_row-gap_full">
         <WhyReason

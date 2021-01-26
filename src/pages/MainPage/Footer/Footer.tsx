@@ -52,11 +52,10 @@ export const Footer: React.FC = () => {
             view="secondary"
             as="p"
           >
-            {'Напишите нам на '}
+            А ещё нам можно писать по электронной почте{' '}
             <Text as="a" href={mailTo} size="2xl" view="link">
               {email}
-            </Text>{' '}
-            или через форму слева
+            </Text>
           </Text>
         </div>
         <div className={cnFooter('Copyright')}>

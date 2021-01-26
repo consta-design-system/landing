@@ -3,6 +3,7 @@ import './Variety.css';
 import React from 'react';
 import { Text } from '@consta/uikit/Text';
 
+import { constaUikitButton } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnVariety = cn('Variety');
@@ -17,7 +18,7 @@ export const Variety: React.FC = () => {
         as="h3"
         lineHeight="2xs"
       >
-        Широкая вариативность
+        Используйте готовые компоненты
       </Text>
       <Text
         className={cnVariety(null, ['decorator decorator_indent-b_4xl'])}
@@ -25,8 +26,12 @@ export const Variety: React.FC = () => {
         view="secondary"
         as="p"
       >
-        Наша библиотека Consta обладает гибкой и очень лёгкой тематизацией. Посмотрите и убедитесь
-        в этом сами, переключая варианты тем на этой странице.
+        Основа, из которой легко построить интерфейс — для любых задач. Большой выбор, много
+        вариантов, можно менять и дорабатывать. <br />
+        Посмотреть, как выглядят и работают компоненты дизайн-системы, можно в нашей{' '}
+        <Text size="2xl" view="link" as="a" href={constaUikitButton}>
+          библиотеке
+        </Text>
       </Text>
     </section>
   );
