@@ -6,7 +6,7 @@ import { IconForward } from '@consta/uikit/IconForward';
 import { Text } from '@consta/uikit/Text';
 import { TextField } from '@consta/uikit/TextField';
 
-import { constaTelegram, email, GPN, mailTo } from '@/modules/api/links';
+import { constaTelegram, email, gazPromNeft, mailTo } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnFooter = cn('Footer');
@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
             as="p"
           >
             © 2020-2021 ПАО «
-            <Text as="a" href={GPN} size="m" view="link">
+            <Text as="a" href={gazPromNeft} size="m" view="link">
               Газпром нефть
             </Text>
             »
