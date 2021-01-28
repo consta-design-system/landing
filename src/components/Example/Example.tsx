@@ -24,6 +24,7 @@ const ButtonWithTooltip = withTooltip({
       Тултип рисуется всегда в контрасной к основной цветовой теме
     </Text>
   ),
+  mode: 'click',
 })(Button);
 
 export const Example: React.FC = () => {
