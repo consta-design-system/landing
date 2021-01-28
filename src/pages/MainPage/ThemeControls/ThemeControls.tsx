@@ -116,7 +116,7 @@ export const ThemeControls: React.FC = () => {
             className={cnControls('ChoiceGroup')}
           />
         </div>
-        <div className={cnControls('Item', ['decorator decorator_indent-b_l'])}>
+        <div className={cnControls('Item', { type: 'size' }, ['decorator decorator_indent-b_l'])}>
           <Text
             className={cnControls('Label', ['decorator decorator_indent-b_xs'])}
             size="l"
