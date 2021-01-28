@@ -16,6 +16,7 @@ export type HeaderProps = PropsWithHTMLAttributesAndRef<
       label: string;
       icon: React.FC<IconProps>;
       link: string;
+      onlyIcon: boolean;
     }[];
     children?: never;
   },
@@ -32,10 +33,16 @@ export const Header: Header = React.forwardRef((props, ref) => {
         <Logo />
       </div>
       <ul className={cnHeader('Menu')}>
-        {menu.map(({ link, label, icon: Icon }, index) => {
+        {menu.map(({ link, label, onlyIcon, icon: Icon }, index) => {
           return (
             <li key={index} className={cnHeader('Item')}>
-              <Text as="a" size="m" view="primary" href={link} className={cnHeader('Link')}>
+              <Text
+                as="a"
+                size="m"
+                view="primary"
+                href={link}
+                className={cnHeader('Link', { onlyIcon: onlyIcon })}
+              >
                 <Icon size="m" className={cnHeader('Icon')} />
                 {label}
               </Text>

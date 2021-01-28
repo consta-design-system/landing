@@ -6,7 +6,7 @@ import { IconForward } from '@consta/uikit/IconForward';
 import { Text } from '@consta/uikit/Text';
 import { TextField } from '@consta/uikit/TextField';
 
-import { email, mailTo } from '@/modules/api/links';
+import { constaTelegram, email, GPN, mailTo } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnFooter = cn('Footer');
@@ -46,17 +46,24 @@ export const Footer: React.FC = () => {
               <Button size="l" form="brickDefault" iconRight={IconForward} label="Отправить" />
             </div>
           </form>
-          <Text
+          <div
             className={cnFooter('Text', ['tpl-grid__fraction_m-col_3 tpl-grid__fraction_l-col_5'])}
-            size="2xl"
-            view="secondary"
-            as="p"
           >
-            А ещё нам можно писать по электронной почте{' '}
-            <Text as="a" href={mailTo} size="2xl" view="link">
-              {email}
+            <Text className="decorator decorator_indent-b_m" size="xl" view="secondary" as="p">
+              А ещё нам можно писать по электронной почте{' '}
+              <Text as="a" href={mailTo} size="xl" view="link">
+                {email}
+              </Text>
+              .
             </Text>
-          </Text>
+            <Text size="xl" view="secondary" as="p">
+              Следите за нашими обновлениями в нашем{' '}
+              <Text as="a" href={constaTelegram} size="xl" view="link">
+                Телеграм-канале
+              </Text>
+              .
+            </Text>
+          </div>
         </div>
         <div className={cnFooter('Copyright')}>
           <Text
@@ -65,7 +72,11 @@ export const Footer: React.FC = () => {
             view="secondary"
             as="p"
           >
-            © 2020-2021 ПАО «Газпром нефть»
+            © 2020-2021 ПАО «
+            <Text as="a" href={GPN} size="m" view="link">
+              Газпром нефть
+            </Text>
+            »
           </Text>
         </div>
       </div>

@@ -39,6 +39,15 @@
         opacity: 1;
       }
     }
+
+    &_onlyIcon {
+      margin-left: var(--space-2xs);
+      font-size: 0;
+
+      & .Consta--Header-Icon {
+        display: inline-flex;
+      }
+    }
   }
 
   &-Icon {
