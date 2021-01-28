@@ -10,6 +10,7 @@ import './Theme_font_gpnPromo.css';
 import './Theme_size_gpnPromo.css';
 import './Theme_space_gpnPromo.css';
 import './Theme_control_gpnPromo.css';
+import './Theme_size_gpnResponsive.css';
 
 import { IconFavorite } from '@consta/uikit/IconFavorite';
 import { IconMoon } from '@consta/uikit/IconMoon';
@@ -76,7 +77,7 @@ const fontDefault = fonts[0];
 
 export const sizes = [
   { name: 'Крупный', value: 'gpnPromo' },
-  { name: 'Средний', value: 'gpnDefault' },
+  { name: 'Средний', value: 'gpnResponsive' },
 ];
 type Size = typeof sizes[number];
 const sizeDefault = sizes[0];
