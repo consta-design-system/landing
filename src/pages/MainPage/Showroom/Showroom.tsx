@@ -139,7 +139,7 @@ export const Showroom: React.FC = () => {
               onChange={() => {}}
               label="Выпустить кракена"
               checked
-              style={{ width: '13em' }}
+              style={{ width: '14em' }}
             />
             <TextField form="round" size="s" placeholder="Что нового?" style={{ width: '240px' }} />
             <Avatar size="m" name="Сергий Успокоитель" />
@@ -248,7 +248,7 @@ export const Showroom: React.FC = () => {
               onChange={() => {}}
               label="Получать уведомления"
               checked
-              style={{ width: '18em' }}
+              style={{ width: '19em' }}
             />
             <Button label="Выбрать" form="brick" view="secondary" />
           </>,
@@ -267,7 +267,7 @@ export const Showroom: React.FC = () => {
               onChange={() => {}}
               label="Показывать статистику"
               checked={false}
-              style={{ width: '16em' }}
+              style={{ width: '17em' }}
             />
             <User
               name="Серж Послоян"
