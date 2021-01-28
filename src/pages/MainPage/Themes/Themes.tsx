@@ -19,7 +19,7 @@ export const Themes: React.FC = () => {
         as="h3"
         lineHeight="2xs"
       >
-        Переключайте темы
+        Гибкая тематизация
       </Text>
       <Text
         className={cnThemes(null, ['decorator decorator_indent-b_4xl'])}
