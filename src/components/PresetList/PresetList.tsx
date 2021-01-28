@@ -39,16 +39,19 @@ export const PresetList: PresetList = React.forwardRef((props, ref) => {
 
   return (
     <div {...otherProps} ref={ref} className={cnPresetList(null, [className])}>
-      {items.map((item) => (
-        <button
-          className={cnPresetList('Item', { checked: getChecked(item) })}
-          key={getLabel(item)}
-          onClick={getOnChange(item)}
-          style={{ ['--brandColor' as any]: getBrandColor(item) }}
-        >
-          {getLabel(item)}
-        </button>
-      ))}
+      <div className={cnPresetList('Wrapper')}>
+        {items.map((item) => (
+          <button
+            className={cnPresetList('Item', { checked: getChecked(item) })}
+            key={getLabel(item)}
+            onClick={getOnChange(item)}
+            style={{ ['--brandColor' as any]: getBrandColor(item) }}
+          >
+            {getLabel(item)}
+          </button>
+        ))}
+        <div className={cnPresetList('LastItem')}></div>
+      </div>
     </div>
   );
 });

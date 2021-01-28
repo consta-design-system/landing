@@ -5,6 +5,7 @@ import { ChoiceGroup } from '@consta/uikit/ChoiceGroup';
 import { Text } from '@consta/uikit/Text';
 import { useAction, useAtom } from '@reatom/react';
 
+import { Example } from '@/components/Example/Example';
 import { PresetList } from '@/components/PresetList/PresetList';
 import {
   colorAtom,
@@ -42,39 +43,33 @@ export const ThemeControls: React.FC = () => {
 
   return (
     <div className={cnControls()}>
-      <div className={cnControls('PresetList')}>
-        <Text
-          className={cnControls('Title', ['decorator decorator_indent-b_xl'])}
-          size="3xl"
-          weight="bold"
-          as="h3"
-          lineHeight="xs"
-        >
-          Пресеты
-        </Text>
-        <PresetList
-          items={presets}
-          value={preset}
-          getLabel={(item) => item.name}
-          getBrandColor={(item) => item.brandColor}
-          onChange={({ value }) => setPreset(value)}
-        />
+      <div className={cnControls('Example')}>
+        <Example />
       </div>
-      <div className={cnControls('Settings')}>
-        <Text
-          className={cnControls('Title', ['decorator decorator_indent-b_xl'])}
-          size="3xl"
-          weight="bold"
-          as="h3"
-          lineHeight="xs"
-        >
-          Параметры
-        </Text>
 
+      <div className={cnControls('Settings')}>
+        <div className={cnControls('Item')}>
+          <Text
+            className={cnControls('Label', ['decorator decorator_indent-b_xs'])}
+            size="l"
+            view="secondary"
+            as="p"
+            lineHeight="s"
+          >
+            Пресеты
+          </Text>
+          <PresetList
+            items={presets}
+            value={preset}
+            getLabel={(item) => item.name}
+            getBrandColor={(item) => item.brandColor}
+            onChange={({ value }) => setPreset(value)}
+          />
+        </div>
         <div className={cnControls('Item', ['decorator decorator_indent-b_l'])}>
           <Text
             className={cnControls('Label', ['decorator decorator_indent-b_xs'])}
-            size="xl"
+            size="l"
             view="secondary"
             as="p"
             lineHeight="s"
@@ -82,13 +77,15 @@ export const ThemeControls: React.FC = () => {
             Цветовая тема
           </Text>
           <ChoiceGroup
+            view="ghost"
             name="ColorThemes"
             value={color}
             onChange={({ value }) => setColor(value)}
             items={colors}
             getLabel={(item) => item.name}
             getIcon={(item) => item.icon}
-            size="l"
+            size="m"
+            iconSize="m"
             width="full"
             multiple={false}
             className={cnControls('ChoiceGroup')}
@@ -99,7 +96,7 @@ export const ThemeControls: React.FC = () => {
         <div className={cnControls('Item', ['decorator decorator_indent-b_l'])}>
           <Text
             className={cnControls('Label', ['decorator decorator_indent-b_xs'])}
-            size="xl"
+            size="l"
             view="secondary"
             as="p"
             lineHeight="s"
@@ -107,12 +104,13 @@ export const ThemeControls: React.FC = () => {
             Шрифт
           </Text>
           <ChoiceGroup
+            view="ghost"
             name="FontThemes"
             value={font}
             onChange={({ value }) => setFont(value)}
             items={fonts}
             getLabel={(item) => item.name}
-            size="l"
+            size="m"
             width="full"
             multiple={false}
             className={cnControls('ChoiceGroup')}
@@ -121,7 +119,7 @@ export const ThemeControls: React.FC = () => {
         <div className={cnControls('Item', ['decorator decorator_indent-b_l'])}>
           <Text
             className={cnControls('Label', ['decorator decorator_indent-b_xs'])}
-            size="xl"
+            size="l"
             view="secondary"
             as="p"
             lineHeight="s"
@@ -129,22 +127,23 @@ export const ThemeControls: React.FC = () => {
             Размер текста
           </Text>
           <ChoiceGroup
+            view="ghost"
             name="SizeThemes"
             value={size}
             onChange={({ value }) => setSize(value)}
             items={sizes}
             getLabel={(item) => item.name}
-            size="l"
+            size="m"
             width="full"
             multiple={false}
             className={cnControls('ChoiceGroup')}
           />
         </div>
 
-        <div className={cnControls('Item', ['decorator decorator_indent-b_l'])}>
+        <div className={cnControls('Item')}>
           <Text
             className={cnControls('Label', ['decorator decorator_indent-b_xs'])}
-            size="xl"
+            size="l"
             view="secondary"
             as="p"
             lineHeight="s"
@@ -152,12 +151,13 @@ export const ThemeControls: React.FC = () => {
             Пространство
           </Text>
           <ChoiceGroup
+            view="ghost"
             name="SpaceThemes"
             value={space}
             onChange={({ value }) => setSpace(value)}
             items={spaces}
             getLabel={(item) => item.name}
-            size="l"
+            size="m"
             width="full"
             multiple={false}
             className={cnControls('ChoiceGroup')}

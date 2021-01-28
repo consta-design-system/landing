@@ -1,0 +1,68 @@
+.Consta--Example {
+  --radius: 12px;
+  overflow: hidden;
+  max-width: 560px;
+  margin-left: calc(-1 * var(--space-xs));
+  border-radius: var(--radius);
+  box-shadow: 0 27px 80px rgba(var(--color-nums-shadow), 0.09),
+    0 11px 33px rgba(var(--color-nums-shadow), 0.06),
+    0 6px 18px rgba(var(--color-nums-shadow), 0.05), 0 3px 10px rgba(var(--color-nums-shadow), 0.04),
+    0 1px 5px rgba(var(--color-nums-shadow), 0.03), 0 0.7px 2px rgba(var(--color-nums-shadow), 0.02);
+
+  &-Header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 230px;
+    padding: var(--space-l) var(--space-xl) var(--space-m);
+    background-color: var(--color-bg-brand);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      width: 70%;
+      height: 100%;
+      background: linear-gradient(var(--color-bg-stripe) 33%, var(--color-bg-ghost) 33%);
+      transform: translate(35%, 30%) rotate(-45deg);
+    }
+
+    &::before {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 140%;
+      background-color: var(--color-bg-stripe);
+      transform: translate(-20%, 30%) rotate(45deg);
+    }
+
+    @media (min-width: 720px) {
+      padding: var(--space-2xl) var(--space-2xl) var(--space-l);
+    }
+
+    @media (min-width: 1200px) {
+      padding: var(--space-2xl) var(--space-3xl) var(--space-l);
+    }
+  }
+
+  &-Main {
+    padding: var(--space-m) var(--space-l) var(--space-xl);
+
+    @media (min-width: 720px) {
+      padding: var(--space-l) var(--space-2xl) var(--space-3xl);
+    }
+
+    @media (min-width: 1200px) {
+      padding: var(--space-xl) var(--space-3xl) var(--space-4xl);
+    }
+  }
+}

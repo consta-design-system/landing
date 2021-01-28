@@ -69,21 +69,21 @@ const colorDefault = colors[0];
 
 export const fonts = [
   { name: 'Промо', value: 'gpnPromo' },
-  { name: 'По умолчанию', value: 'gpnDefault' },
+  { name: 'Системный', value: 'gpnDefault' },
 ];
 type Font = typeof fonts[number];
 const fontDefault = fonts[0];
 
 export const sizes = [
-  { name: 'Увеличеный', value: 'gpnPromo' },
-  { name: 'По умолчанию', value: 'gpnDefault' },
+  { name: 'Крупный', value: 'gpnPromo' },
+  { name: 'Средний', value: 'gpnDefault' },
 ];
 type Size = typeof sizes[number];
 const sizeDefault = sizes[0];
 
 export const spaces = [
-  { name: 'Воздушное', value: 'gpnPromo' },
-  { name: 'По умолчанию', value: 'gpnDefault' },
+  { name: 'Просторнее', value: 'gpnPromo' },
+  { name: 'Теснее', value: 'gpnDefault' },
 ];
 type Space = typeof spaces[number];
 const spaceDefault = spaces[0];
