@@ -86,6 +86,7 @@ export const HeroScreen: React.FC = () => {
               <Button
                 as="a"
                 href={constaUikitButton}
+                target="_blank"
                 label="Компоненты"
                 size="l"
                 className="decorator decorator_indent-r_xs"
@@ -93,6 +94,7 @@ export const HeroScreen: React.FC = () => {
               <Button
                 as="a"
                 href={constaFigma}
+                target="_blank"
                 label="Figma"
                 size="l"
                 view="secondary"
@@ -103,6 +105,7 @@ export const HeroScreen: React.FC = () => {
               <Button
                 as="a"
                 href={constaGitHub}
+                target="_blank"
                 label="Github"
                 size="l"
                 view="secondary"

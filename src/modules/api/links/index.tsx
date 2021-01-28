@@ -8,3 +8,4 @@ export const mailTo = `mailto:${email}`;
 export const constaUikitTheme = `${constaUikit}/?path=/docs/components-theme--playground`;
 export const constaUikitButton = `${constaUikit}/?path=/story/components-button--playground`;
 export const allProjects = 'http://digital.gazprom-neft.local/digital-solutions/consta';
+export const gazPromNeft = 'https://gazprom-neft.ru/';

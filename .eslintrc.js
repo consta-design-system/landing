@@ -50,6 +50,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/display-name': 'off',
+    'react/jsx-no-target-blank': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-redeclare': 'off',
     'triple-slash-reference': 0,

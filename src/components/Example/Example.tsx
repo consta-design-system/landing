@@ -8,6 +8,7 @@ import { IconBookmarkStroked } from '@consta/uikit/IconBookmarkStroked';
 import { Text } from '@consta/uikit/Text';
 import { TextField } from '@consta/uikit/TextField';
 import { useTheme } from '@consta/uikit/Theme';
+import { withTooltip } from '@consta/uikit/withTooltip';
 
 import { cn } from '@/utils/bem';
 
@@ -16,6 +17,14 @@ const cnExample = cn('Example');
 type ItemCG = string;
 
 const CG = ['Выбери меня', 'Нет, меня'];
+
+const ButtonWithTooltip = withTooltip({
+  content: (
+    <Text size="s" align="center">
+      Тултип рисуется всегда в контрасной к основной цветовой теме
+    </Text>
+  ),
+})(Button);
 
 export const Example: React.FC = () => {
   const { themeClassNames } = useTheme();
@@ -79,7 +88,7 @@ export const Example: React.FC = () => {
             style={{ width: '50%' }}
           />
         </div>
-        <Button size="l" label="Нажми на кнопку" width="full" />
+        <ButtonWithTooltip size="l" label="Нажми на кнопку" width="full" />
       </div>
     </div>
   );
