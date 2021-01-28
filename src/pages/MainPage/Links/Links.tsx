@@ -28,31 +28,33 @@ export const Links: React.FC = () => {
       >
         Берите и пользуйтесь
       </Text>
-      <div className={cnLinks('List', ['tpl-grid tpl-grid_m-ratio_1-1-1'])}>
-        <LinksCard
-          className={themeClassNames.color.accent}
-          view="storybook"
-          icon={IconStorybook}
-          title="Витрина компонентов и документация"
-          href={constaUikitButton}
-          description="Посмотрите, как выглядят компоненты, как они меняются и прочитайте, где и когда их лучше использовать."
-        />
-        <LinksCard
-          className={themeClassNames.color.invert}
-          view="figma"
-          icon={IconFigma}
-          title="Библиотека в Figma"
-          href={constaFigma}
-          description="Набор компонентов для создания макетов проекта в Figma Community. Отправьте эту ссылку дизайнеру — он разберётся."
-        />
-        <LinksCard
-          className={themeClassNames.color.invert}
-          view="github"
-          icon={IconGithub}
-          title="React-библиотека"
-          href={constaGitHub}
-          description="NPM-пакет с библиотекой на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
-        />
+      <div className={cnLinks('List')}>
+        <div className="tpl-grid tpl-grid_m-ratio_1-1-1">
+          <LinksCard
+            className={themeClassNames.color.accent}
+            view="storybook"
+            icon={IconStorybook}
+            title="Витрина компонентов и документация"
+            href={constaUikitButton}
+            description="Посмотрите, как выглядят компоненты, как они меняются и прочитайте, где и когда их лучше использовать."
+          />
+          <LinksCard
+            className={themeClassNames.color.invert}
+            view="figma"
+            icon={IconFigma}
+            title="Библиотека в Figma"
+            href={constaFigma}
+            description="Набор компонентов для создания макетов проекта в Figma Community. Отправьте эту ссылку дизайнеру — он разберётся."
+          />
+          <LinksCard
+            className={themeClassNames.color.invert}
+            view="github"
+            icon={IconGithub}
+            title="React-библиотека"
+            href={constaGitHub}
+            description="NPM-пакет с библиотекой на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
+          />
+        </div>
       </div>
     </section>
   );
