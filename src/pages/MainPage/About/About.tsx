@@ -92,6 +92,7 @@ export const About: React.FC = () => {
       <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_2xl'])}>
         <a
           href={constaUikitButton}
+          target="_blank"
           className={cnLinks('Item', { to: 'Storybook' }, [themeClassNames.color.accent])}
         >
           <div className={cnLinks('Content', ['tpl-grid tpl-grid_l-ratio_1-1'])}>
@@ -119,6 +120,7 @@ export const About: React.FC = () => {
 
         <a
           href={constaFigma}
+          target="_blank"
           className={cnLinks('Item', { to: 'Figma' }, [themeClassNames.color.invert])}
         >
           <div className={cnLinks('Content')}>
@@ -144,6 +146,7 @@ export const About: React.FC = () => {
 
         <a
           href={constaGitHub}
+          target="_blank"
           className={cnLinks('Item', { to: 'Github' }, [themeClassNames.color.invert])}
         >
           <div className={cnLinks('Content')}>

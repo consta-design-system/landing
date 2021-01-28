@@ -36,6 +36,7 @@ export const Links: React.FC = () => {
             icon={IconStorybook}
             title="Витрина компонентов и документация"
             href={constaUikitButton}
+            target="_blank"
             description="Посмотрите, как выглядят компоненты, как они меняются и прочитайте, где и когда их лучше использовать."
           />
           <LinksCard
@@ -44,6 +45,7 @@ export const Links: React.FC = () => {
             icon={IconFigma}
             title="Библиотека в Figma"
             href={constaFigma}
+            target="_blank"
             description="Набор компонентов для создания макетов проекта в Figma Community. Отправьте эту ссылку дизайнеру — он разберётся."
           />
           <LinksCard
@@ -52,6 +54,7 @@ export const Links: React.FC = () => {
             icon={IconGithub}
             title="React-библиотека"
             href={constaGitHub}
+            target="_blank"
             description="NPM-пакет с библиотекой на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
           />
         </div>

@@ -39,6 +39,7 @@ export const Projects: React.FC = () => {
         <Button
           as="a"
           href={allProjects}
+          target="_blank"
           size="l"
           label="Посмотреть проекты"
           className={cnProjects('Button')}

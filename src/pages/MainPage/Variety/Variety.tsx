@@ -29,7 +29,7 @@ export const Variety: React.FC = () => {
         Основа, из которой легко построить интерфейс — для любых задач. Большой выбор, много
         вариантов, можно менять и дорабатывать. <br />
         Посмотреть, как выглядят и работают компоненты дизайн-системы, можно в нашей{' '}
-        <Text size="2xl" view="link" as="a" href={constaUikitButton}>
+        <Text size="2xl" view="link" as="a" href={constaUikitButton} target="_blank">
           библиотеке
         </Text>
       </Text>
