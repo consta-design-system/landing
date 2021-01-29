@@ -29,10 +29,10 @@ export const Footer: React.FC = () => {
             className={cnFooter('Form', ['tpl-grid__fraction_m-col_5 tpl-grid__fraction_l-col_7'])}
           >
             <TextField
-              // TODO Надо сделать в 3 строки, но у меня не получилось
               size="l"
               type="textarea"
-              rows={3}
+              minRows={3}
+              maxRows={5}
               placeholder="Здесь можно задать вопрос о дизайн-системе или просто написать её разработчикам"
               className={cnFooter('Textarea', ['decorator decorator_indent-b_m'])}
             />
