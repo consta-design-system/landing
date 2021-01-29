@@ -78,6 +78,7 @@ export const Showroom: React.FC = () => {
   const [valueCG4, setValueCG4] = useState<ItemCG | null>(CG4[0]);
   const [valueCG5, setValueCG5] = useState<ItemCG | null>(CG5[3]);
   const [valueCG6, setValueCG6] = useState<ItemCGIcon | null>(CG6[1]);
+  const [valueCG7, setValueCG7] = useState(false);
 
   const getItemLabel = (option: SelectOption): string => option.label;
 
@@ -136,9 +137,9 @@ export const Showroom: React.FC = () => {
           <>
             <Switch
               size="m"
-              onChange={() => {}}
+              onChange={() => setValueCG7(!valueCG7)}
+              checked={valueCG7}
               label="Выпустить кракена"
-              checked
               style={{ width: '14em' }}
             />
             <TextField form="round" size="s" placeholder="Что нового?" style={{ width: '240px' }} />
@@ -245,9 +246,9 @@ export const Showroom: React.FC = () => {
             <Button label="Войти" form="brickDefault" />
             <Switch
               size="l"
-              onChange={() => {}}
+              onChange={() => setValueCG7(!valueCG7)}
+              checked={valueCG7}
               label="Получать уведомления"
-              checked
               style={{ width: '19em' }}
             />
             <Button label="Выбрать" form="brick" view="secondary" />
@@ -264,9 +265,9 @@ export const Showroom: React.FC = () => {
             <Switch
               size="m"
               view="ghost"
-              onChange={() => {}}
+              onChange={() => setValueCG7(!valueCG7)}
+              checked={valueCG7}
               label="Показывать статистику"
-              checked={false}
               style={{ width: '17em' }}
             />
             <User
