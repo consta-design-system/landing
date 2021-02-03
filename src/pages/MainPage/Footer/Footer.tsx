@@ -58,7 +58,7 @@ export const Footer: React.FC = () => {
             </Text>
             <Text size="xl" view="secondary" as="p">
               Следите за нашими обновлениями в нашем{' '}
-              <Text as="a" href={constaTelegram} size="xl" view="link">
+              <Text as="a" href={constaTelegram} size="xl" view="link" target="_blank">
                 Телеграм-канале
               </Text>
               .
@@ -72,11 +72,10 @@ export const Footer: React.FC = () => {
             view="secondary"
             as="p"
           >
-            © 2020-2021 ПАО «
+            © 2020-2021{' '}
             <Text as="a" href={gazPromNeft} size="m" view="link">
-              Газпром нефть
+              ПАО « Газпром нефть »
             </Text>
-            »
           </Text>
         </div>
       </div>
