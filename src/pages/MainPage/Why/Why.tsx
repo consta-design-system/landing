@@ -5,42 +5,114 @@ import { Text } from '@consta/uikit/Text';
 
 import { WhyReason } from './WhyReason/WhyReason';
 
-import Reason1_1x_dark from '@/images/Reasons/Dark/Reason_1_1x.jpg';
-import Reason1_2x_dark from '@/images/Reasons/Dark/Reason_1_2x.jpg';
-import Reason1_3x_dark from '@/images/Reasons/Dark/Reason_1_3x.jpg';
-import Reason2_1x_dark from '@/images/Reasons/Dark/Reason_2_1x.jpg';
-import Reason2_2x_dark from '@/images/Reasons/Dark/Reason_2_2x.jpg';
-import Reason2_3x_dark from '@/images/Reasons/Dark/Reason_2_3x.jpg';
-import Reason3_1x_dark from '@/images/Reasons/Dark/Reason_3_1x.jpg';
-import Reason3_2x_dark from '@/images/Reasons/Dark/Reason_3_2x.jpg';
-import Reason3_3x_dark from '@/images/Reasons/Dark/Reason_3_3x.jpg';
-import Reason4_1x_dark from '@/images/Reasons/Dark/Reason_4_1x.jpg';
-import Reason4_2x_dark from '@/images/Reasons/Dark/Reason_4_2x.jpg';
-import Reason4_3x_dark from '@/images/Reasons/Dark/Reason_4_3x.jpg';
-import Reason1_1x_default from '@/images/Reasons/Default/Reason_1_1x.jpg';
-import Reason1_2x_default from '@/images/Reasons/Default/Reason_1_2x.jpg';
-import Reason1_3x_default from '@/images/Reasons/Default/Reason_1_3x.jpg';
-import Reason2_1x_default from '@/images/Reasons/Default/Reason_2_1x.jpg';
-import Reason2_2x_default from '@/images/Reasons/Default/Reason_2_2x.jpg';
-import Reason2_3x_default from '@/images/Reasons/Default/Reason_2_3x.jpg';
-import Reason3_1x_default from '@/images/Reasons/Default/Reason_3_1x.jpg';
-import Reason3_2x_default from '@/images/Reasons/Default/Reason_3_2x.jpg';
-import Reason3_3x_default from '@/images/Reasons/Default/Reason_3_3x.jpg';
-import Reason4_1x_default from '@/images/Reasons/Default/Reason_4_1x.jpg';
-import Reason4_2x_default from '@/images/Reasons/Default/Reason_4_2x.jpg';
-import Reason4_3x_default from '@/images/Reasons/Default/Reason_4_3x.jpg';
-import Reason1_1x_display from '@/images/Reasons/Display/Reason_1_1x.jpg';
-import Reason1_2x_display from '@/images/Reasons/Display/Reason_1_2x.jpg';
-import Reason1_3x_display from '@/images/Reasons/Display/Reason_1_3x.jpg';
-import Reason2_1x_display from '@/images/Reasons/Display/Reason_2_1x.jpg';
-import Reason2_2x_display from '@/images/Reasons/Display/Reason_2_2x.jpg';
-import Reason2_3x_display from '@/images/Reasons/Display/Reason_2_3x.jpg';
-import Reason3_1x_display from '@/images/Reasons/Display/Reason_3_1x.jpg';
-import Reason3_2x_display from '@/images/Reasons/Display/Reason_3_2x.jpg';
-import Reason3_3x_display from '@/images/Reasons/Display/Reason_3_3x.jpg';
-import Reason4_1x_display from '@/images/Reasons/Display/Reason_4_1x.jpg';
-import Reason4_2x_display from '@/images/Reasons/Display/Reason_4_2x.jpg';
-import Reason4_3x_display from '@/images/Reasons/Display/Reason_4_3x.jpg';
+import AltReason1_1x_dark from '@/images/Reasons/Alt/Dark/Reason_1_1x.jpg';
+import AltReason1_2x_dark from '@/images/Reasons/Alt/Dark/Reason_1_2x.jpg';
+import AltReason1_3x_dark from '@/images/Reasons/Alt/Dark/Reason_1_3x.jpg';
+import AltReason2_1x_dark from '@/images/Reasons/Alt/Dark/Reason_2_1x.jpg';
+import AltReason2_2x_dark from '@/images/Reasons/Alt/Dark/Reason_2_2x.jpg';
+import AltReason2_3x_dark from '@/images/Reasons/Alt/Dark/Reason_2_3x.jpg';
+import AltReason3_1x_dark from '@/images/Reasons/Alt/Dark/Reason_3_1x.jpg';
+import AltReason3_2x_dark from '@/images/Reasons/Alt/Dark/Reason_3_2x.jpg';
+import AltReason3_3x_dark from '@/images/Reasons/Alt/Dark/Reason_3_3x.jpg';
+import AltReason4_1x_dark from '@/images/Reasons/Alt/Dark/Reason_4_1x.jpg';
+import AltReason4_2x_dark from '@/images/Reasons/Alt/Dark/Reason_4_2x.jpg';
+import AltReason4_3x_dark from '@/images/Reasons/Alt/Dark/Reason_4_3x.jpg';
+import AltReason1_1x_default from '@/images/Reasons/Alt/Default/Reason_1_1x.jpg';
+import AltReason1_2x_default from '@/images/Reasons/Alt/Default/Reason_1_2x.jpg';
+import AltReason1_3x_default from '@/images/Reasons/Alt/Default/Reason_1_3x.jpg';
+import AltReason2_1x_default from '@/images/Reasons/Alt/Default/Reason_2_1x.jpg';
+import AltReason2_2x_default from '@/images/Reasons/Alt/Default/Reason_2_2x.jpg';
+import AltReason2_3x_default from '@/images/Reasons/Alt/Default/Reason_2_3x.jpg';
+import AltReason3_1x_default from '@/images/Reasons/Alt/Default/Reason_3_1x.jpg';
+import AltReason3_2x_default from '@/images/Reasons/Alt/Default/Reason_3_2x.jpg';
+import AltReason3_3x_default from '@/images/Reasons/Alt/Default/Reason_3_3x.jpg';
+import AltReason4_1x_default from '@/images/Reasons/Alt/Default/Reason_4_1x.jpg';
+import AltReason4_2x_default from '@/images/Reasons/Alt/Default/Reason_4_2x.jpg';
+import AltReason4_3x_default from '@/images/Reasons/Alt/Default/Reason_4_3x.jpg';
+import AltReason1_1x_display from '@/images/Reasons/Alt/Display/Reason_1_1x.jpg';
+import AltReason1_2x_display from '@/images/Reasons/Alt/Display/Reason_1_2x.jpg';
+import AltReason1_3x_display from '@/images/Reasons/Alt/Display/Reason_1_3x.jpg';
+import AltReason2_1x_display from '@/images/Reasons/Alt/Display/Reason_2_1x.jpg';
+import AltReason2_2x_display from '@/images/Reasons/Alt/Display/Reason_2_2x.jpg';
+import AltReason2_3x_display from '@/images/Reasons/Alt/Display/Reason_2_3x.jpg';
+import AltReason3_1x_display from '@/images/Reasons/Alt/Display/Reason_3_1x.jpg';
+import AltReason3_2x_display from '@/images/Reasons/Alt/Display/Reason_3_2x.jpg';
+import AltReason3_3x_display from '@/images/Reasons/Alt/Display/Reason_3_3x.jpg';
+import AltReason4_1x_display from '@/images/Reasons/Alt/Display/Reason_4_1x.jpg';
+import AltReason4_2x_display from '@/images/Reasons/Alt/Display/Reason_4_2x.jpg';
+import AltReason4_3x_display from '@/images/Reasons/Alt/Display/Reason_4_3x.jpg';
+import Alt2Reason1_1x_dark from '@/images/Reasons/Alt2/Dark/Reason_1_1x.jpg';
+import Alt2Reason1_2x_dark from '@/images/Reasons/Alt2/Dark/Reason_1_2x.jpg';
+import Alt2Reason1_3x_dark from '@/images/Reasons/Alt2/Dark/Reason_1_3x.jpg';
+import Alt2Reason2_1x_dark from '@/images/Reasons/Alt2/Dark/Reason_2_1x.jpg';
+import Alt2Reason2_2x_dark from '@/images/Reasons/Alt2/Dark/Reason_2_2x.jpg';
+import Alt2Reason2_3x_dark from '@/images/Reasons/Alt2/Dark/Reason_2_3x.jpg';
+import Alt2Reason3_1x_dark from '@/images/Reasons/Alt2/Dark/Reason_3_1x.jpg';
+import Alt2Reason3_2x_dark from '@/images/Reasons/Alt2/Dark/Reason_3_2x.jpg';
+import Alt2Reason3_3x_dark from '@/images/Reasons/Alt2/Dark/Reason_3_3x.jpg';
+import Alt2Reason4_1x_dark from '@/images/Reasons/Alt2/Dark/Reason_4_1x.jpg';
+import Alt2Reason4_2x_dark from '@/images/Reasons/Alt2/Dark/Reason_4_2x.jpg';
+import Alt2Reason4_3x_dark from '@/images/Reasons/Alt2/Dark/Reason_4_3x.jpg';
+import Alt2Reason1_1x_default from '@/images/Reasons/Alt2/Default/Reason_1_1x.jpg';
+import Alt2Reason1_2x_default from '@/images/Reasons/Alt2/Default/Reason_1_2x.jpg';
+import Alt2Reason1_3x_default from '@/images/Reasons/Alt2/Default/Reason_1_3x.jpg';
+import Alt2Reason2_1x_default from '@/images/Reasons/Alt2/Default/Reason_2_1x.jpg';
+import Alt2Reason2_2x_default from '@/images/Reasons/Alt2/Default/Reason_2_2x.jpg';
+import Alt2Reason2_3x_default from '@/images/Reasons/Alt2/Default/Reason_2_3x.jpg';
+import Alt2Reason3_1x_default from '@/images/Reasons/Alt2/Default/Reason_3_1x.jpg';
+import Alt2Reason3_2x_default from '@/images/Reasons/Alt2/Default/Reason_3_2x.jpg';
+import Alt2Reason3_3x_default from '@/images/Reasons/Alt2/Default/Reason_3_3x.jpg';
+import Alt2Reason4_1x_default from '@/images/Reasons/Alt2/Default/Reason_4_1x.jpg';
+import Alt2Reason4_2x_default from '@/images/Reasons/Alt2/Default/Reason_4_2x.jpg';
+import Alt2Reason4_3x_default from '@/images/Reasons/Alt2/Default/Reason_4_3x.jpg';
+import Alt2Reason1_1x_display from '@/images/Reasons/Alt2/Display/Reason_1_1x.jpg';
+import Alt2Reason1_2x_display from '@/images/Reasons/Alt2/Display/Reason_1_2x.jpg';
+import Alt2Reason1_3x_display from '@/images/Reasons/Alt2/Display/Reason_1_3x.jpg';
+import Alt2Reason2_1x_display from '@/images/Reasons/Alt2/Display/Reason_2_1x.jpg';
+import Alt2Reason2_2x_display from '@/images/Reasons/Alt2/Display/Reason_2_2x.jpg';
+import Alt2Reason2_3x_display from '@/images/Reasons/Alt2/Display/Reason_2_3x.jpg';
+import Alt2Reason3_1x_display from '@/images/Reasons/Alt2/Display/Reason_3_1x.jpg';
+import Alt2Reason3_2x_display from '@/images/Reasons/Alt2/Display/Reason_3_2x.jpg';
+import Alt2Reason3_3x_display from '@/images/Reasons/Alt2/Display/Reason_3_3x.jpg';
+import Alt2Reason4_1x_display from '@/images/Reasons/Alt2/Display/Reason_4_1x.jpg';
+import Alt2Reason4_2x_display from '@/images/Reasons/Alt2/Display/Reason_4_2x.jpg';
+import Alt2Reason4_3x_display from '@/images/Reasons/Alt2/Display/Reason_4_3x.jpg';
+import GPNReason1_1x_dark from '@/images/Reasons/GPN/Dark/Reason_1_1x.jpg';
+import GPNReason1_2x_dark from '@/images/Reasons/GPN/Dark/Reason_1_2x.jpg';
+import GPNReason1_3x_dark from '@/images/Reasons/GPN/Dark/Reason_1_3x.jpg';
+import GPNReason2_1x_dark from '@/images/Reasons/GPN/Dark/Reason_2_1x.jpg';
+import GPNReason2_2x_dark from '@/images/Reasons/GPN/Dark/Reason_2_2x.jpg';
+import GPNReason2_3x_dark from '@/images/Reasons/GPN/Dark/Reason_2_3x.jpg';
+import GPNReason3_1x_dark from '@/images/Reasons/GPN/Dark/Reason_3_1x.jpg';
+import GPNReason3_2x_dark from '@/images/Reasons/GPN/Dark/Reason_3_2x.jpg';
+import GPNReason3_3x_dark from '@/images/Reasons/GPN/Dark/Reason_3_3x.jpg';
+import GPNReason4_1x_dark from '@/images/Reasons/GPN/Dark/Reason_4_1x.jpg';
+import GPNReason4_2x_dark from '@/images/Reasons/GPN/Dark/Reason_4_2x.jpg';
+import GPNReason4_3x_dark from '@/images/Reasons/GPN/Dark/Reason_4_3x.jpg';
+import GPNReason1_1x_default from '@/images/Reasons/GPN/Default/Reason_1_1x.jpg';
+import GPNReason1_2x_default from '@/images/Reasons/GPN/Default/Reason_1_2x.jpg';
+import GPNReason1_3x_default from '@/images/Reasons/GPN/Default/Reason_1_3x.jpg';
+import GPNReason2_1x_default from '@/images/Reasons/GPN/Default/Reason_2_1x.jpg';
+import GPNReason2_2x_default from '@/images/Reasons/GPN/Default/Reason_2_2x.jpg';
+import GPNReason2_3x_default from '@/images/Reasons/GPN/Default/Reason_2_3x.jpg';
+import GPNReason3_1x_default from '@/images/Reasons/GPN/Default/Reason_3_1x.jpg';
+import GPNReason3_2x_default from '@/images/Reasons/GPN/Default/Reason_3_2x.jpg';
+import GPNReason3_3x_default from '@/images/Reasons/GPN/Default/Reason_3_3x.jpg';
+import GPNReason4_1x_default from '@/images/Reasons/GPN/Default/Reason_4_1x.jpg';
+import GPNReason4_2x_default from '@/images/Reasons/GPN/Default/Reason_4_2x.jpg';
+import GPNReason4_3x_default from '@/images/Reasons/GPN/Default/Reason_4_3x.jpg';
+import GPNReason1_1x_display from '@/images/Reasons/GPN/Display/Reason_1_1x.jpg';
+import GPNReason1_2x_display from '@/images/Reasons/GPN/Display/Reason_1_2x.jpg';
+import GPNReason1_3x_display from '@/images/Reasons/GPN/Display/Reason_1_3x.jpg';
+import GPNReason2_1x_display from '@/images/Reasons/GPN/Display/Reason_2_1x.jpg';
+import GPNReason2_2x_display from '@/images/Reasons/GPN/Display/Reason_2_2x.jpg';
+import GPNReason2_3x_display from '@/images/Reasons/GPN/Display/Reason_2_3x.jpg';
+import GPNReason3_1x_display from '@/images/Reasons/GPN/Display/Reason_3_1x.jpg';
+import GPNReason3_2x_display from '@/images/Reasons/GPN/Display/Reason_3_2x.jpg';
+import GPNReason3_3x_display from '@/images/Reasons/GPN/Display/Reason_3_3x.jpg';
+import GPNReason4_1x_display from '@/images/Reasons/GPN/Display/Reason_4_1x.jpg';
+import GPNReason4_2x_display from '@/images/Reasons/GPN/Display/Reason_4_2x.jpg';
+import GPNReason4_3x_display from '@/images/Reasons/GPN/Display/Reason_4_3x.jpg';
 import { cn } from '@/utils/bem';
 
 const cnWhy = cn('Why');
@@ -63,19 +135,49 @@ export const Why: React.FC = () => {
             mode: 1,
             src: {
               gpnDefault: {
-                '1x': Reason1_1x_default,
-                '2x': Reason1_2x_default,
-                '4x': Reason1_3x_default,
+                '1x': GPNReason1_1x_default,
+                '2x': GPNReason1_2x_default,
+                '4x': GPNReason1_3x_default,
               },
               gpnDark: {
-                '1x': Reason1_1x_dark,
-                '2x': Reason1_2x_dark,
-                '4x': Reason1_3x_dark,
+                '1x': GPNReason1_1x_dark,
+                '2x': GPNReason1_2x_dark,
+                '4x': GPNReason1_3x_dark,
               },
               gpnDisplay: {
-                '1x': Reason1_1x_display,
-                '2x': Reason1_2x_display,
-                '4x': Reason1_3x_display,
+                '1x': GPNReason1_1x_display,
+                '2x': GPNReason1_2x_display,
+                '4x': GPNReason1_3x_display,
+              },
+              altDefault: {
+                '1x': AltReason1_1x_default,
+                '2x': AltReason1_2x_default,
+                '4x': AltReason1_3x_default,
+              },
+              altDark: {
+                '1x': AltReason1_1x_dark,
+                '2x': AltReason1_2x_dark,
+                '4x': AltReason1_3x_dark,
+              },
+              altDisplay: {
+                '1x': AltReason1_1x_display,
+                '2x': AltReason1_2x_display,
+                '4x': AltReason1_3x_display,
+              },
+              alt2Default: {
+                '1x': Alt2Reason1_1x_default,
+                '2x': Alt2Reason1_2x_default,
+                '4x': Alt2Reason1_3x_default,
+              },
+              alt2Dark: {
+                '1x': Alt2Reason1_1x_dark,
+                '2x': Alt2Reason1_2x_dark,
+                '4x': Alt2Reason1_3x_dark,
+              },
+              alt2Display: {
+                '1x': Alt2Reason1_1x_display,
+                '2x': Alt2Reason1_2x_display,
+                '4x': Alt2Reason1_3x_display,
               },
             },
           }}
@@ -87,19 +189,49 @@ export const Why: React.FC = () => {
             mode: 1,
             src: {
               gpnDefault: {
-                '1x': Reason2_1x_default,
-                '2x': Reason2_2x_default,
-                '4x': Reason2_3x_default,
+                '1x': GPNReason2_1x_default,
+                '2x': GPNReason2_2x_default,
+                '4x': GPNReason2_3x_default,
               },
               gpnDark: {
-                '1x': Reason2_1x_dark,
-                '2x': Reason2_2x_dark,
-                '4x': Reason2_3x_dark,
+                '1x': GPNReason2_1x_dark,
+                '2x': GPNReason2_2x_dark,
+                '4x': GPNReason2_3x_dark,
               },
               gpnDisplay: {
-                '1x': Reason2_1x_display,
-                '2x': Reason2_2x_display,
-                '4x': Reason2_3x_display,
+                '1x': GPNReason2_1x_display,
+                '2x': GPNReason2_2x_display,
+                '4x': GPNReason2_3x_display,
+              },
+              altDefault: {
+                '1x': AltReason2_1x_default,
+                '2x': AltReason2_2x_default,
+                '4x': AltReason2_3x_default,
+              },
+              altDark: {
+                '1x': AltReason2_1x_dark,
+                '2x': AltReason2_2x_dark,
+                '4x': AltReason2_3x_dark,
+              },
+              altDisplay: {
+                '1x': AltReason2_1x_display,
+                '2x': AltReason2_2x_display,
+                '4x': AltReason2_3x_display,
+              },
+              alt2Default: {
+                '1x': Alt2Reason2_1x_default,
+                '2x': Alt2Reason2_2x_default,
+                '4x': Alt2Reason2_3x_default,
+              },
+              alt2Dark: {
+                '1x': Alt2Reason2_1x_dark,
+                '2x': Alt2Reason2_2x_dark,
+                '4x': Alt2Reason2_3x_dark,
+              },
+              alt2Display: {
+                '1x': Alt2Reason2_1x_display,
+                '2x': Alt2Reason2_2x_display,
+                '4x': Alt2Reason2_3x_display,
               },
             },
           }}
@@ -111,19 +243,49 @@ export const Why: React.FC = () => {
             mode: 1,
             src: {
               gpnDefault: {
-                '1x': Reason3_1x_default,
-                '2x': Reason3_2x_default,
-                '4x': Reason3_3x_default,
+                '1x': GPNReason3_1x_default,
+                '2x': GPNReason3_2x_default,
+                '4x': GPNReason3_3x_default,
               },
               gpnDark: {
-                '1x': Reason3_1x_dark,
-                '2x': Reason3_2x_dark,
-                '4x': Reason3_3x_dark,
+                '1x': GPNReason3_1x_dark,
+                '2x': GPNReason3_2x_dark,
+                '4x': GPNReason3_3x_dark,
               },
               gpnDisplay: {
-                '1x': Reason3_1x_display,
-                '2x': Reason3_2x_display,
-                '4x': Reason3_3x_display,
+                '1x': GPNReason3_1x_display,
+                '2x': GPNReason3_2x_display,
+                '4x': GPNReason3_3x_display,
+              },
+              altDefault: {
+                '1x': AltReason3_1x_default,
+                '2x': AltReason3_2x_default,
+                '4x': AltReason3_3x_default,
+              },
+              altDark: {
+                '1x': AltReason3_1x_dark,
+                '2x': AltReason3_2x_dark,
+                '4x': AltReason3_3x_dark,
+              },
+              altDisplay: {
+                '1x': AltReason3_1x_display,
+                '2x': AltReason3_2x_display,
+                '4x': AltReason3_3x_display,
+              },
+              alt2Default: {
+                '1x': Alt2Reason3_1x_default,
+                '2x': Alt2Reason3_2x_default,
+                '4x': Alt2Reason3_3x_default,
+              },
+              alt2Dark: {
+                '1x': Alt2Reason3_1x_dark,
+                '2x': Alt2Reason3_2x_dark,
+                '4x': Alt2Reason3_3x_dark,
+              },
+              alt2Display: {
+                '1x': Alt2Reason3_1x_display,
+                '2x': Alt2Reason3_2x_display,
+                '4x': Alt2Reason3_3x_display,
               },
             },
           }}
@@ -135,19 +297,49 @@ export const Why: React.FC = () => {
             mode: 1,
             src: {
               gpnDefault: {
-                '1x': Reason4_1x_default,
-                '2x': Reason4_2x_default,
-                '4x': Reason4_3x_default,
+                '1x': GPNReason4_1x_default,
+                '2x': GPNReason4_2x_default,
+                '4x': GPNReason4_3x_default,
               },
               gpnDark: {
-                '1x': Reason4_1x_dark,
-                '2x': Reason4_2x_dark,
-                '4x': Reason4_3x_dark,
+                '1x': GPNReason4_1x_dark,
+                '2x': GPNReason4_2x_dark,
+                '4x': GPNReason4_3x_dark,
               },
               gpnDisplay: {
-                '1x': Reason4_1x_display,
-                '2x': Reason4_2x_display,
-                '4x': Reason4_3x_display,
+                '1x': GPNReason4_1x_display,
+                '2x': GPNReason4_2x_display,
+                '4x': GPNReason4_3x_display,
+              },
+              altDefault: {
+                '1x': AltReason4_1x_default,
+                '2x': AltReason4_2x_default,
+                '4x': AltReason4_3x_default,
+              },
+              altDark: {
+                '1x': AltReason4_1x_dark,
+                '2x': AltReason4_2x_dark,
+                '4x': AltReason4_3x_dark,
+              },
+              altDisplay: {
+                '1x': AltReason4_1x_display,
+                '2x': AltReason4_2x_display,
+                '4x': AltReason4_3x_display,
+              },
+              alt2Default: {
+                '1x': Alt2Reason4_1x_default,
+                '2x': Alt2Reason4_2x_default,
+                '4x': Alt2Reason4_3x_default,
+              },
+              alt2Dark: {
+                '1x': Alt2Reason4_1x_dark,
+                '2x': Alt2Reason4_2x_dark,
+                '4x': Alt2Reason4_3x_dark,
+              },
+              alt2Display: {
+                '1x': Alt2Reason4_1x_display,
+                '2x': Alt2Reason4_2x_display,
+                '4x': Alt2Reason4_3x_display,
               },
             },
           }}

@@ -9,24 +9,60 @@ import { Picture } from '@/components/Picture/Picture';
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import ConstaLogo from '@/images/ConstaLogo.image.svg';
-import HeroImage_375_1x_dark from '@/images/HeroImage/Dark/HeroImage_375_1x.jpg';
-import HeroImage_375_2x_dark from '@/images/HeroImage/Dark/HeroImage_375_2x.jpg';
-import HeroImage_375_3x_dark from '@/images/HeroImage/Dark/HeroImage_375_3x.jpg';
-import HeroImage_720_1x_dark from '@/images/HeroImage/Dark/HeroImage_720_1x.jpg';
-import HeroImage_720_2x_dark from '@/images/HeroImage/Dark/HeroImage_720_2x.jpg';
-import HeroImage_720_3x_dark from '@/images/HeroImage/Dark/HeroImage_720_3x.jpg';
-import HeroImage_375_1x_default from '@/images/HeroImage/Default/HeroImage_375_1x.jpg';
-import HeroImage_375_2x_default from '@/images/HeroImage/Default/HeroImage_375_2x.jpg';
-import HeroImage_375_3x_default from '@/images/HeroImage/Default/HeroImage_375_3x.jpg';
-import HeroImage_720_1x_default from '@/images/HeroImage/Default/HeroImage_720_1x.jpg';
-import HeroImage_720_2x_default from '@/images/HeroImage/Default/HeroImage_720_2x.jpg';
-import HeroImage_720_3x_default from '@/images/HeroImage/Default/HeroImage_720_3x.jpg';
-import HeroImage_375_1x_display from '@/images/HeroImage/Display/HeroImage_375_1x.jpg';
-import HeroImage_375_2x_display from '@/images/HeroImage/Display/HeroImage_375_2x.jpg';
-import HeroImage_375_3x_display from '@/images/HeroImage/Display/HeroImage_375_3x.jpg';
-import HeroImage_720_1x_display from '@/images/HeroImage/Display/HeroImage_720_1x.jpg';
-import HeroImage_720_2x_display from '@/images/HeroImage/Display/HeroImage_720_2x.jpg';
-import HeroImage_720_3x_display from '@/images/HeroImage/Display/HeroImage_720_3x.jpg';
+import AltHeroImage_375_1x_dark from '@/images/HeroImage/Alt/Dark/HeroImage_375_1x.jpg';
+import AltHeroImage_375_2x_dark from '@/images/HeroImage/Alt/Dark/HeroImage_375_2x.jpg';
+import AltHeroImage_375_3x_dark from '@/images/HeroImage/Alt/Dark/HeroImage_375_3x.jpg';
+import AltHeroImage_720_1x_dark from '@/images/HeroImage/Alt/Dark/HeroImage_720_1x.jpg';
+import AltHeroImage_720_2x_dark from '@/images/HeroImage/Alt/Dark/HeroImage_720_2x.jpg';
+import AltHeroImage_720_3x_dark from '@/images/HeroImage/Alt/Dark/HeroImage_720_3x.jpg';
+import AltHeroImage_375_1x_default from '@/images/HeroImage/Alt/Default/HeroImage_375_1x.jpg';
+import AltHeroImage_375_2x_default from '@/images/HeroImage/Alt/Default/HeroImage_375_2x.jpg';
+import AltHeroImage_375_3x_default from '@/images/HeroImage/Alt/Default/HeroImage_375_3x.jpg';
+import AltHeroImage_720_1x_default from '@/images/HeroImage/Alt/Default/HeroImage_720_1x.jpg';
+import AltHeroImage_720_2x_default from '@/images/HeroImage/Alt/Default/HeroImage_720_2x.jpg';
+import AltHeroImage_720_3x_default from '@/images/HeroImage/Alt/Default/HeroImage_720_3x.jpg';
+import AltHeroImage_375_1x_display from '@/images/HeroImage/Alt/Display/HeroImage_375_1x.jpg';
+import AltHeroImage_375_2x_display from '@/images/HeroImage/Alt/Display/HeroImage_375_2x.jpg';
+import AltHeroImage_375_3x_display from '@/images/HeroImage/Alt/Display/HeroImage_375_3x.jpg';
+import AltHeroImage_720_1x_display from '@/images/HeroImage/Alt/Display/HeroImage_720_1x.jpg';
+import AltHeroImage_720_2x_display from '@/images/HeroImage/Alt/Display/HeroImage_720_2x.jpg';
+import AltHeroImage_720_3x_display from '@/images/HeroImage/Alt/Display/HeroImage_720_3x.jpg';
+import Alt2HeroImage_375_1x_dark from '@/images/HeroImage/Alt2/Dark/HeroImage_375_1x.jpg';
+import Alt2HeroImage_375_2x_dark from '@/images/HeroImage/Alt2/Dark/HeroImage_375_2x.jpg';
+import Alt2HeroImage_375_3x_dark from '@/images/HeroImage/Alt2/Dark/HeroImage_375_3x.jpg';
+import Alt2HeroImage_720_1x_dark from '@/images/HeroImage/Alt2/Dark/HeroImage_720_1x.jpg';
+import Alt2HeroImage_720_2x_dark from '@/images/HeroImage/Alt2/Dark/HeroImage_720_2x.jpg';
+import Alt2HeroImage_720_3x_dark from '@/images/HeroImage/Alt2/Dark/HeroImage_720_3x.jpg';
+import Alt2HeroImage_375_1x_default from '@/images/HeroImage/Alt2/Default/HeroImage_375_1x.jpg';
+import Alt2HeroImage_375_2x_default from '@/images/HeroImage/Alt2/Default/HeroImage_375_2x.jpg';
+import Alt2HeroImage_375_3x_default from '@/images/HeroImage/Alt2/Default/HeroImage_375_3x.jpg';
+import Alt2HeroImage_720_1x_default from '@/images/HeroImage/Alt2/Default/HeroImage_720_1x.jpg';
+import Alt2HeroImage_720_2x_default from '@/images/HeroImage/Alt2/Default/HeroImage_720_2x.jpg';
+import Alt2HeroImage_720_3x_default from '@/images/HeroImage/Alt2/Default/HeroImage_720_3x.jpg';
+import Alt2HeroImage_375_1x_display from '@/images/HeroImage/Alt2/Display/HeroImage_375_1x.jpg';
+import Alt2HeroImage_375_2x_display from '@/images/HeroImage/Alt2/Display/HeroImage_375_2x.jpg';
+import Alt2HeroImage_375_3x_display from '@/images/HeroImage/Alt2/Display/HeroImage_375_3x.jpg';
+import Alt2HeroImage_720_1x_display from '@/images/HeroImage/Alt2/Display/HeroImage_720_1x.jpg';
+import Alt2HeroImage_720_2x_display from '@/images/HeroImage/Alt2/Display/HeroImage_720_2x.jpg';
+import Alt2HeroImage_720_3x_display from '@/images/HeroImage/Alt2/Display/HeroImage_720_3x.jpg';
+import GPNHeroImage_375_1x_dark from '@/images/HeroImage/GPN/Dark/HeroImage_375_1x.jpg';
+import GPNHeroImage_375_2x_dark from '@/images/HeroImage/GPN/Dark/HeroImage_375_2x.jpg';
+import GPNHeroImage_375_3x_dark from '@/images/HeroImage/GPN/Dark/HeroImage_375_3x.jpg';
+import GPNHeroImage_720_1x_dark from '@/images/HeroImage/GPN/Dark/HeroImage_720_1x.jpg';
+import GPNHeroImage_720_2x_dark from '@/images/HeroImage/GPN/Dark/HeroImage_720_2x.jpg';
+import GPNHeroImage_720_3x_dark from '@/images/HeroImage/GPN/Dark/HeroImage_720_3x.jpg';
+import GPNHeroImage_375_1x_default from '@/images/HeroImage/GPN/Default/HeroImage_375_1x.jpg';
+import GPNHeroImage_375_2x_default from '@/images/HeroImage/GPN/Default/HeroImage_375_2x.jpg';
+import GPNHeroImage_375_3x_default from '@/images/HeroImage/GPN/Default/HeroImage_375_3x.jpg';
+import GPNHeroImage_720_1x_default from '@/images/HeroImage/GPN/Default/HeroImage_720_1x.jpg';
+import GPNHeroImage_720_2x_default from '@/images/HeroImage/GPN/Default/HeroImage_720_2x.jpg';
+import GPNHeroImage_720_3x_default from '@/images/HeroImage/GPN/Default/HeroImage_720_3x.jpg';
+import GPNHeroImage_375_1x_display from '@/images/HeroImage/GPN/Display/HeroImage_375_1x.jpg';
+import GPNHeroImage_375_2x_display from '@/images/HeroImage/GPN/Display/HeroImage_375_2x.jpg';
+import GPNHeroImage_375_3x_display from '@/images/HeroImage/GPN/Display/HeroImage_375_3x.jpg';
+import GPNHeroImage_720_1x_display from '@/images/HeroImage/GPN/Display/HeroImage_720_1x.jpg';
+import GPNHeroImage_720_2x_display from '@/images/HeroImage/GPN/Display/HeroImage_720_2x.jpg';
+import GPNHeroImage_720_3x_display from '@/images/HeroImage/GPN/Display/HeroImage_720_3x.jpg';
 import { constaFigma, constaGitHub, constaUikitButton } from '@/modules/api/links';
 import { setFixedAction } from '@/modules/header';
 import { cn } from '@/utils/bem';
@@ -124,38 +160,110 @@ export const HeroScreen: React.FC = () => {
           src={{
             gpnDefault: {
               0: {
-                '1x': HeroImage_375_1x_default,
-                '2x': HeroImage_375_2x_default,
-                '4x': HeroImage_375_3x_default,
+                '1x': GPNHeroImage_375_1x_default,
+                '2x': GPNHeroImage_375_2x_default,
+                '4x': GPNHeroImage_375_3x_default,
               },
               1024: {
-                '1x': HeroImage_720_1x_default,
-                '2x': HeroImage_720_2x_default,
-                '4x': HeroImage_720_3x_default,
+                '1x': GPNHeroImage_720_1x_default,
+                '2x': GPNHeroImage_720_2x_default,
+                '4x': GPNHeroImage_720_3x_default,
               },
             },
             gpnDark: {
               0: {
-                '1x': HeroImage_375_1x_dark,
-                '2x': HeroImage_375_2x_dark,
-                '4x': HeroImage_375_3x_dark,
+                '1x': GPNHeroImage_375_1x_dark,
+                '2x': GPNHeroImage_375_2x_dark,
+                '4x': GPNHeroImage_375_3x_dark,
               },
               1024: {
-                '1x': HeroImage_720_1x_dark,
-                '2x': HeroImage_720_2x_dark,
-                '4x': HeroImage_720_3x_dark,
+                '1x': GPNHeroImage_720_1x_dark,
+                '2x': GPNHeroImage_720_2x_dark,
+                '4x': GPNHeroImage_720_3x_dark,
               },
             },
             gpnDisplay: {
               0: {
-                '1x': HeroImage_375_1x_display,
-                '2x': HeroImage_375_2x_display,
-                '4x': HeroImage_375_3x_display,
+                '1x': GPNHeroImage_375_1x_display,
+                '2x': GPNHeroImage_375_2x_display,
+                '4x': GPNHeroImage_375_3x_display,
               },
               1024: {
-                '1x': HeroImage_720_1x_display,
-                '2x': HeroImage_720_2x_display,
-                '4x': HeroImage_720_3x_display,
+                '1x': GPNHeroImage_720_1x_display,
+                '2x': GPNHeroImage_720_2x_display,
+                '4x': GPNHeroImage_720_3x_display,
+              },
+            },
+            altDefault: {
+              0: {
+                '1x': AltHeroImage_375_1x_default,
+                '2x': AltHeroImage_375_2x_default,
+                '4x': AltHeroImage_375_3x_default,
+              },
+              1024: {
+                '1x': AltHeroImage_720_1x_default,
+                '2x': AltHeroImage_720_2x_default,
+                '4x': AltHeroImage_720_3x_default,
+              },
+            },
+            altDark: {
+              0: {
+                '1x': AltHeroImage_375_1x_dark,
+                '2x': AltHeroImage_375_2x_dark,
+                '4x': AltHeroImage_375_3x_dark,
+              },
+              1024: {
+                '1x': AltHeroImage_720_1x_dark,
+                '2x': AltHeroImage_720_2x_dark,
+                '4x': AltHeroImage_720_3x_dark,
+              },
+            },
+            altDisplay: {
+              0: {
+                '1x': AltHeroImage_375_1x_display,
+                '2x': AltHeroImage_375_2x_display,
+                '4x': AltHeroImage_375_3x_display,
+              },
+              1024: {
+                '1x': AltHeroImage_720_1x_display,
+                '2x': AltHeroImage_720_2x_display,
+                '4x': AltHeroImage_720_3x_display,
+              },
+            },
+            alt2Default: {
+              0: {
+                '1x': Alt2HeroImage_375_1x_default,
+                '2x': Alt2HeroImage_375_2x_default,
+                '4x': Alt2HeroImage_375_3x_default,
+              },
+              1024: {
+                '1x': Alt2HeroImage_720_1x_default,
+                '2x': Alt2HeroImage_720_2x_default,
+                '4x': Alt2HeroImage_720_3x_default,
+              },
+            },
+            alt2Dark: {
+              0: {
+                '1x': Alt2HeroImage_375_1x_dark,
+                '2x': Alt2HeroImage_375_2x_dark,
+                '4x': Alt2HeroImage_375_3x_dark,
+              },
+              1024: {
+                '1x': Alt2HeroImage_720_1x_dark,
+                '2x': Alt2HeroImage_720_2x_dark,
+                '4x': Alt2HeroImage_720_3x_dark,
+              },
+            },
+            alt2Display: {
+              0: {
+                '1x': Alt2HeroImage_375_1x_display,
+                '2x': Alt2HeroImage_375_2x_display,
+                '4x': Alt2HeroImage_375_3x_display,
+              },
+              1024: {
+                '1x': Alt2HeroImage_720_1x_display,
+                '2x': Alt2HeroImage_720_2x_display,
+                '4x': Alt2HeroImage_720_3x_display,
               },
             },
           }}

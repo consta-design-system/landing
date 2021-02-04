@@ -1,5 +1,6 @@
 .Consta--WhyReason {
   &-Image {
+    display: inline-block;
     height: 128px;
     margin-bottom: var(--space-m);
     transform: translateX(-4%);

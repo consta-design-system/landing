@@ -37,7 +37,7 @@ export const presets = [
   {
     name: 'Ва-банк',
     value: 1,
-    brandColor: '#b80b0b',
+    brandColor: '#db3333',
   },
   {
     name: 'Алюмикель',
