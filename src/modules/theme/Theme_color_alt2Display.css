@@ -32,7 +32,7 @@
   --color-typo-link: hsl(274, 89%, 63%);
   --color-typo-link-minor: hsl(275, 30%, 54%);
   --color-typo-link-hover: hsl(274, 95%, 70%);
-  --color-nums-shadow: 0, 3, 6;
+  --color-nums-shadow: 0, 5, 6;
   --color-scroll-bg: rgba(251, 246, 253, 0.06);
   --color-scroll-thumb: rgba(251, 246, 253, 0.24);
   --color-scroll-thumb-hover: rgba(251, 246, 253, 0.32);
