@@ -37,7 +37,7 @@ export const Links: React.FC = () => {
             title="Витрина компонентов и документация"
             href={constaUikitButton}
             target="_blank"
-            description="Посмотрите, как выглядят компоненты, как они меняются и прочитайте, где и когда их лучше использовать."
+            description="Посмотрите, как выглядят компоненты, как они меняются и прочитайте, где и когда их лучше использовать."
           />
           <LinksCard
             className={themeClassNames.color.invert}
@@ -55,7 +55,7 @@ export const Links: React.FC = () => {
             title="React-библиотека"
             href={constaGitHub}
             target="_blank"
-            description="NPM-пакет с библиотекой на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
+            description="NPM-пакет с библиотекой на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
           />
         </div>
       </div>

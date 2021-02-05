@@ -61,8 +61,8 @@ export const About: React.FC = () => {
             view="secondary"
             as="p"
           >
-            Это библиотека компонентов и правила их взаимодействия — всё, что нужно дизайнерам
-            и разработчикам для создания интерфейсов.
+            Это библиотека компонентов и понятные правила их взаимодействия — всё, что нужно
+            дизайнерам и разработчикам для создания интерфейсов.
           </Text>
         </div>
         <div className="tpl-grid__fraction tpl-grid__fraction_m-col_4 ">
@@ -84,8 +84,8 @@ export const About: React.FC = () => {
         view="secondary"
         as="p"
       >
-        Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс. Похоже
-        на брендбук или гайдлайн, только удобнее: любой элемент можно взять в готовом виде и сразу
+        Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс. Похоже
+        на брендбук или гайдлайн, только удобнее: любой элемент можно взять в готовом виде и сразу
         добавить к себе.
       </Text>
 
@@ -173,13 +173,19 @@ export const About: React.FC = () => {
       </div>
 
       <div className="decorator decorator_distribute_center decorator_vertical_align_baseline">
-        <IconThumbUp size="m" view="secondary" className="decorator decorator_indent-r_m" />
+        <IconThumbUp
+          size="m"
+          view="secondary"
+          className="decorator decorator_indent-r_m"
+          style={{ flexShrink: 0 }}
+        />
         <Text size="l" view="secondary" as="p">
           Дизайн-систему можно использовать бесплатно, она распространяется ПАО «Газпром нефть» на
           условиях открытой 
           <Text href={licenceMit} size="l" view="link" as="a">
             лицензии MIT
           </Text>
+          .
         </Text>
       </div>
     </section>

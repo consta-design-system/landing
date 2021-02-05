@@ -86,7 +86,7 @@ export const HeroScreen: React.FC = () => {
 
   return (
     <div ref={ref} className="Container Section">
-      <section className={cnHeroScreen()}>
+      <section className={cnHeroScreen(null, ['decorator decorator_indent-b_4xl'])}>
         <div className={cnHeroScreen('Content')}>
           <Text
             className={cnHeroScreen('Title', ['decorator decorator_indent-v_4xl'])}
@@ -108,16 +108,6 @@ export const HeroScreen: React.FC = () => {
             </Text>
           </Text>
           <div className={cnHeroScreen('Links')}>
-            <Text
-              className="decorator decorator_indent-b_m"
-              size="l"
-              weight="regular"
-              view="secondary"
-              as="p"
-              lineHeight="xs"
-            >
-              Посмотреть библиотеку
-            </Text>
             <div className="decorator decorator_distribute_left">
               <Button
                 as="a"

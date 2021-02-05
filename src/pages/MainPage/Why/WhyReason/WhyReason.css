@@ -1,8 +1,10 @@
 .Consta--WhyReason {
+  margin-bottom: var(--space-xl);
+
   &-Image {
     display: inline-block;
     height: 128px;
-    margin-bottom: var(--space-m);
+    margin-bottom: var(--space-l);
     transform: translateX(-4%);
   }
 }
