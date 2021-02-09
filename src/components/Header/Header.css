@@ -1,15 +1,20 @@
 .Consta--Header {
+  --header-v-space: min(3vw, var(--space-m));
+  --header-h-space: min(5vw, var(--space-4xl));
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: min(3vw, var(--space-m)) min(5vw, var(--space-4xl));
+  padding: 0 var(--header-h-space) var(--header-v-space);
   background-color: var(--color-bg-default);
 
   &-Logo {
     width: 100%;
-    max-width: clamp(200px, 30vw, 264px);
-    transform: translateY(-10%);
+    max-width: clamp(240px, 30vw, 360px);
+    margin-left: calc(-1 * var(--space-xl));
+    padding: var(--space-m) var(--space-xl) var(--space-xl);
+    background-color: #fff;
+    font-size: 0;
   }
 
   &-Menu {

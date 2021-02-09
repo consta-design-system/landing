@@ -38,6 +38,9 @@
       &-Logo {
         width: 100%;
         max-width: clamp(90px, 20vw, 120px);
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
         font-size: 0;
         transform: translateY(-4%);
       }
