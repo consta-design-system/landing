@@ -31,8 +31,8 @@ export const Header: Header = React.forwardRef((props, ref) => {
 
   return (
     <header {...otherProps} ref={ref} className={cnHeader(null, [className])}>
-      {Logo &&
-        (logoLink ? (
+      {Logo ? (
+        logoLink ? (
           <a className={cnHeader('Logo')} href={logoLink} target="_blank">
             <Logo />
           </a>
@@ -40,7 +40,10 @@ export const Header: Header = React.forwardRef((props, ref) => {
           <div className={cnHeader('Logo')}>
             <Logo />
           </div>
-        ))}
+        )
+      ) : (
+        <div className={cnHeader('Logo')} />
+      )}
 
       <ul className={cnHeader('Menu')}>
         {menu &&
