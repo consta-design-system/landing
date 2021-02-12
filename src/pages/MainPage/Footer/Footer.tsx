@@ -1,10 +1,9 @@
 import './Footer.css';
 
 import React from 'react';
-import { Button } from '@consta/uikit/Button';
-import { IconForward } from '@consta/uikit/IconForward';
 import { Text } from '@consta/uikit/Text';
-import { TextField } from '@consta/uikit/TextField';
+
+import { FooterForm } from './FooterForm/FooterForm';
 
 import { constaTelegram, email, gazPromNeft, mailTo } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
@@ -25,27 +24,7 @@ export const Footer: React.FC = () => {
           Остались вопросы?
         </Text>
         <div className="tpl-grid tpl-grid_m-columns_8 tpl-grid_l-columns_12 tpl-grid_col-gap_full decorator decorator_indent-b_6xl">
-          <form
-            className={cnFooter('Form', ['tpl-grid__fraction_m-col_5 tpl-grid__fraction_l-col_7'])}
-          >
-            <TextField
-              size="l"
-              type="textarea"
-              minRows={3}
-              maxRows={5}
-              placeholder="Здесь можно задать вопрос о дизайн-системе или просто написать её разработчикам"
-              className={cnFooter('Textarea', ['decorator decorator_indent-b_m'])}
-            />
-            <div className={cnFooter('EmailPlusSubmit')}>
-              <TextField
-                size="l"
-                placeholder="Эл. почта"
-                form="defaultClear"
-                className={cnFooter('Email', ['decorator decorator_indent-b_m'])}
-              />
-              <Button size="l" form="brickDefault" iconRight={IconForward} label="Отправить" />
-            </div>
-          </form>
+          <FooterForm className="tpl-grid__fraction_m-col_5 tpl-grid__fraction_l-col_7" />
           <div
             className={cnFooter('Text', ['tpl-grid__fraction_m-col_3 tpl-grid__fraction_l-col_5'])}
           >

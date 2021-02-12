@@ -1,0 +1,13 @@
+.Consta--FooterForm {
+  &-Textarea {
+    width: 100%;
+  }
+
+  &-EmailPlusSubmit {
+    display: flex;
+  }
+
+  &-Email {
+    flex: 1 1 100%;
+  }
+}
