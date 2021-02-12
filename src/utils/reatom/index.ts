@@ -72,8 +72,9 @@ export function createFetchAction<DATA, PARAMS>(
       try {
         store.dispatch(asyncActions.start());
         const response = await f(payload);
-        if (response.data) {
-          store.dispatch(asyncActions.success(response.data));
+
+        if (!response.error) {
+          store.dispatch(asyncActions.success(response.data || null));
           return response;
         }
       } catch (error) {
