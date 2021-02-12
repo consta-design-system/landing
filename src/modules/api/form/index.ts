@@ -5,12 +5,8 @@ export async function sendFormData(params: { email: string; message: string }) {
   formData.append('email', params.email);
   formData.append('message', params.message);
 
-  const result = await fetchData<null>(`http://consta.gazprom-neft.ru/send.php`, {
+  return await fetchData<null>(`http://consta.gazprom-neft.ru/send.php`, {
     method: 'POST',
     body: formData,
   });
-
-  console.log(result);
-
-  return result;
 }
