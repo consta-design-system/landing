@@ -21,7 +21,7 @@ const CG = ['Выбери меня', 'Нет, меня'];
 const ButtonWithTooltip = withTooltip({
   content: (
     <Text size="s" align="center">
-      Тултип рисуется всегда в контрасной к основной цветовой теме
+      Это тултип, он всегда в цветовой теме, контрастной по отношению к основной
     </Text>
   ),
   mode: 'click',
@@ -57,7 +57,7 @@ export const Example: React.FC = () => {
           lineHeight="s"
           className={cnExample('Description', ['decorator decorator_indent-b_xl'])}
         >
-          Эта карточка просто абстрактный пример интерфейса.
+          Эта карточка — просто абстрактный пример интерфейса.
         </Text>
         <ChoiceGroup
           name="CG"

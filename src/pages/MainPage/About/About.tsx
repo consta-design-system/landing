@@ -182,7 +182,7 @@ export const About: React.FC = () => {
         <Text size="l" view="secondary" as="p">
           Дизайн-систему можно использовать бесплатно, она распространяется ПАО «Газпром нефть» на
           условиях открытой 
-          <Text href={licenceMit} size="l" view="link" as="a">
+          <Text href={licenceMit} target="_blank" size="l" view="link" as="a">
             лицензии MIT
           </Text>
           .
