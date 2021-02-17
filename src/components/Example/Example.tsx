@@ -57,7 +57,7 @@ export const Example: React.FC = () => {
           lineHeight="s"
           className={cnExample('Description', ['decorator decorator_indent-b_xl'])}
         >
-          Эта карточка — просто абстрактный пример интерфейса.
+          Эта карточка — просто абстрактный пример интерфейса
         </Text>
         <ChoiceGroup
           name="CG"
@@ -74,7 +74,7 @@ export const Example: React.FC = () => {
         <div className="decorator decorator_distribute_between distribute_vertical-align_center decorator_indent-b_2xl">
           <TextField
             size="l"
-            placeholder="Допустим длина"
+            placeholder="Допустим, длина"
             rightSide="м"
             width="full"
             form="defaultClear"
