@@ -84,6 +84,6 @@ export const sendAction = declareAction(nForm('send'), (payload, store) => {
       }
     });
 
-    store.dispatch(sendFetchAction({ email, message }));
+    store.dispatch(sendFetchAction({ email: email.toLowerCase(), message }));
   }
 });
