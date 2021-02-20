@@ -42,7 +42,7 @@ export const questions = [
           Для разработки
         </Text>
         <Text as="p" size="xl">
-          <Text as="span" weight="bold">
+          <Text as="span" size="xl" weight="bold">
             React
           </Text>{' '}
           — JavaScript-библиотека для создания пользовательских интерфейсов
@@ -54,7 +54,7 @@ export const questions = [
           — язык программирования для разработки веб-приложений, расширяющий возможности JavaScript
         </Text>
         <Text as="p" size="xl" className="decorator decorator_indent-b_m">
-          <Text as="span" weight="bold">
+          <Text as="span" size="xl" weight="bold">
             PostCSS
           </Text>{' '}
           — автоматизирует рутинные операции в CSS с помощью расширений, написанных на JavaScript
@@ -63,12 +63,22 @@ export const questions = [
           Для дизайна
         </Text>
         <Text as="p" size="xl">
-          <Text as="span" weight="bold">
+          <Text as="span" size="xl" weight="bold">
             Figma
           </Text>{' '}
           — инструмент для разработки интерфейсов и прототипирования
         </Text>
       </>
+    ),
+  },
+  {
+    title: 'Это только для новых продуктов?',
+    answer: (
+      <Text as="p" size="xl">
+        Не обязательно. Если ваш продукт уже работает, можно постепенно перевести его на
+        дизайн-систему. Сначала потребуются дополнительные усилия, но потом будет проще поддерживать
+        и соблюдать консистентность.
+      </Text>
     ),
   },
   {
@@ -98,16 +108,6 @@ export const questions = [
           при выборе шрифтов, цветов, формы контролов.
         </Text>
       </>
-    ),
-  },
-  {
-    title: 'Это только для новых продуктов?',
-    answer: (
-      <Text as="p" size="xl">
-        Не обязательно. Если ваш продукт уже работает, можно постепенно перевести его на
-        дизайн-систему. Сначала потребуются дополнительные усилия, но потом будет проще поддерживать
-        и соблюдать консистентность.
-      </Text>
     ),
   },
   {
