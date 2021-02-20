@@ -77,7 +77,7 @@ export const HeaderContainer: React.FC = () => {
           onlyIcon: false,
         },
         {
-          label: 'Github',
+          label: 'GitHub',
           link: constaGitHub,
           icon: IconGithub,
           onlyIcon: false,

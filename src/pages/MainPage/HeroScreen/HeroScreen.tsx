@@ -132,7 +132,7 @@ export const HeroScreen: React.FC = () => {
                 as="a"
                 href={constaGitHub}
                 target="_blank"
-                label="Github"
+                label="GitHub"
                 size="l"
                 view="secondary"
                 iconLeft={IconGithub}

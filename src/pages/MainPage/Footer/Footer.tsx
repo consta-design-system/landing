@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
             as="p"
           >
             © 2020-2021{' '}
-            <Text as="a" href={gazPromNeft} size="m" view="link">
+            <Text as="a" href={gazPromNeft} target="_blank" size="m" view="link">
               ПАО «Газпром нефть»
             </Text>
           </Text>
