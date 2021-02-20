@@ -48,7 +48,7 @@ export const questions = [
           — JavaScript-библиотека для создания пользовательских интерфейсов
         </Text>
         <Text as="p" size="xl">
-          <Text as="span" weight="bold">
+          <Text as="span" size="xl" weight="bold">
             TypeScript
           </Text>{' '}
           — язык программирования для разработки веб-приложений, расширяющий возможности JavaScript
