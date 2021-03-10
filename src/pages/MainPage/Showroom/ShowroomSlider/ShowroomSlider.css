@@ -35,17 +35,9 @@
       margin-bottom: var(--col-gap-two-thirds);
     }
 
-    & > * {
-      margin-right: var(--col-gap-third);
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
     &:nth-child(2n) {
       .Consta--ShowroomSlider-Group {
-        animation-direction: alternate-reverse;
+        animation-direction: reverse;
       }
     }
   }
@@ -55,12 +47,10 @@
     display: flex;
     align-items: center;
     animation-name: Consta--ShowroomSlider-Animate;
-    animation-duration: 1s;
-    animation-play-state: paused;
+    animation-duration: 20s;
     animation-timing-function: linear;
-    animation-delay: calc(var(--delay) * -1s);
     animation-iteration-count: infinite;
-    animation-iteration-count: 1;
+    animation-direction: normal;
     will-change: scroll-position;
     animation-fill-mode: both;
 
@@ -72,14 +62,22 @@
       }
     }
   }
+
+  &_scrollDirection {
+    &_stop {
+      & .Consta--ShowroomSlider-Group {
+        animation-play-state: paused;
+      }
+    }
+  }
 }
 
 @keyframes Consta--ShowroomSlider-Animate {
-  0% {
-    transform: translate3d(0, 0, 0);
+  from {
+    transform: translate3d(0%, 0, 0);
   }
 
-  100% {
-    transform: translate3d(-50%, 0, 0);
+  to {
+    transform: translate3d(-33.3333%, 0, 0);
   }
 }
