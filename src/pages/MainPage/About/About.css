@@ -42,12 +42,12 @@
 
     &_to {
       &_Storybook {
-        grid-column: span 2;
+        grid-column: span 1;
         background-color: var(--color-bg-link);
 
-        & .Consta--LinksToLibrary-Content {
+        /* & .Consta--LinksToLibrary-Content {
           align-items: baseline;
-        }
+        } */
       }
 
       &_Figma {
@@ -62,7 +62,8 @@
 
       @media (min-width: 720px) {
         &_Figma,
-        &_Github {
+        &_Github,
+        &_Storybook {
           min-height: 20em;
         }
       }
