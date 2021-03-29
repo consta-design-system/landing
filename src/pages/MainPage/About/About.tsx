@@ -6,6 +6,8 @@ import { IconThumbUp } from '@consta/uikit/IconThumbUp';
 import { Text } from '@consta/uikit/Text';
 import { useTheme } from '@consta/uikit/Theme';
 
+// import { ReactComponent as ConstaWidgetsLogo } from './../../../constaWidgetsLogo.image.svg';
+// import { ReactComponent as ConstaUiKitLogo } from './../../../images/constaUiKitLogo.image.svg';
 import { AboutVersionPackage } from './AboutVersionPackage/AboutVersionPackage';
 import { AboutVideo } from './AboutVideo/AboutVideo';
 
@@ -24,7 +26,7 @@ const More = (
     className={cnLinks('More', [
       'decorator decorator_distribute_left decorator_vertical-align_center decorator_indent-r_s',
     ])}
-    size="xl"
+    size="l"
     as="span"
   >
     Смотреть
@@ -90,6 +92,113 @@ export const About: React.FC = () => {
       </Text>
 
       <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_2xl'])}>
+        <Text>Consta UIkit</Text>
+        {/* <ConstaUiKitLogo /> */}
+        <Text
+          className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
+          size="2xl"
+          view="secondary"
+          as="p"
+        >
+          Тут будет описание UI kit, подробное, чтобы было понятно что происходит
+        </Text>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3,1fr)',
+            columnGap: 'var(--space-l)',
+          }}
+        >
+          {[
+            {
+              title: 'Всем-всем',
+              subTitle:
+                'Витрина готовых компонентов с подробной документацией и правилами использования.',
+              hasVersion: false,
+              icon: 'storybook',
+              href: constaUikitButton,
+            },
+            {
+              title: 'Дизайнерам',
+              subTitle: 'Правила использования и библиотека компонентов в Figma Community.',
+              hasVersion: false,
+              icon: 'figma',
+              href: constaFigma,
+            },
+            {
+              title: 'Разработчикам',
+              subTitle: 'Библиотека компонентов в виде NPM пакета на Github.',
+              hasVersion: true,
+              icon: 'github',
+              href: constaGitHub,
+            },
+          ].map((item) => (
+            <>
+              <a
+                href={item.href}
+                target="_blank"
+                className={cnLinks(
+                  'Item',
+                  { to: `${item.icon[0].toUpperCase()}${item.icon.slice(1)}` },
+                  [themeClassNames.color.accent],
+                )}
+              >
+                {/* <div className={cnLinks('Content', ['tpl-grid tpl-grid_l-ratio_1-1'])}> */}
+                {/* <div className="tpl-grid__fraction"> */}
+                <div>
+                  <Text
+                    className={cnLinks('Title', ['decorator decorator_indent-b_m'])}
+                    size="2xl"
+                    weight="bold"
+                    as="h3"
+                    lineHeight="xs"
+                  >
+                    {item.title}
+                  </Text>
+                  {/* </div> */}
+                  <Text className={cnLinks('Text')} size="l" as="p">
+                    {item.subTitle}
+                  </Text>
+                  {/* </div> */}
+                  {item.hasVersion && (
+                    <div
+                      className={cnLinks('Text', [
+                        item.hasVersion ? 'decorator decorator_indent-t_m' : '',
+                      ])}
+                    >
+                      <AboutVersionPackage />
+                    </div>
+                  )}
+                </div>
+
+                <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
+                  {/* {() => {
+                    return {
+                      storybook: <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />,
+                      figma: <IconFigma size="m" view="primary" className={cnLinks('Logo')} />,
+                      github: <IconGithub size="m" view="primary" className={cnLinks('Logo')} />,
+                    }[item.icon];
+                  }} */}
+
+                  {item.icon === 'storybook' && (
+                    <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
+                  {item.icon === 'figma' && (
+                    <IconFigma size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
+                  {item.icon === 'github' && (
+                    <IconGithub size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
+
+                  {More}
+                </div>
+              </a>
+            </>
+          ))}
+        </div>
+      </div>
+
+      {/* <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_2xl'])}>
         <a
           href={constaUikitButton}
           target="_blank"
@@ -170,7 +279,7 @@ export const About: React.FC = () => {
             {More}
           </div>
         </a>
-      </div>
+      </div> */}
 
       <div className="decorator decorator_distribute_center decorator_vertical_align_baseline">
         <IconThumbUp
