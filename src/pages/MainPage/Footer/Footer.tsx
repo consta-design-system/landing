@@ -1,11 +1,18 @@
 import './Footer.css';
 
 import React from 'react';
+import { IconOpenInNew } from '@consta/uikit/IconOpenInNew';
 import { Text } from '@consta/uikit/Text';
 
 import { FooterForm } from './FooterForm/FooterForm';
 
-import { constaTelegram, email, gazPromNeft, mailTo } from '@/modules/api/links';
+import {
+  constaLandingRepository,
+  constaTelegram,
+  email,
+  gazPromNeft,
+  mailTo,
+} from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnFooter = cn('Footer');
@@ -55,6 +62,9 @@ export const Footer: React.FC = () => {
             <Text as="a" href={gazPromNeft} target="_blank" size="m" view="link">
               ПАО «Газпром нефть»
             </Text>
+          </Text>
+          <Text as="a" href={constaLandingRepository} target="_blank" size="m" view="link">
+            Репозиторий этой страницы <IconOpenInNew size="s" />
           </Text>
         </div>
       </div>
