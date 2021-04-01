@@ -52,19 +52,14 @@ export const Footer: React.FC = () => {
           </div>
         </div>
         <div className={cnFooter('Copyright')}>
-          <Text
-            className={cnFooter('Text', ['tpl-grid__fraction_m-col_3 tpl-grid__fraction_l-col_5'])}
-            size="m"
-            view="secondary"
-            as="p"
-          >
+          <Text as="a" href={constaLandingRepository} target="_blank" size="m" view="link">
+            Репозиторий этой страницы <IconOpenInNew size="s" />
+          </Text>
+          <Text size="m" view="secondary" as="p">
             © 2020-2021{' '}
             <Text as="a" href={gazPromNeft} target="_blank" size="m" view="link">
               ПАО «Газпром нефть»
             </Text>
-          </Text>
-          <Text as="a" href={constaLandingRepository} target="_blank" size="m" view="link">
-            Репозиторий этой страницы <IconOpenInNew size="s" />
           </Text>
         </div>
       </div>
