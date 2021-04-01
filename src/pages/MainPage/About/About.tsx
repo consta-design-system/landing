@@ -12,6 +12,7 @@ import { AboutVideo } from './AboutVideo/AboutVideo';
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
+import ConstaUiKitLogo from '@/images/ConstaUiKitLogo.image.svg';
 import {
   constaFigma,
   constaGitHub,
@@ -110,7 +111,7 @@ export const About: React.FC = () => {
             >
               вместо этого текста должен быть свг лого Consta UIkit
             </Text>
-            {/* <img src={ConstaUiKit} /> */}
+            <ConstaUiKitLogo className="dddds" />
 
             <Text className={cnLinks('Text')} size="xl" as="p">
               Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс.
