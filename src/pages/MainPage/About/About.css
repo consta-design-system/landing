@@ -32,22 +32,39 @@
     padding: var(--space-xl) var(--space-l);
     text-decoration: none;
 
-    @media (min-width: 720px) {
-      padding: var(--space-2xl);
+    & > div > svg {
+      margin-bottom: var(--space-m);
     }
 
-    @media (min-width: 1200px) {
-      padding: var(--space-3xl);
+    &_withBg {
+      background-position: center;
+      background-size: cover;
+
+      &_uikitLightOverlay {
+        background: linear-gradient(0deg, var(--color-bg-soft), var(--color-bg-soft)),
+          url('../../../images/ConstaUiKitBlockBg.png');
+      }
+
+      &_uikitDarkOverlay {
+        background: linear-gradient(0deg, var(--color-bg-tone), var(--color-bg-tone)),
+          url('../../../images/ConstaUiKitBlockBg.png');
+      }
+
+      &_widgetsLightOverlay {
+        background: linear-gradient(0deg, var(--color-bg-soft), var(--color-bg-soft)),
+          url('../../../images/ConstaWidgetsBlockBg.png');
+      }
+
+      &_widgetsDarkOverlay {
+        background: linear-gradient(0deg, var(--color-bg-tone), var(--color-bg-tone)),
+          url('../../../images/ConstaWidgetsBlockBg.png');
+      }
     }
 
     &_to {
       &_Storybook {
         grid-column: span 1;
         background-color: var(--color-bg-link);
-
-        /* & .Consta--LinksToLibrary-Content {
-          align-items: baseline;
-        } */
       }
 
       &_Figma {
@@ -67,6 +84,14 @@
           min-height: 20em;
         }
       }
+    }
+
+    @media (min-width: 720px) {
+      padding: var(--space-2xl);
+    }
+
+    @media (min-width: 1200px) {
+      padding: var(--space-3xl);
     }
   }
 

@@ -13,6 +13,7 @@ import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
 import ConstaUiKitLogo from '@/images/ConstaUiKitLogo.image.svg';
+import ConstaWidgetsLogo from '@/images/ConstaWidgetsLogo.image.svg';
 import {
   constaFigma,
   constaGitHub,
@@ -46,7 +47,7 @@ const More = (
 );
 
 export const About: React.FC = () => {
-  const { themeClassNames } = useTheme();
+  const { theme, themeClassNames } = useTheme();
   return (
     <section className={cnAbout(null, ['Container', 'Section'])}>
       <div
@@ -70,7 +71,7 @@ export const About: React.FC = () => {
             view="secondary"
             as="p"
           >
-            Это библиотека компонентов и понятные правила их взаимодействия — всё, что нужно
+            Это библиотеки компонентов и понятные правила их взаимодействия — всё, что нужно
             дизайнерам и разработчикам для создания интерфейсов.
           </Text>
         </div>
@@ -79,7 +80,7 @@ export const About: React.FC = () => {
         </div>
       </div>
       <Text
-        className={cnAbout('Title', ['decorator decorator_indent-t_3xl decorator_indent-b_3xl'])}
+        className={cnAbout('Title', ['decorator decorator_indent-t_5xl decorator_indent-b_3xl'])}
         size="3xl"
         weight="bold"
         as="h3"
@@ -100,19 +101,16 @@ export const About: React.FC = () => {
 
       {/* Блок про UI kit Начало */}
 
-      <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_2xl'])}>
-        <div className={cnLinks('Item')}>
+      <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_4xl'])}>
+        <div
+          className={cnLinks('Item', {
+            withBg: theme.color.primary.includes('Default')
+              ? 'uikitLightOverlay'
+              : 'uikitDarkOverlay',
+          })}
+        >
           <div>
-            <Text
-              className={cnLinks('Text', ['decorator decorator_indent-b_xl'])}
-              size="m"
-              as="p"
-              weight="bold"
-            >
-              вместо этого текста должен быть свг лого Consta UIkit
-            </Text>
-            <ConstaUiKitLogo className="dddds" />
-
+            <ConstaUiKitLogo />
             <Text className={cnLinks('Text')} size="xl" as="p">
               Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс.
               Похоже на брендбук или гайдлайн, только удобнее: любой элемент можно взять в готовом
@@ -136,7 +134,7 @@ export const About: React.FC = () => {
             >
               Всем-всем
             </Text>
-            <Text className={cnLinks('Text')} size="xl" as="p">
+            <Text view="secondary" className={cnLinks('Text')} size="xl" as="p">
               Витрина готовых компонентов с подробной документацией и правилами использования.
             </Text>
           </div>
@@ -145,27 +143,6 @@ export const About: React.FC = () => {
             <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />
             {More}
           </div>
-          {/* <div className={cnLinks('Content', ['tpl-grid tpl-grid_l-ratio_1-1'])}>
-            <div className="tpl-grid__fraction">
-              <Text
-                className={cnLinks('Title', ['decorator decorator_indent-b_xl'])}
-                size="3xl"
-                weight="bold"
-                as="h3"
-                lineHeight="xs"
-              >
-                Всем-всем
-              </Text>
-            </div>
-            <Text className={cnLinks('Text')} size="xl" as="p">
-              Витрина готовых компонентов с подробной документацией и правилами использования.
-            </Text>
-          </div>
-
-          <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
-            <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />
-            {More}
-          </div> */}
         </a>
 
         <a
@@ -183,7 +160,7 @@ export const About: React.FC = () => {
             >
               Дизайнерам
             </Text>
-            <Text className={cnLinks('Text')} size="xl" as="p">
+            <Text view="secondary" className={cnLinks('Text')} size="xl" as="p">
               Правила использования и библиотека компонентов в Figma Community.
             </Text>
           </div>
@@ -209,7 +186,12 @@ export const About: React.FC = () => {
             >
               Разработчикам
             </Text>
-            <Text className={cnLinks('Text', ['decorator decorator_indent-b_s'])} size="xl" as="p">
+            <Text
+              view="secondary"
+              className={cnLinks('Text', ['decorator decorator_indent-b_s'])}
+              size="xl"
+              as="p"
+            >
               Библиотека компонентов в виде NPM-пакета на GitHub
             </Text>
             <AboutVersionPackage />
@@ -227,18 +209,15 @@ export const About: React.FC = () => {
       {/* Блок про Widgets Начало */}
 
       <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_2xl'])}>
-        <div className={cnLinks('Item')}>
+        <div
+          className={cnLinks('Item', {
+            withBg: theme.color.primary.includes('Default')
+              ? 'widgetsLightOverlay'
+              : 'widgetsDarkOverlay',
+          })}
+        >
           <div>
-            <Text
-              className={cnLinks('Text', ['decorator decorator_indent-b_xl'])}
-              size="m"
-              as="p"
-              weight="bold"
-            >
-              вместо этого текста должен быть свг лого Consta Widgets
-            </Text>
-            {/* <img src={ConstaUiKit} /> */}
-
+            <ConstaWidgetsLogo />
             <Text className={cnLinks('Text')} size="xl" as="p">
               Графики графики графики — описание библиотеки с виджетами
             </Text>
