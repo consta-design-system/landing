@@ -4,6 +4,36 @@
   &-Lead {
     align-items: center;
   }
+
+  &-Links_withBg {
+    &_uikitLightOverlay {
+      background: linear-gradient(0deg, var(--color-bg-soft), var(--color-bg-soft)),
+        url('../../../images/ConstaUiKitBlockBg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &_uikitDarkOverlay {
+      background: linear-gradient(0deg, var(--color-bg-tone), var(--color-bg-tone)),
+        url('../../../images/ConstaUiKitBlockBg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &_widgetsLightOverlay {
+      background: linear-gradient(0deg, var(--color-bg-soft), var(--color-bg-soft)),
+        url('../../../images/ConstaWidgetsBlockBg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &_widgetsDarkOverlay {
+      background: linear-gradient(0deg, var(--color-bg-tone), var(--color-bg-tone)),
+        url('../../../images/ConstaWidgetsBlockBg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 }
 
 .Consta--LinksToLibrary {

@@ -15,15 +15,15 @@ import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
 import ConstaUiKitLogo from '@/images/ConstaUiKitLogo.image.svg';
-// import ConstaWidgetsLogo from '@/images/ConstaWidgetsLogo.image.svg';
+import ConstaWidgetsLogo from '@/images/ConstaWidgetsLogo.image.svg';
 // import { constaFigma, constaGitHub, constaUikitButton, licenceMit } from '@/modules/api/links';
 import {
   constaFigma,
   constaGitHub,
   constaUikitButton,
-  // constaWidgetsBarChart,
-  // constaWidgetsFigma,
-  // constaWidgetsGitHub,
+  constaWidgetsBarChart,
+  constaWidgetsFigma,
+  constaWidgetsGitHub,
   licenceMit,
 } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
@@ -50,7 +50,7 @@ const More = (
 );
 
 export const About: React.FC = () => {
-  const { themeClassNames } = useTheme();
+  const { theme, themeClassNames } = useTheme();
   return (
     <section className={cnAbout(null, ['Container', 'Section'])}>
       <div
@@ -103,11 +103,15 @@ export const About: React.FC = () => {
       </Text> */}
 
       <div
-        className={cnAbout('Links', [
-          'uikitLightOverlay',
-          cnLinks(),
-          'decorator decorator_indent-b_2xl',
-        ])}
+        className={cnAbout(
+          'Links',
+          {
+            withBg: theme.color.primary.includes('Default')
+              ? 'uikitLightOverlay'
+              : 'uikitDarkOverlay',
+          },
+          [cnLinks(), 'decorator decorator_indent-b_2xl'],
+        )}
       >
         <ConstaUiKitLogo />
         <Text
@@ -143,6 +147,118 @@ export const About: React.FC = () => {
               hasVersion: true,
               icon: 'github',
               href: constaGitHub,
+            },
+          ].map((item) => (
+            <>
+              <a
+                href={item.href}
+                target="_blank"
+                className={cnLinks(
+                  'Item',
+                  { to: `${item.icon[0].toUpperCase()}${item.icon.slice(1)}` },
+                  [themeClassNames.color.accent],
+                )}
+              >
+                {/* <div className={cnLinks('Content', ['tpl-grid tpl-grid_l-ratio_1-1'])}> */}
+                {/* <div className="tpl-grid__fraction"> */}
+                <div>
+                  <Text
+                    className={cnLinks('Title', ['decorator decorator_indent-b_m'])}
+                    size="2xl"
+                    weight="bold"
+                    as="h3"
+                    lineHeight="xs"
+                  >
+                    {item.title}
+                  </Text>
+                  {/* </div> */}
+                  <Text className={cnLinks('Text')} size="l" as="p">
+                    {item.subTitle}
+                  </Text>
+                  {/* </div> */}
+                  {item.hasVersion && (
+                    <div
+                      className={cnLinks('Text', [
+                        item.hasVersion ? 'decorator decorator_indent-t_m' : '',
+                      ])}
+                    >
+                      <AboutVersionPackage />
+                    </div>
+                  )}
+                </div>
+
+                <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
+                  {/* {() => {
+                    return {
+                      storybook: <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />,
+                      figma: <IconFigma size="m" view="primary" className={cnLinks('Logo')} />,
+                      github: <IconGithub size="m" view="primary" className={cnLinks('Logo')} />,
+                    }[item.icon];
+                  }} */}
+
+                  {item.icon === 'storybook' && (
+                    <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
+                  {item.icon === 'figma' && (
+                    <IconFigma size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
+                  {item.icon === 'github' && (
+                    <IconGithub size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
+
+                  {More}
+                </div>
+              </a>
+            </>
+          ))}
+        </div>
+      </div>
+
+      <div
+        className={cnAbout(
+          'Links',
+          {
+            withBg: theme.color.primary.includes('Default')
+              ? 'widgetsLightOverlay'
+              : 'widgetsDarkOverlay',
+          },
+          [cnLinks(), 'decorator decorator_indent-b_2xl'],
+        )}
+      >
+        <ConstaWidgetsLogo />
+        <Text
+          className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
+          size="2xl"
+          view="secondary"
+          as="p"
+        >
+          Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс. Похоже
+          на брендбук или гайдлайн, только удобнее: любой элемент можно взять в готовом виде и сразу
+          добавить к себе.
+        </Text>
+        <div className={cnLinks('Cards')}>
+          {[
+            {
+              title: 'Всем-всем',
+              subTitle:
+                'Витрина готовых компонентов с подробной документацией и правилами использования.',
+              hasVersion: false,
+              icon: 'storybook',
+              href: constaWidgetsBarChart,
+            },
+            {
+              title: 'Дизайнерам',
+              subTitle: 'Правила использования и библиотека компонентов в Figma Community.',
+              hasVersion: false,
+              icon: 'figma',
+              href: constaWidgetsFigma,
+            },
+            {
+              title: 'Разработчикам',
+              subTitle: 'Библиотека компонентов в виде NPM пакета на Github.',
+              hasVersion: true,
+              icon: 'github',
+              href: constaWidgetsGitHub,
             },
           ].map((item) => (
             <>
