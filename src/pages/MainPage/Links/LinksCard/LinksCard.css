@@ -35,17 +35,36 @@
 
   &-Footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
 
-  &-More,
+  &-Brick {
+    display: inherit;
+    justify-content: space-between;
+    text-decoration: none;
+
+    &:first-child {
+      margin-bottom: var(--space-s);
+    }
+
+    &-More,
+    .Consta--LinksCard-Arrow {
+      transition: transform 0.3s;
+    }
+
+    &:hover .Consta--LinksCard-Arrow {
+      transform: translateX(var(--space-m));
+    }
+  }
+
+  /* &-More,
   &-Arrow {
     transition: transform 0.3s;
   }
 
   &:hover &-Arrow {
     transform: translateX(var(--space-m));
-  }
+  } */
 
   &:hover &-Title span {
     background-size: 1px 1em;
