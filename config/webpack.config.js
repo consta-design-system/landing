@@ -504,7 +504,7 @@ module.exports = function (webpackEnv) {
               ),
             },
             {
-              test: /(\/|\\)icons(\/|\\)[\w\.\-\/]*\.svg$/,
+              test: /\.icon\.svg$/,
               use: [
                 {
                   loader: '@svgr/webpack',
@@ -539,7 +539,7 @@ module.exports = function (webpackEnv) {
               ],
             },
             {
-              test: /(\/|\\)images(\/|\\)[\w\.\-\/]*\.svg$/,
+              test: /\.image\.svg$/,
               use: [
                 {
                   loader: '@svgr/webpack',
