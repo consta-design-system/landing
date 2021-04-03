@@ -14,7 +14,18 @@ import { AboutVideo } from './AboutVideo/AboutVideo';
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
-import { constaFigma, constaGitHub, constaUikitButton, licenceMit } from '@/modules/api/links';
+import ConstaUiKitLogo from '@/images/ConstaUiKitLogo.image.svg';
+import ConstaWidgetsLogo from '@/images/ConstaWidgetsLogo.image.svg';
+// import { constaFigma, constaGitHub, constaUikitButton, licenceMit } from '@/modules/api/links';
+import {
+  constaFigma,
+  constaGitHub,
+  constaUikitButton,
+  // constaWidgetsBarChart,
+  // constaWidgetsFigma,
+  // constaWidgetsGitHub,
+  licenceMit,
+} from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnAbout = cn('About');
@@ -92,8 +103,8 @@ export const About: React.FC = () => {
       </Text>
 
       <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_2xl'])}>
-        <Text>Consta UIkit</Text>
-        {/* <ConstaUiKitLogo /> */}
+        <ConstaUiKitLogo />
+        <ConstaWidgetsLogo />
         <Text
           className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
           size="2xl"
