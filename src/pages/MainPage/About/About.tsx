@@ -50,12 +50,12 @@ const More = (
 );
 
 export const About: React.FC = () => {
-  const { theme, themeClassNames } = useTheme();
+  const { themeClassNames } = useTheme();
   return (
     <section className={cnAbout(null, ['Container', 'Section'])}>
       <div
         className={cnAbout('Lead', [
-          'tpl-grid tpl-grid_col-gap_half tpl-grid_row-gap_full tpl-grid_m-columns_12 decorator decorator_space-b_2xl',
+          'tpl-grid tpl-grid_col-gap_half tpl-grid_row-gap_full tpl-grid_m-columns_12 decorator decorator_space-b_5xl',
         ])}
       >
         <div className="tpl-grid__fraction tpl-grid__fraction_m-col_8">
@@ -74,7 +74,7 @@ export const About: React.FC = () => {
             view="secondary"
             as="p"
           >
-            Это библиотека компонентов и понятные правила их взаимодействия — всё, что нужно
+            Это библиотеки компонентов и понятные правила их взаимодействия — всё, что нужно
             дизайнерам и разработчикам для создания интерфейсов.
           </Text>
         </div>
@@ -82,37 +82,28 @@ export const About: React.FC = () => {
           <AboutVideo />
         </div>
       </div>
-      <Text
-        className={cnAbout('Title', ['decorator decorator_indent-t_3xl decorator_indent-b_3xl'])}
-        size="3xl"
-        weight="bold"
-        as="h3"
-        lineHeight="xs"
-      >
-        Библиотеки
-      </Text>
-      {/* <Text
-        className={cnAbout('Title', ['decorator decorator_indent-b_5xl'])}
-        size="2xl"
-        view="secondary"
-        as="p"
-      >
-        Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс. Похоже
-        на брендбук или гайдлайн, только удобнее: любой элемент можно взять в готовом виде и сразу
-        добавить к себе.
-      </Text> */}
 
       <div
         className={cnAbout(
           'Links',
-          {
-            withBg: theme.color.primary.includes('Default')
-              ? 'uikitLightOverlay'
-              : 'uikitDarkOverlay',
-          },
-          [cnLinks(), 'decorator decorator_indent-b_3xl'],
+          // {
+          //   withBg: theme.color.primary.includes('Default')
+          //     ? 'uikitLightOverlay'
+          //     : 'uikitDarkOverlay',
+          // },
+          [cnLinks(), 'decorator decorator_indent-b_5xl'],
         )}
       >
+        <Text
+          className={cnAbout('Title', ['decorator decorator_indent-b_2xs'])}
+          size="l"
+          weight="semibold"
+          as="h3"
+          lineHeight="xs"
+          view="ghost"
+        >
+          Библиотека
+        </Text>
         <ConstaUiKitLogo />
         <Text
           className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
@@ -131,6 +122,7 @@ export const About: React.FC = () => {
               hasVersion: false,
               icon: 'storybook',
               href: constaUikitButton,
+              additionalClassNames: themeClassNames.color.accent,
             },
             {
               title: 'Дизайнерам',
@@ -138,6 +130,7 @@ export const About: React.FC = () => {
               hasVersion: false,
               icon: 'figma',
               href: constaFigma,
+              additionalClassNames: themeClassNames.color.invert,
             },
             {
               title: 'Разработчикам',
@@ -145,6 +138,7 @@ export const About: React.FC = () => {
               hasVersion: true,
               icon: 'github',
               href: constaGitHub,
+              additionalClassNames: themeClassNames.color.invert,
             },
           ].map((item) => (
             <>
@@ -154,7 +148,7 @@ export const About: React.FC = () => {
                 className={cnLinks(
                   'Item',
                   { to: `${item.icon[0].toUpperCase()}${item.icon.slice(1)}` },
-                  [themeClassNames.color.accent],
+                  [item.additionalClassNames],
                 )}
               >
                 <div>
@@ -203,14 +197,24 @@ export const About: React.FC = () => {
       <div
         className={cnAbout(
           'Links',
-          {
-            withBg: theme.color.primary.includes('Default')
-              ? 'widgetsLightOverlay'
-              : 'widgetsDarkOverlay',
-          },
+          // {
+          //   withBg: theme.color.primary.includes('Default')
+          //     ? 'widgetsLightOverlay'
+          //     : 'widgetsDarkOverlay',
+          // },
           [cnLinks(), 'decorator decorator_indent-b_2xl'],
         )}
       >
+        <Text
+          className={cnAbout('Title', ['decorator decorator_indent-b_2xs'])}
+          size="l"
+          weight="semibold"
+          as="h3"
+          lineHeight="xs"
+          view="ghost"
+        >
+          Библиотека
+        </Text>
         <ConstaWidgetsLogo />
         <Text
           className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
@@ -229,6 +233,7 @@ export const About: React.FC = () => {
               hasVersion: false,
               icon: 'storybook',
               href: constaWidgetsBarChart,
+              additionalClassNames: themeClassNames.color.accent,
             },
             {
               title: 'Дизайнерам',
@@ -236,6 +241,7 @@ export const About: React.FC = () => {
               hasVersion: false,
               icon: 'figma',
               href: constaWidgetsFigma,
+              additionalClassNames: themeClassNames.color.invert,
             },
             {
               title: 'Разработчикам',
@@ -243,6 +249,7 @@ export const About: React.FC = () => {
               hasVersion: true,
               icon: 'github',
               href: constaWidgetsGitHub,
+              additionalClassNames: themeClassNames.color.invert,
             },
           ].map((item) => (
             <>
@@ -252,11 +259,9 @@ export const About: React.FC = () => {
                 className={cnLinks(
                   'Item',
                   { to: `${item.icon[0].toUpperCase()}${item.icon.slice(1)}` },
-                  [themeClassNames.color.accent],
+                  [item.additionalClassNames],
                 )}
               >
-                {/* <div className={cnLinks('Content', ['tpl-grid tpl-grid_l-ratio_1-1'])}> */}
-                {/* <div className="tpl-grid__fraction"> */}
                 <div>
                   <Text
                     className={cnLinks('Title', ['decorator decorator_indent-b_m'])}
@@ -267,11 +272,9 @@ export const About: React.FC = () => {
                   >
                     {item.title}
                   </Text>
-                  {/* </div> */}
                   <Text className={cnLinks('Text')} size="l" as="p">
                     {item.subTitle}
                   </Text>
-                  {/* </div> */}
                   {item.hasVersion && (
                     <div
                       className={cnLinks('Text', [
@@ -284,14 +287,6 @@ export const About: React.FC = () => {
                 </div>
 
                 <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
-                  {/* {() => {
-                    return {
-                      storybook: <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />,
-                      figma: <IconFigma size="m" view="primary" className={cnLinks('Logo')} />,
-                      github: <IconGithub size="m" view="primary" className={cnLinks('Logo')} />,
-                    }[item.icon];
-                  }} */}
-
                   {item.icon === 'storybook' && (
                     <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />
                   )}
