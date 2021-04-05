@@ -6,8 +6,6 @@ import { IconThumbUp } from '@consta/uikit/IconThumbUp';
 import { Text } from '@consta/uikit/Text';
 import { useTheme } from '@consta/uikit/Theme';
 
-// import { ReactComponent as ConstaWidgetsLogo } from './../../../constaWidgetsLogo.image.svg';
-// import { ReactComponent as ConstaUiKitLogo } from './../../../images/constaUiKitLogo.image.svg';
 import { AboutVersionPackage } from './AboutVersionPackage/AboutVersionPackage';
 import { AboutVideo } from './AboutVideo/AboutVideo';
 
@@ -16,7 +14,6 @@ import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
 import ConstaUiKitLogo from '@/images/ConstaUiKitLogo.image.svg';
 import ConstaWidgetsLogo from '@/images/ConstaWidgetsLogo.image.svg';
-// import { constaFigma, constaGitHub, constaUikitButton, licenceMit } from '@/modules/api/links';
 import {
   constaFigma,
   constaGitHub,
@@ -83,17 +80,7 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      <div
-        className={cnAbout(
-          'Links',
-          // {
-          //   withBg: theme.color.primary.includes('Default')
-          //     ? 'uikitLightOverlay'
-          //     : 'uikitDarkOverlay',
-          // },
-          [cnLinks(), 'decorator decorator_indent-b_5xl'],
-        )}
-      >
+      <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_5xl'])}>
         <Text
           className={cnAbout('Title', ['decorator decorator_indent-b_2xs'])}
           size="l"
@@ -194,17 +181,7 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      <div
-        className={cnAbout(
-          'Links',
-          // {
-          //   withBg: theme.color.primary.includes('Default')
-          //     ? 'widgetsLightOverlay'
-          //     : 'widgetsDarkOverlay',
-          // },
-          [cnLinks(), 'decorator decorator_indent-b_2xl'],
-        )}
-      >
+      <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_5xl'])}>
         <Text
           className={cnAbout('Title', ['decorator decorator_indent-b_2xs'])}
           size="l"
