@@ -110,7 +110,7 @@ export const About: React.FC = () => {
               ? 'uikitLightOverlay'
               : 'uikitDarkOverlay',
           },
-          [cnLinks(), 'decorator decorator_indent-b_2xl'],
+          [cnLinks(), 'decorator decorator_indent-b_3xl'],
         )}
       >
         <ConstaUiKitLogo />
@@ -120,16 +120,14 @@ export const About: React.FC = () => {
           view="secondary"
           as="p"
         >
-          Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс. Похоже
-          на брендбук или гайдлайн, только удобнее: любой элемент можно взять в готовом виде и сразу
-          добавить к себе.
+          Кнопки, иконки, списки, таблицы — основные элементы, из которых собирается интерфейс.
         </Text>
         <div className={cnLinks('Cards')}>
           {[
             {
               title: 'Всем-всем',
               subTitle:
-                'Витрина готовых компонентов с подробной документацией и правилами использования.',
+                'Витрина основных компонентов с подробной документацией и правилами использования.',
               hasVersion: false,
               icon: 'storybook',
               href: constaUikitButton,
@@ -143,7 +141,7 @@ export const About: React.FC = () => {
             },
             {
               title: 'Разработчикам',
-              subTitle: 'Библиотека компонентов в виде NPM пакета на Github.',
+              subTitle: 'Библиотека основных компонентов в виде NPM-пакета на GitHub.',
               hasVersion: true,
               icon: 'github',
               href: constaGitHub,
@@ -159,8 +157,6 @@ export const About: React.FC = () => {
                   [themeClassNames.color.accent],
                 )}
               >
-                {/* <div className={cnLinks('Content', ['tpl-grid tpl-grid_l-ratio_1-1'])}> */}
-                {/* <div className="tpl-grid__fraction"> */}
                 <div>
                   <Text
                     className={cnLinks('Title', ['decorator decorator_indent-b_m'])}
@@ -171,11 +167,9 @@ export const About: React.FC = () => {
                   >
                     {item.title}
                   </Text>
-                  {/* </div> */}
                   <Text className={cnLinks('Text')} size="l" as="p">
                     {item.subTitle}
                   </Text>
-                  {/* </div> */}
                   {item.hasVersion && (
                     <div
                       className={cnLinks('Text', [
@@ -188,14 +182,6 @@ export const About: React.FC = () => {
                 </div>
 
                 <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
-                  {/* {() => {
-                    return {
-                      storybook: <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />,
-                      figma: <IconFigma size="m" view="primary" className={cnLinks('Logo')} />,
-                      github: <IconGithub size="m" view="primary" className={cnLinks('Logo')} />,
-                    }[item.icon];
-                  }} */}
-
                   {item.icon === 'storybook' && (
                     <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />
                   )}
@@ -232,30 +218,28 @@ export const About: React.FC = () => {
           view="secondary"
           as="p"
         >
-          Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс. Похоже
-          на брендбук или гайдлайн, только удобнее: любой элемент можно взять в готовом виде и сразу
-          добавить к себе.
+          Разные виды диаграмм — линейные, столбчатые, круговые. Всё, чтобы красиво показывать и
+          сравнивать данные.
         </Text>
         <div className={cnLinks('Cards')}>
           {[
             {
               title: 'Всем-всем',
-              subTitle:
-                'Витрина готовых компонентов с подробной документацией и правилами использования.',
+              subTitle: 'Витрина диаграмм с подробной документацией и правилами использования.',
               hasVersion: false,
               icon: 'storybook',
               href: constaWidgetsBarChart,
             },
             {
               title: 'Дизайнерам',
-              subTitle: 'Правила использования и библиотека компонентов в Figma Community.',
+              subTitle: 'Диаграммы в Figma Community: библиотека и правила использования.',
               hasVersion: false,
               icon: 'figma',
               href: constaWidgetsFigma,
             },
             {
               title: 'Разработчикам',
-              subTitle: 'Библиотека компонентов в виде NPM пакета на Github.',
+              subTitle: 'Библиотека диаграмм в виде NPM-пакета на GitHub.',
               hasVersion: true,
               icon: 'github',
               href: constaWidgetsGitHub,
