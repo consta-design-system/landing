@@ -52,7 +52,7 @@
     }
 
     &:hover {
-      background-color: var(--color-bg-stripe);
+      background-color: var(--color-control-bg-ghost-hover);
     }
 
     /* &-More,

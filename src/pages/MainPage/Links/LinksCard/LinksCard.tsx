@@ -99,12 +99,7 @@ export const LinksCard: React.FC<Props> = (props) => {
           >
             Consta Kit
           </Text>
-          <IconOpenInNew
-            // className={cnLinksCard('Arrow', ['decorator decorator_indent-l_m'])}
-            className={cnLinksCard('Arrow')}
-            size="m"
-            view="primary"
-          />
+          <IconOpenInNew className={cnLinksCard('Arrow')} size="m" view="primary" />
         </a>
         <a className={cnLinksCard('Brick')} href={hrefWidgets} target="_blank">
           {/* <ButtonCopyLink
