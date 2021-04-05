@@ -88,16 +88,6 @@ export const About: React.FC = () => {
       >
         Библиотеки
       </Text>
-      {/* <Text
-        className={cnAbout('Title', ['decorator decorator_indent-b_5xl'])}
-        size="2xl"
-        view="secondary"
-        as="p"
-      >
-        Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс. Похоже
-        на брендбук или гайдлайн, только удобнее: любой элемент можно взять в готовом виде и сразу
-        добавить к себе.
-      </Text> */}
 
       {/* Блок про UI kit Начало */}
 
@@ -112,9 +102,7 @@ export const About: React.FC = () => {
           <div>
             <ConstaUiKitLogo />
             <Text className={cnLinks('Text')} size="xl" as="p">
-              Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс.
-              Похоже на брендбук или гайдлайн, только удобнее: любой элемент можно взять в готовом
-              виде и сразу добавить к себе.
+              Кнопки, иконки, списки, таблицы — основные элементы, из которых собирается интерфейс.
             </Text>
           </div>
         </div>
@@ -134,8 +122,8 @@ export const About: React.FC = () => {
             >
               Всем-всем
             </Text>
-            <Text view="secondary" className={cnLinks('Text')} size="xl" as="p">
-              Витрина готовых компонентов с подробной документацией и правилами использования.
+            <Text view="primary" className={cnLinks('Text')} size="xl" as="p">
+              Витрина основных компонентов с подробной документацией и правилами использования.
             </Text>
           </div>
 
@@ -160,7 +148,7 @@ export const About: React.FC = () => {
             >
               Дизайнерам
             </Text>
-            <Text view="secondary" className={cnLinks('Text')} size="xl" as="p">
+            <Text view="primary" className={cnLinks('Text')} size="xl" as="p">
               Правила использования и библиотека компонентов в Figma Community.
             </Text>
           </div>
@@ -187,12 +175,12 @@ export const About: React.FC = () => {
               Разработчикам
             </Text>
             <Text
-              view="secondary"
+              view="primary"
               className={cnLinks('Text', ['decorator decorator_indent-b_s'])}
               size="xl"
               as="p"
             >
-              Библиотека компонентов в виде NPM-пакета на GitHub
+              Библиотека основных компонентов в виде NPM-пакета на GitHub.
             </Text>
             <AboutVersionPackage />
           </div>
@@ -219,7 +207,8 @@ export const About: React.FC = () => {
           <div>
             <ConstaWidgetsLogo />
             <Text className={cnLinks('Text')} size="xl" as="p">
-              Графики графики графики — описание библиотеки с виджетами
+              Разные виды диаграмм — линейные, столбчатые, круговые. Всё, чтобы красиво показывать и
+              сравнивать данные.
             </Text>
           </div>
         </div>
@@ -240,7 +229,7 @@ export const About: React.FC = () => {
               Всем-всем
             </Text>
             <Text className={cnLinks('Text')} size="xl" as="p">
-              Витрина готовых компонентов с подробной документацией и правилами использования.
+              Витрина диаграмм с подробной документацией и правилами использования.
             </Text>
           </div>
 
@@ -266,7 +255,7 @@ export const About: React.FC = () => {
               Дизайнерам
             </Text>
             <Text className={cnLinks('Text')} size="xl" as="p">
-              Правила использования и библиотека компонентов в Figma Community.
+              Диаграммы в Figma Community: библиотека и правила использования.
             </Text>
           </div>
 
@@ -292,7 +281,7 @@ export const About: React.FC = () => {
               Разработчикам
             </Text>
             <Text className={cnLinks('Text', ['decorator decorator_indent-b_s'])} size="xl" as="p">
-              Библиотека компонентов в виде NPM-пакета на GitHub
+              Библиотека диаграмм в виде NPM-пакета на GitHub.
             </Text>
             <AboutVersionPackage />
           </div>
