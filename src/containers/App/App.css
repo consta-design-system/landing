@@ -127,6 +127,14 @@ p {
   background-color: var(--color-bg-default);
 }
 
+.Consta--App-UpdateBrowser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #0071b2;
+}
+
 .Container {
   box-sizing: content-box;
   max-width: 1100px;
