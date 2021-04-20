@@ -3,7 +3,7 @@
   z-index: 1;
 
   &-Logo {
-    max-width: clamp(200px, 30vw, 340px);
+    max-width: 340px;
   }
 
   &-Content {
