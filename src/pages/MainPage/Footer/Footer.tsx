@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
           >
             <Text className="decorator decorator_indent-b_m" size="xl" view="secondary" as="p">
               Пишите нам по электронной почте{' '}
-              <Text as="a" href={mailTo} size="xl" view="link">
+              <Text as="a" href={`${mailTo}?subject=Вопрос+команде+Consta`} size="xl" view="link">
                 {email}
               </Text>
               .
