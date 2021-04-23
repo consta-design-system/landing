@@ -83,10 +83,10 @@ export const HeaderContainer: React.FC = () => {
           onlyIcon: false,
         },
         {
-          label: 'Telegram',
+          label: 'Новости в Telegram',
           link: constaTelegram,
           icon: IconTelegram,
-          onlyIcon: true,
+          onlyIcon: false,
         },
       ]}
       fixed={fixed}

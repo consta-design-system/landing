@@ -1,8 +1,4 @@
 .Consta--Links {
-  &-Title {
-    max-width: 18ch;
-  }
-
   &-List {
     --radius: 12px;
     overflow: hidden;
