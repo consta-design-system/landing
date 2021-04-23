@@ -9,7 +9,7 @@ import { LinksCard } from './LinksCard/LinksCard';
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
-import { constaFigma, constaGitHub, constaUikitButton } from '@/modules/api/links';
+import { constaFigma, constaGitHub, constaTelegram, constaUikitButton } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 export const cnLinks = cn('Links');
@@ -25,10 +25,11 @@ export const Links: React.FC = () => {
         weight="bold"
         as="h3"
         lineHeight="2xs"
+        align="center"
       >
         Берите и пользуйтесь
       </Text>
-      <div className={cnLinks('List')}>
+      <div className={cnLinks('List', ['decorator decorator_indent-b_4xl'])}>
         <div className="tpl-grid tpl-grid_m-ratio_1-1-1">
           <LinksCard
             className={themeClassNames.color.accent}
@@ -58,6 +59,15 @@ export const Links: React.FC = () => {
             description="NPM-пакет с библиотекой на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
           />
         </div>
+      </div>
+      <div className="decorator decorator_distribute_center decorator_vertical_align_baseline">
+        <Text size="xl" view="secondary" as="p" align="center">
+          Следите за обновлениями{' '}
+          <Text as="a" href={constaTelegram} size="xl" view="link" target="_blank">
+            в Телеграм-канале
+          </Text>
+          .
+        </Text>
       </div>
     </section>
   );

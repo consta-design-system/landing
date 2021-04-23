@@ -6,13 +6,7 @@ import { Text } from '@consta/uikit/Text';
 
 import { FooterForm } from './FooterForm/FooterForm';
 
-import {
-  constaLandingRepository,
-  constaTelegram,
-  email,
-  gazPromNeft,
-  mailTo,
-} from '@/modules/api/links';
+import { constaLandingRepository, email, gazPromNeft, mailTo } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnFooter = cn('Footer');
@@ -39,13 +33,6 @@ export const Footer: React.FC = () => {
               А ещё нам можно писать по электронной почте{' '}
               <Text as="a" href={mailTo} size="xl" view="link">
                 {email}
-              </Text>
-              .
-            </Text>
-            <Text size="xl" view="secondary" as="p">
-              Следите за нашими обновлениями в нашем{' '}
-              <Text as="a" href={constaTelegram} size="xl" view="link" target="_blank">
-                Телеграм-канале
               </Text>
               .
             </Text>
