@@ -4,8 +4,7 @@ import React from 'react';
 import { IconOpenInNew } from '@consta/uikit/IconOpenInNew';
 import { Text } from '@consta/uikit/Text';
 
-import { FooterForm } from './FooterForm/FooterForm';
-
+// import { FooterForm } from './FooterForm/FooterForm';
 import { constaLandingRepository, email, gazPromNeft, mailTo } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
@@ -24,13 +23,13 @@ export const Footer: React.FC = () => {
         >
           Остались вопросы?
         </Text>
-        <div className="tpl-grid tpl-grid_m-columns_8 tpl-grid_l-columns_12 tpl-grid_col-gap_full decorator decorator_indent-b_6xl">
-          <FooterForm className="tpl-grid__fraction_m-col_5 tpl-grid__fraction_l-col_7" />
+        <div className="tpl-grid tpl-grid_m-columns_8 tpl-grid_l-columns_12 tpl-grid_col-gap_full decorator decorator_indent-b_4xl">
+          {/* <FooterForm className="tpl-grid__fraction_m-col_5 tpl-grid__fraction_l-col_7" /> */}
           <div
             className={cnFooter('Text', ['tpl-grid__fraction_m-col_3 tpl-grid__fraction_l-col_5'])}
           >
             <Text className="decorator decorator_indent-b_m" size="xl" view="secondary" as="p">
-              А ещё нам можно писать по электронной почте{' '}
+              Пишите нам по электронной почте{' '}
               <Text as="a" href={mailTo} size="xl" view="link">
                 {email}
               </Text>
