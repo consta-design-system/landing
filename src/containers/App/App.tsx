@@ -8,11 +8,14 @@ import { useAtom } from '@reatom/react';
 import { SnackBarContainer } from '@/containers/SnackBarContainer/SnackBarContainer';
 import { themeAtom } from '@/modules/theme';
 import { cn } from '@/utils/bem';
-import { getBrowserCompatibility } from '@/utils/helpers';
+// закоментировал условие на проверку браузеров
+// как сделаем это https://github.com/gazprom-neft/consta-uikit/issues/1156
+// обратно раскоментируем
+// import { getBrowserCompatibility } from '@/utils/helpers';
 
 const cnApp = cn('App');
 
-const { browserName, browserVersion, isCompatible } = getBrowserCompatibility();
+// const { browserName, browserVersion, isCompatible } = getBrowserCompatibility();
 
 export const App: React.FC = ({ children }) => {
   const theme = useAtom(themeAtom);
@@ -26,15 +29,22 @@ export const App: React.FC = ({ children }) => {
     document.querySelector('html')?.setAttribute('class', cnTheme(mods));
   }, [theme]);
 
-  return isCompatible ? (
+  return (
     <Theme className={cnApp(null, ['theme_gap_large'])} preset={theme}>
       {children}
-      <SnackBarContainer />
+      <SnackBarContainer />{' '}
     </Theme>
-  ) : (
-    <div className={cnApp('UpdateBrowser')}>
-      Ваш браузер {browserName} {browserVersion} устарел и не обеспечивает полноценную и безопасную
-      работу с сайтом. Пожалуйста, обновите браузер.
-    </div>
   );
+
+  // return isCompatible ? (
+  //   <Theme className={cnApp(null, ['theme_gap_large'])} preset={theme}>
+  //     {children}
+  //     <SnackBarContainer />
+  //   </Theme>
+  // ) : (
+  //   <div className={cnApp('UpdateBrowser')}>
+  //     Ваш браузер {browserName} {browserVersion} устарел и не обеспечивает полноценную и безопасную
+  //     работу с сайтом. Пожалуйста, обновите браузер.
+  //   </div>
+  // );
 };
