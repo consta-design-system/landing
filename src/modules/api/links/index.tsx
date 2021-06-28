@@ -3,6 +3,7 @@ export const constaUikit = 'https://consta-uikit.vercel.app';
 export const constaUikitDevelopContributors = `${constaUikit}/?path=/docs/common-develop-contributors--page`;
 export const constaFigma = 'https://www.figma.com/@Consta';
 export const constaGitHub = 'https://github.com/gazprom-neft/consta-uikit';
+export const constaNPM = 'https://www.npmjs.com/package/@consta/uikit';
 export const constaTelegram = 'https://t.me/consta_ui_releases';
 export const email = 'design@gazprom-neft.ru';
 export const mailTo = `mailto:${email}`;

@@ -4,6 +4,7 @@ import { Text } from '@consta/uikit/Text';
 import {
   constaFigma,
   constaGitHub,
+  constaNPM,
   constaUikit,
   constaUikitDevelopContributors,
   email,
@@ -229,9 +230,9 @@ export const questions = [
             Figma.
           </li>
           <li>
-            Разработчики собирают интерфейс на основе макета — берут код компонентов дизайн-системы{' '}
-            <Text as="a" view="link" href={constaGitHub} target="_blank" size="xl">
-              в нашем проекте на GitHub
+            Разработчики собирают интерфейс на основе макета — берут компоненты из npm пакета{' '}
+            <Text as="a" view="link" href={constaNPM} target="_blank" size="xl">
+              @consta/uikit
             </Text>
             , встраивают в свой проект, оживляют с помощью скриптов и подключают к бэкенду
             (например, к базе данных).
