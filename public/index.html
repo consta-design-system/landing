@@ -26,7 +26,6 @@
       content="Библиотека компонентов и понятные правила их взаимодействия — всё, что нужно дизайнерам и разработчикам для создания интерфейсов."
     />
     <meta property="og:image" content="/og_image.jpg" />
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=Map%2CSymbol%2CSymbol.asyncIterator%2CSymbol.for%2CSymbol.hasInstance%2CSymbol.isConcatSpreadable%2CSymbol.iterator%2CSymbol.keyFor%2CSymbol.match%2CSymbol.prototype.description%2CSymbol.replace%2CSymbol.search%2CSymbol.species%2CSymbol.split%2CSymbol.toPrimitive%2CSymbol.toStringTag%2CSymbol.unscopables"></script>
 
     <title>Дизайн-система Consta</title>
   </head>
@@ -34,8 +33,9 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
-      var isIEBrowser = window.navigator.userAgent.indexOf('MSIE') > -1
-        || window.navigator.userAgent.indexOf('Trident/') > -1;
+      var isIEBrowser =
+        window.navigator.userAgent.indexOf('MSIE') > -1 ||
+        window.navigator.userAgent.indexOf('Trident/') > -1;
       if (isIEBrowser) {
         var rootElement = document.getElementById('root');
         var IEMessageElement = '<h1>Пожалуйста, откройте эту страницу в другом браузере.</h1>';
