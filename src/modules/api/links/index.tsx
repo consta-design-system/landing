@@ -12,3 +12,4 @@ export const constaUikitButton = `${constaUikit}/?path=/story/components-button-
 export const allProjects = 'http://digital.gazprom-neft.local/digital_projects/consta';
 export const gazPromNeft = 'https://gazprom-neft.ru/';
 export const constaLandingRepository = 'https://github.com/gazprom-neft/consta-landing';
+export const platfortmProfessionals = 'https://professionals4-0.ru/';
