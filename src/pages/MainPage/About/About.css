@@ -163,7 +163,7 @@
 
     /* padding: var(--space-2xl) var(--space-xl) var(--space-xl) var(--space-xl); */
     & > svg {
-      width: 50%;
+      width: 40%;
     }
 
     /* display: grid; */
