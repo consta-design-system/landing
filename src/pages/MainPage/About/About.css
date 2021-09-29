@@ -22,14 +22,14 @@
 
     &_widgetsLightOverlay {
       background: linear-gradient(0deg, var(--color-bg-soft), var(--color-bg-soft)),
-        url('../../../images/ConstaWidgetsBlockBg.png');
+        url('../../../images/constaChartsBlockBg.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
 
     &_widgetsDarkOverlay {
       background: linear-gradient(0deg, var(--color-bg-tone), var(--color-bg-tone)),
-        url('../../../images/ConstaWidgetsBlockBg.png');
+        url('../../../images/constaChartsBlockBg.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -175,42 +175,6 @@
     /* flex-direction: column; */
   }
 }
-
-/* .Consta--VideoButton {
-  position: relative;
-  width: 100%;
-  padding: 0;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-
-  &::before {
-    content: '';
-    float: left;
-    width: 100%;
-    padding-top: 100%;
-    background: linear-gradient(-200deg, rgba(var(--color-nums-shadow), 0.06), rgba(var(--color-nums-shadow), 0.16));
-    border-radius: 50%;
-    box-shadow: inset -6px -17px 30px 6px rgba(var(--color-nums-shadow), 0.16),
-      inset 10px 27px 40px -20px var(--color-bg-soft),
-      inset 6px 17px 10px -10px rgba(var(--color-nums-shadow), 0.09),
-      0 27px 80px rgba(var(--color-nums-shadow), 0.09),
-      0 11px 33px rgba(var(--color-nums-shadow), 0.06),
-      0 6px 18px rgba(var(--color-nums-shadow), 0.05),
-      0 3px 10px rgba(var(--color-nums-shadow), 0.04),
-      0 1px 5px rgba(var(--color-nums-shadow), 0.03),
-      0 0.7px 2px rgba(var(--color-nums-shadow), 0.02);
-  }
-
-  &-Content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: var(--color-typo-primary);
-    font-size: var(--size-text-xl);
-    transform: translate(-50%, -50%);
-  }
-} */
 
 .Consta--VideoButton {
   --bg: var(--color-control-bg-primary);

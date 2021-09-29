@@ -76,7 +76,7 @@ export const LinksCard: React.FC<Props> = (props) => {
             size="l"
             as="span"
           >
-            Consta Widgets
+            Consta Charts
           </Text>
           <IconOpenInNew className={cnLinksCard('Arrow')} size="m" view="primary" />
         </a>

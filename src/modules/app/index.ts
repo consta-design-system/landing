@@ -8,5 +8,3 @@ export const store = createStore();
 if (isDev) {
   connectReduxDevtools(store);
 }
-
-// store.subscribe((action) => console.warn(action));
