@@ -22,14 +22,14 @@
 
     &_widgetsLightOverlay {
       background: linear-gradient(0deg, var(--color-bg-soft), var(--color-bg-soft)),
-        url('../../../images/ConstaWidgetsBlockBg.png');
+        url('../../../images/constaChartsBlockBg.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
 
     &_widgetsDarkOverlay {
       background: linear-gradient(0deg, var(--color-bg-tone), var(--color-bg-tone)),
-        url('../../../images/ConstaWidgetsBlockBg.png');
+        url('../../../images/constaChartsBlockBg.png');
       background-repeat: no-repeat;
       background-size: cover;
     }

@@ -12,7 +12,7 @@ import { AboutVideo } from './AboutVideo/AboutVideo';
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
-import constaChartsLogo from '@/images/constaChartsLogo.image.svg';
+import ConstaChartsLogo from '@/images/ConstaChartsLogo.image.svg';
 import ConstaUiKitLogo from '@/images/ConstaUiKitLogo.image.svg';
 import {
   constaChartsBarChart,
@@ -192,7 +192,7 @@ export const About: React.FC = () => {
         >
           Библиотека
         </Text>
-        <constaChartsLogo />
+        <ConstaChartsLogo />
         <Text
           className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
           size="2xl"
@@ -261,25 +261,6 @@ export const About: React.FC = () => {
                       <AboutVersionPackage />
                     </div>
                   )}
-                </div>
-                <div className={cnLinks('Content')}>
-                  <Text
-                    className={cnLinks('Title', ['decorator decorator_indent-b_xl'])}
-                    size="3xl"
-                    weight="bold"
-                    as="h3"
-                    lineHeight="xs"
-                  >
-                    Разработчикам
-                  </Text>
-                  <Text
-                    className={cnLinks('Text', ['decorator decorator_indent-b_s'])}
-                    size="xl"
-                    as="p"
-                  >
-                    Библиотека компонентов в виде NPM-пакета
-                  </Text>
-                  <AboutVersionPackage />
                 </div>
                 <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
                   {item.icon === 'storybook' && (

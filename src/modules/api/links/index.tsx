@@ -6,11 +6,11 @@ export const constaGitHub = 'https://github.com/gazprom-neft/consta-uikit';
 export const constaNPM = 'https://www.npmjs.com/package/@consta/uikit';
 export const constaTelegram = 'https://t.me/consta_ui_releases';
 
-export const constaWidgets = 'http://consta-charts.vercel.app/';
-export const constaWidgetsFigma =
+export const constaCharts = 'http://consta-charts.vercel.app/';
+export const constaChartsFigma =
   'https://www.figma.com/community/file/982611119114314434/Consta-Charts';
-export const constaWidgetsGitHub = 'https://github.com/gazprom-neft/consta-charts';
-export const constaWidgetsBarChart = `${constaWidgets}/?path=/story/components-bar--playground`;
+export const constaChartsGitHub = 'https://github.com/gazprom-neft/consta-charts';
+export const constaChartsBarChart = `${constaCharts}/?path=/story/components-bar--playground`;
 
 export const email = 'design@gazprom-neft.ru';
 export const mailTo = `mailto:${email}`;
