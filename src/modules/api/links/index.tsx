@@ -5,10 +5,11 @@ export const constaFigma = 'https://www.figma.com/community/file/853774806786762
 export const constaGitHub = 'https://github.com/gazprom-neft/consta-uikit';
 export const constaTelegram = 'https://t.me/consta_ui_releases';
 
-export const constaWidgets = 'https://consta-widgets.consta.vercel.app';
-export const constaWidgetsFigma = 'https://www.figma.com/community/file/955853026322123186';
-export const constaWidgetsGitHub = 'https://github.com/gazprom-neft/consta-widgets-new';
-export const constaWidgetsBarChart = `${constaWidgets}/?path=/story/components-barchart--minimalistic`;
+export const constaWidgets = 'http://consta-charts.vercel.app/';
+export const constaWidgetsFigma =
+  'https://www.figma.com/community/file/982611119114314434/Consta-Charts';
+export const constaWidgetsGitHub = 'https://github.com/gazprom-neft/consta-charts';
+export const constaWidgetsBarChart = `${constaWidgets}/?path=/story/components-bar--playground`;
 
 export const email = 'design@gazprom-neft.ru';
 export const mailTo = `mailto:${email}`;
