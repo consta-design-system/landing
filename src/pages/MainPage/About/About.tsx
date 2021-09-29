@@ -12,15 +12,15 @@ import { AboutVideo } from './AboutVideo/AboutVideo';
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
+import constaChartsLogo from '@/images/constaChartsLogo.image.svg';
 import ConstaUiKitLogo from '@/images/ConstaUiKitLogo.image.svg';
-import ConstaWidgetsLogo from '@/images/ConstaWidgetsLogo.image.svg';
 import {
+  constaChartsBarChart,
+  constaChartsFigma,
+  constaChartsGitHub,
   constaFigma,
   constaGitHub,
   constaUikitButton,
-  constaWidgetsBarChart,
-  constaWidgetsFigma,
-  constaWidgetsGitHub,
   licenceMit,
 } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
@@ -192,7 +192,7 @@ export const About: React.FC = () => {
         >
           Библиотека
         </Text>
-        <ConstaWidgetsLogo />
+        <constaChartsLogo />
         <Text
           className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
           size="2xl"
@@ -209,7 +209,7 @@ export const About: React.FC = () => {
               subTitle: 'Витрина диаграмм с подробной документацией и правилами использования.',
               hasVersion: false,
               icon: 'storybook',
-              href: constaWidgetsBarChart,
+              href: constaChartsBarChart,
               additionalClassNames: themeClassNames.color.accent,
             },
             {
@@ -217,7 +217,7 @@ export const About: React.FC = () => {
               subTitle: 'Диаграммы в Figma Community: библиотека и правила использования.',
               hasVersion: false,
               icon: 'figma',
-              href: constaWidgetsFigma,
+              href: constaChartsFigma,
               additionalClassNames: themeClassNames.color.invert,
             },
             {
@@ -225,7 +225,7 @@ export const About: React.FC = () => {
               subTitle: 'Библиотека диаграмм в виде NPM-пакета на GitHub.',
               hasVersion: true,
               icon: 'github',
-              href: constaWidgetsGitHub,
+              href: constaChartsGitHub,
               additionalClassNames: themeClassNames.color.invert,
             },
           ].map((item) => (
@@ -262,7 +262,25 @@ export const About: React.FC = () => {
                     </div>
                   )}
                 </div>
-
+                <div className={cnLinks('Content')}>
+                  <Text
+                    className={cnLinks('Title', ['decorator decorator_indent-b_xl'])}
+                    size="3xl"
+                    weight="bold"
+                    as="h3"
+                    lineHeight="xs"
+                  >
+                    Разработчикам
+                  </Text>
+                  <Text
+                    className={cnLinks('Text', ['decorator decorator_indent-b_s'])}
+                    size="xl"
+                    as="p"
+                  >
+                    Библиотека компонентов в виде NPM-пакета
+                  </Text>
+                  <AboutVersionPackage />
+                </div>
                 <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
                   {item.icon === 'storybook' && (
                     <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />

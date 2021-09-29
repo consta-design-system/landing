@@ -4,11 +4,13 @@ import { Text } from '@consta/uikit/Text';
 import {
   constaFigma,
   constaGitHub,
+  constaNPM,
   constaUikit,
   constaUikitDevelopContributors,
   email,
   licenceMit,
   mailTo,
+  platfortmProfessionals,
 } from '@/modules/api/links';
 
 export const questions = [
@@ -229,9 +231,9 @@ export const questions = [
             Figma.
           </li>
           <li>
-            Разработчики собирают интерфейс на основе макета — берут код компонентов дизайн-системы{' '}
-            <Text as="a" view="link" href={constaGitHub} target="_blank" size="xl">
-              в нашем проекте на GitHub
+            Разработчики собирают интерфейс на основе макета — берут компоненты из npm пакета{' '}
+            <Text as="a" view="link" href={constaNPM} target="_blank" size="xl">
+              @consta/uikit
             </Text>
             , встраивают в свой проект, оживляют с помощью скриптов и подключают к бэкенду
             (например, к базе данных).
@@ -261,6 +263,22 @@ export const questions = [
           <Text as="a" view="link" href={mailTo} size="xl">
             {email}
           </Text>
+        </Text>
+      </>
+    ),
+  },
+  {
+    title: 'Где найти специалистов для работы над проектом?',
+    answer: (
+      <>
+        <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+          Вы можете найти любых специалистов и даже всю команду на{' '}
+          <Text as="a" view="link" href={platfortmProfessionals} size="xl">
+            платформе Профессионалы 4.0
+          </Text>
+          . Разместите описание вашего проекта или задачи и ждите откликов. После сбора команды П4.0
+          возьмут всю работу по заключению договора на себя. Если хотите разрабатывать интерфейс на
+          дизайн-системе Consta, обязательно напишите об этом в описании проекта.
         </Text>
       </>
     ),

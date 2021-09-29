@@ -3,13 +3,19 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: min(3vw, var(--space-m)) min(5vw, var(--space-4xl));
+  padding: 3vw 5vw;
   background-color: var(--color-bg-default);
+  @media (min-width: 600px) {
+    padding: var(--space-m) var(--space-4xl);
+  }
 
   &-Logo {
     width: 100%;
-    max-width: clamp(200px, 30vw, 264px);
+    max-width: 200px;
     transform: translateY(-10%);
+    @media (min-width: 600px) {
+      max-width: 264px;
+    }
   }
 
   &-Menu {
