@@ -12,7 +12,17 @@ import { AboutVideo } from './AboutVideo/AboutVideo';
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
-import { constaFigma, constaGitHub, constaUikitButton, licenceMit } from '@/modules/api/links';
+import ConstaChartsLogo from '@/images/ConstaChartsLogo.image.svg';
+import ConstaUiKitLogo from '@/images/ConstaUiKitLogo.image.svg';
+import {
+  constaChartsBarChart,
+  constaChartsFigma,
+  constaChartsGitHub,
+  constaFigma,
+  constaGitHub,
+  constaUikitButton,
+  licenceMit,
+} from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnAbout = cn('About');
@@ -24,7 +34,7 @@ const More = (
     className={cnLinks('More', [
       'decorator decorator_distribute_left decorator_vertical-align_center decorator_indent-r_s',
     ])}
-    size="xl"
+    size="l"
     as="span"
   >
     Смотреть
@@ -42,7 +52,7 @@ export const About: React.FC = () => {
     <section className={cnAbout(null, ['Container', 'Section'])}>
       <div
         className={cnAbout('Lead', [
-          'tpl-grid tpl-grid_col-gap_half tpl-grid_row-gap_full tpl-grid_m-columns_12 decorator decorator_space-b_2xl',
+          'tpl-grid tpl-grid_col-gap_half tpl-grid_row-gap_full tpl-grid_m-columns_12 decorator decorator_space-b_5xl',
         ])}
       >
         <div className="tpl-grid__fraction tpl-grid__fraction_m-col_8">
@@ -61,7 +71,7 @@ export const About: React.FC = () => {
             view="secondary"
             as="p"
           >
-            Это библиотека компонентов и понятные правила их взаимодействия — всё, что нужно
+            Это библиотеки компонентов и понятные правила их взаимодействия — всё, что нужно
             дизайнерам и разработчикам для создания интерфейсов.
           </Text>
         </div>
@@ -69,107 +79,206 @@ export const About: React.FC = () => {
           <AboutVideo />
         </div>
       </div>
-      <Text
-        className={cnAbout('Title', ['decorator decorator_indent-t_3xl decorator_indent-b_l'])}
-        size="3xl"
-        weight="bold"
-        as="h3"
-        lineHeight="xs"
-      >
-        Компоненты
-      </Text>
-      <Text
-        className={cnAbout('Title', ['decorator decorator_indent-b_5xl'])}
-        size="2xl"
-        view="secondary"
-        as="p"
-      >
-        Кнопки, иконки, списки, таблицы и другие элементы, из которых собирается интерфейс. Похоже
-        на брендбук или гайдлайн, только удобнее: любой элемент можно взять в готовом виде и сразу
-        добавить к себе.
-      </Text>
 
-      <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_2xl'])}>
-        <a
-          href={constaUikitButton}
-          target="_blank"
-          className={cnLinks('Item', { to: 'Storybook' }, [themeClassNames.color.accent])}
+      <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_5xl'])}>
+        <Text
+          className={cnAbout('Title', ['decorator decorator_indent-b_2xs'])}
+          size="l"
+          weight="semibold"
+          as="h3"
+          lineHeight="xs"
+          view="ghost"
         >
-          <div className={cnLinks('Content', ['tpl-grid tpl-grid_l-ratio_1-1'])}>
-            <div className="tpl-grid__fraction">
-              <Text
-                className={cnLinks('Title', ['decorator decorator_indent-b_xl'])}
-                size="3xl"
-                weight="bold"
-                as="h3"
-                lineHeight="xs"
+          Библиотека
+        </Text>
+        <ConstaUiKitLogo />
+        <Text
+          className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
+          size="2xl"
+          view="secondary"
+          as="p"
+        >
+          Кнопки, иконки, списки, таблицы — основные элементы, из которых собирается интерфейс.
+        </Text>
+        <div className={cnLinks('Cards')}>
+          {[
+            {
+              title: 'Всем-всем',
+              subTitle:
+                'Витрина основных компонентов с подробной документацией и правилами использования.',
+              hasVersion: false,
+              icon: 'storybook',
+              href: constaUikitButton,
+              additionalClassNames: themeClassNames.color.accent,
+            },
+            {
+              title: 'Дизайнерам',
+              subTitle: 'Правила использования и библиотека компонентов в Figma Community.',
+              hasVersion: false,
+              icon: 'figma',
+              href: constaFigma,
+              additionalClassNames: themeClassNames.color.invert,
+            },
+            {
+              title: 'Разработчикам',
+              subTitle: 'Библиотека основных компонентов в виде NPM-пакета на GitHub.',
+              hasVersion: true,
+              icon: 'github',
+              href: constaGitHub,
+              additionalClassNames: themeClassNames.color.invert,
+            },
+          ].map((item) => (
+            <>
+              <a
+                href={item.href}
+                target="_blank"
+                className={cnLinks(
+                  'Item',
+                  { to: `${item.icon[0].toUpperCase()}${item.icon.slice(1)}` },
+                  [item.additionalClassNames],
+                )}
               >
-                Всем-всем
-              </Text>
-            </div>
-            <Text className={cnLinks('Text')} size="xl" as="p">
-              Витрина готовых компонентов с подробной документацией и правилами использования.
-            </Text>
-          </div>
+                <div>
+                  <Text
+                    className={cnLinks('Title', ['decorator decorator_indent-b_m'])}
+                    size="2xl"
+                    weight="bold"
+                    as="h3"
+                    lineHeight="xs"
+                  >
+                    {item.title}
+                  </Text>
+                  <Text className={cnLinks('Text')} size="l" as="p">
+                    {item.subTitle}
+                  </Text>
+                  {item.hasVersion && (
+                    <div
+                      className={cnLinks('Text', [
+                        item.hasVersion ? 'decorator decorator_indent-t_m' : '',
+                      ])}
+                    >
+                      <AboutVersionPackage />
+                    </div>
+                  )}
+                </div>
 
-          <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
-            <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />
-            {More}
-          </div>
-        </a>
+                <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
+                  {item.icon === 'storybook' && (
+                    <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
+                  {item.icon === 'figma' && (
+                    <IconFigma size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
+                  {item.icon === 'github' && (
+                    <IconGithub size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
 
-        <a
-          href={constaFigma}
-          target="_blank"
-          className={cnLinks('Item', { to: 'Figma' }, [themeClassNames.color.invert])}
+                  {More}
+                </div>
+              </a>
+            </>
+          ))}
+        </div>
+      </div>
+
+      <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_5xl'])}>
+        <Text
+          className={cnAbout('Title', ['decorator decorator_indent-b_2xs'])}
+          size="l"
+          weight="semibold"
+          as="h3"
+          lineHeight="xs"
+          view="ghost"
         >
-          <div className={cnLinks('Content')}>
-            <Text
-              className={cnLinks('Title', ['decorator decorator_indent-b_xl'])}
-              size="3xl"
-              weight="bold"
-              as="h3"
-              lineHeight="xs"
-            >
-              Дизайнерам
-            </Text>
-            <Text className={cnLinks('Text')} size="xl" as="p">
-              Правила использования и библиотека компонентов в Figma Community.
-            </Text>
-          </div>
-
-          <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
-            <IconFigma size="m" view="primary" className={cnLinks('Logo')} />
-            {More}
-          </div>
-        </a>
-
-        <a
-          href={constaGitHub}
-          target="_blank"
-          className={cnLinks('Item', { to: 'Github' }, [themeClassNames.color.invert])}
+          Библиотека
+        </Text>
+        <ConstaChartsLogo />
+        <Text
+          className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
+          size="2xl"
+          view="secondary"
+          as="p"
         >
-          <div className={cnLinks('Content')}>
-            <Text
-              className={cnLinks('Title', ['decorator decorator_indent-b_xl'])}
-              size="3xl"
-              weight="bold"
-              as="h3"
-              lineHeight="xs"
-            >
-              Разработчикам
-            </Text>
-            <Text className={cnLinks('Text', ['decorator decorator_indent-b_s'])} size="xl" as="p">
-              Библиотека компонентов в виде NPM-пакета
-            </Text>
-            <AboutVersionPackage />
-          </div>
+          Разные виды диаграмм — линейные, столбчатые, круговые. Всё, чтобы красиво показывать и
+          сравнивать данные.
+        </Text>
+        <div className={cnLinks('Cards')}>
+          {[
+            {
+              title: 'Всем-всем',
+              subTitle: 'Витрина диаграмм с подробной документацией и правилами использования.',
+              hasVersion: false,
+              icon: 'storybook',
+              href: constaChartsBarChart,
+              additionalClassNames: themeClassNames.color.accent,
+            },
+            {
+              title: 'Дизайнерам',
+              subTitle: 'Диаграммы в Figma Community: библиотека и правила использования.',
+              hasVersion: false,
+              icon: 'figma',
+              href: constaChartsFigma,
+              additionalClassNames: themeClassNames.color.invert,
+            },
+            {
+              title: 'Разработчикам',
+              subTitle: 'Библиотека диаграмм в виде NPM-пакета на GitHub.',
+              hasVersion: true,
+              icon: 'github',
+              href: constaChartsGitHub,
+              additionalClassNames: themeClassNames.color.invert,
+            },
+          ].map((item) => (
+            <>
+              <a
+                href={item.href}
+                target="_blank"
+                className={cnLinks(
+                  'Item',
+                  { to: `${item.icon[0].toUpperCase()}${item.icon.slice(1)}` },
+                  [item.additionalClassNames],
+                )}
+              >
+                <div>
+                  <Text
+                    className={cnLinks('Title', ['decorator decorator_indent-b_m'])}
+                    size="2xl"
+                    weight="bold"
+                    as="h3"
+                    lineHeight="xs"
+                  >
+                    {item.title}
+                  </Text>
+                  <Text className={cnLinks('Text')} size="l" as="p">
+                    {item.subTitle}
+                  </Text>
+                  {item.hasVersion && (
+                    <div
+                      className={cnLinks('Text', [
+                        item.hasVersion ? 'decorator decorator_indent-t_m' : '',
+                      ])}
+                    >
+                      <AboutVersionPackage />
+                    </div>
+                  )}
+                </div>
+                <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
+                  {item.icon === 'storybook' && (
+                    <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
+                  {item.icon === 'figma' && (
+                    <IconFigma size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
+                  {item.icon === 'github' && (
+                    <IconGithub size="m" view="primary" className={cnLinks('Logo')} />
+                  )}
 
-          <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
-            <IconGithub size="m" view="primary" className={cnLinks('Logo')} />
-            {More}
-          </div>
-        </a>
+                  {More}
+                </div>
+              </a>
+            </>
+          ))}
+        </div>
       </div>
 
       <div className="decorator decorator_distribute_center decorator_vertical_align_baseline">
