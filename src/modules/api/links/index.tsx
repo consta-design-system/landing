@@ -1,6 +1,7 @@
 export const licenceMit = '/static/licence_mit.pdf';
 export const constaUikit = 'https://consta-uikit.vercel.app';
 export const constaUikitDevelopContributors = `${constaUikit}/?path=/docs/common-develop-contributors--page`;
+export const contsaCommunityFigma = 'https://www.figma.com/@consta';
 export const constaFigma = 'https://www.figma.com/community/file/853774806786762374';
 export const constaGitHub = 'https://github.com/gazprom-neft/consta-uikit';
 export const constaNPM = 'https://www.npmjs.com/package/@consta/uikit';

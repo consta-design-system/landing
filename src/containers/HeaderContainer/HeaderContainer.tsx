@@ -12,10 +12,10 @@ import IconTelegram from '@/icons/Telegram.icon.svg';
 import ConstaLogo from '@/images/ConstaLogo2.image.svg';
 import GPNLogo from '@/images/GPNLogo.image.svg';
 import {
-  constaFigma,
   constaGitHub,
   constaTelegram,
   constaUikitButton,
+  contsaCommunityFigma,
   gazPromNeft,
 } from '@/modules/api/links';
 import { fixedAtom } from '@/modules/header';
@@ -72,7 +72,7 @@ export const HeaderContainer: React.FC = () => {
         },
         {
           label: 'Figma',
-          link: constaFigma,
+          link: contsaCommunityFigma,
           icon: IconFigma,
           onlyIcon: false,
         },

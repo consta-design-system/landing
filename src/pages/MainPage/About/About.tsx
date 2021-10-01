@@ -121,7 +121,7 @@ export const About: React.FC = () => {
             },
             {
               title: 'Разработчикам',
-              subTitle: 'Библиотека основных компонентов в виде NPM-пакета на GitHub.',
+              subTitle: 'Библиотека основных компонентов в виде NPM-пакета.',
               hasVersion: true,
               icon: 'github',
               href: constaGitHub,
@@ -222,7 +222,7 @@ export const About: React.FC = () => {
             },
             {
               title: 'Разработчикам',
-              subTitle: 'Библиотека диаграмм в виде NPM-пакета на GitHub.',
+              subTitle: 'Библиотека диаграмм в виде NPM-пакета.',
               hasVersion: true,
               icon: 'github',
               href: constaChartsGitHub,
