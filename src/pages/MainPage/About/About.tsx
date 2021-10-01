@@ -6,7 +6,8 @@ import { IconThumbUp } from '@consta/uikit/IconThumbUp';
 import { Text } from '@consta/uikit/Text';
 import { useTheme } from '@consta/uikit/Theme';
 
-import { AboutVersionPackage } from './AboutVersionPackage/AboutVersionPackage';
+import { AboutVersionCharts } from './AboutVersionCharts/AboutVersionCharts';
+import { AboutVersionUikit } from './AboutVersionUikit/AboutVersionUikit';
 import { AboutVideo } from './AboutVideo/AboutVideo';
 
 import IconFigma from '@/icons/Figma.icon.svg';
@@ -157,7 +158,7 @@ export const About: React.FC = () => {
                         item.hasVersion ? 'decorator decorator_indent-t_m' : '',
                       ])}
                     >
-                      <AboutVersionPackage />
+                      <AboutVersionUikit />
                     </div>
                   )}
                 </div>
@@ -258,7 +259,7 @@ export const About: React.FC = () => {
                         item.hasVersion ? 'decorator decorator_indent-t_m' : '',
                       ])}
                     >
-                      <AboutVersionPackage />
+                      <AboutVersionCharts />
                     </div>
                   )}
                 </div>

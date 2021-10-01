@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { Badge } from '@consta/uikit/Badge';
 import { useAction, useAtom } from '@reatom/react';
 
-import { getTagAction, loadingAtom, versionAtom } from '@/modules/about';
+import { getChartsTagAction, loadingChartsTagAtom, versionChartsAtom } from '@/modules/about';
 
-export const AboutVersionPackage: React.FC = () => {
-  const version = useAtom(versionAtom);
-  const loading = useAtom(loadingAtom);
-  const getTag = useAction(getTagAction);
+export const AboutVersionCharts: React.FC = () => {
+  const version = useAtom(versionChartsAtom);
+  const loading = useAtom(loadingChartsTagAtom);
+  const getTag = useAction(getChartsTagAction);
 
   useEffect(() => getTag(), []);
 
