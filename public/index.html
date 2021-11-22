@@ -42,5 +42,17 @@
         rootElement.innerHTML = IEMessageElement;
       }
     </script>
+    <script>
+      (function() {
+        const spaURL = 'https://spa-backend.apps.test.gazprom-neft.local';
+        window.gpnSpaUrl = `${spaURL}/events`;
+        window.gpnCounterId= 77;
+        const headElement = document.getElementsByTagName('head')[0];
+        const counterLoadingScript = document.createElement('script');
+        counterLoadingScript.async = true;
+        counterLoadingScript.src = `${spaURL}/static/counter.js`;
+        headElement.appendChild(counterLoadingScript);
+      })()
+    </script>
   </body>
 </html>
