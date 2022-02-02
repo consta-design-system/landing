@@ -1,6 +1,6 @@
 import './About.css';
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import { IconForward } from '@consta/uikit/IconForward';
 import { IconThumbUp } from '@consta/uikit/IconThumbUp';
 import { Text } from '@consta/uikit/Text';
@@ -128,8 +128,8 @@ export const About: React.FC = () => {
               href: constaGitHub,
               additionalClassNames: themeClassNames.color.invert,
             },
-          ].map((item) => (
-            <>
+          ].map((item, index) => (
+            <Fragment key={index}>
               <a
                 href={item.href}
                 target="_blank"
@@ -177,7 +177,7 @@ export const About: React.FC = () => {
                   {More}
                 </div>
               </a>
-            </>
+            </Fragment>
           ))}
         </div>
       </div>
@@ -229,8 +229,8 @@ export const About: React.FC = () => {
               href: constaChartsGitHub,
               additionalClassNames: themeClassNames.color.invert,
             },
-          ].map((item) => (
-            <>
+          ].map((item, index) => (
+            <Fragment key={index}>
               <a
                 href={item.href}
                 target="_blank"
@@ -277,7 +277,7 @@ export const About: React.FC = () => {
                   {More}
                 </div>
               </a>
-            </>
+            </Fragment>
           ))}
         </div>
       </div>

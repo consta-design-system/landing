@@ -11,7 +11,7 @@ export const [getUikitTagFetchStatusActions, getUikitTagsFetchAction] = createFe
 );
 
 export const getUikitTagAction = declareAction(mN('getTag'), (payload, store) => {
-  store.dispatch(getUikitTagsFetchAction({ owner: 'gazprom-neft', repo: 'consta-uikit' }));
+  store.dispatch(getUikitTagsFetchAction({ owner: 'consta-design-system', repo: 'uikit' }));
 });
 
 export const loadingUikitTagAtom = declareLoadingAtom(mN('loading'), getUikitTagFetchStatusActions);
