@@ -11,7 +11,7 @@ export const [getChartsTagFetchStatusActions, getChartsTagsFetchAction] = create
 );
 
 export const getChartsTagAction = declareAction(mN('getTag'), (payload, store) => {
-  store.dispatch(getChartsTagsFetchAction({ owner: 'gazprom-neft', repo: 'consta-charts' }));
+  store.dispatch(getChartsTagsFetchAction({ owner: 'consta-design-system', repo: 'charts' }));
 });
 
 export const loadingChartsTagAtom = declareLoadingAtom(
