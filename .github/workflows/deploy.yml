@@ -1,0 +1,39 @@
+name: deploy
+on:
+  push:
+    branches: master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Установка yarn
+        id: yarn-setup
+        run: |
+          yarn policies set-version 1.19.1
+          echo "::set-output name=cache_dir::$(yarn cache dir)"
+
+      - name: Настройка кэширования yarn
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-setup.outputs.cache_dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install Dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: build
