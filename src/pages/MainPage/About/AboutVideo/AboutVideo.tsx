@@ -7,11 +7,18 @@ import { cn } from '@/utils/bem';
 
 const cnAboutVideo = cn('AboutVideo');
 
+const videoLink = 'https://www.youtube.com/watch?v=ebZeLi3cfI4';
+
 export const AboutVideo: React.FC = () => {
   const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    window.open(videoLink);
+  };
+
   return (
     <>
-      <button onClick={() => setOpen(true)} className={cnAboutVideo()}>
+      <button onClick={handleClick} className={cnAboutVideo()}>
         <div className={cnAboutVideo('Play')}>
           <div className={cnAboutVideo('Triangle')}></div>
         </div>
