@@ -10,7 +10,7 @@ Consta — дизайн-система для разработки интерф�
 
 ### Библиотека компонентов
 
-[Репозиторий](https://github.com/consta-design-system/uikit) | [NPM](https://www.npmjs.com/package/@consta/uikit) | [Документация и стенд](https://uikit.gizeasy.ru/?path=/story/common-about--page) | [Макеты](https://www.figma.com/community/file/853774806786762374)
+[Репозиторий](https://github.com/consta-design-system/uikit) | [NPM](https://www.npmjs.com/package/@consta/uikit) | [Документация и стенд](http://uikit.gizeasy.ru/?path=/story/common-about--page) | [Макеты](https://www.figma.com/community/file/853774806786762374)
 
 ### Библиотека графиков
 
@@ -49,4 +49,4 @@ $ yarn build
 ## Документация
 
 [Create React App](https://github.com/facebook/create-react-app)
-[Дизайн-система Consta](https://uikit.gizeasy.ru/?path=/story/common-about--page)
+[Дизайн-система Consta](http://uikit.gizeasy.ru/?path=/story/common-about--page)
