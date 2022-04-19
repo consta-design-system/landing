@@ -10,11 +10,11 @@ Consta — дизайн-система для разработки интерф�
 
 ### Библиотека компонентов
 
-[Репозиторий](https://github.com/consta-design-system/uikit) | [NPM](https://www.npmjs.com/package/@consta/uikit) | [Документация и стенд](http://uikit.gizeasy.ru/?path=/story/common-about--page) | [Макеты](https://www.figma.com/community/file/853774806786762374)
+[Репозиторий](https://github.com/consta-design-system/uikit) | [NPM](https://www.npmjs.com/package/@consta/uikit) | [Документация и стенд](http://uikit.consta.design/?path=/story/common-about--page) | [Макеты](https://www.figma.com/community/file/853774806786762374)
 
 ### Библиотека графиков
 
-[Репозиторий](https://github.com/consta-design-system/charts) | [NPM](https://www.npmjs.com/package/@consta/charts) | [Документация и стенд](https://charts.gizeasy.ru/) | [Макеты](https://www.figma.com/community/file/982611119114314434)
+[Репозиторий](https://github.com/consta-design-system/charts) | [NPM](https://www.npmjs.com/package/@consta/charts) | [Документация и стенд](https://charts.consta.design/) | [Макеты](https://www.figma.com/community/file/982611119114314434)
 
 <hr>
 
@@ -24,7 +24,7 @@ Consta — дизайн-система для разработки интерф�
 
 ## Разработка
 
-Этот проект создан на [Create React App](https://github.com/facebook/create-react-app) с использованием [дизайн-системы Consta](https://uikit.gizeasy.ru/?path=/story/common-about--page)
+Этот проект создан на [Create React App](https://github.com/facebook/create-react-app) с использованием [дизайн-системы Consta](https://uikit.consta.design/?path=/story/common-about--page)
 
 ### Основные команды
 
@@ -49,4 +49,4 @@ $ yarn build
 ## Документация
 
 [Create React App](https://github.com/facebook/create-react-app)
-[Дизайн-система Consta](http://uikit.gizeasy.ru/?path=/story/common-about--page)
+[Дизайн-система Consta](http://uikit.consta.design/?path=/story/common-about--page)
