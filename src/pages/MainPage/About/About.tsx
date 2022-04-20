@@ -290,8 +290,7 @@ export const About: React.FC = () => {
           style={{ flexShrink: 0 }}
         />
         <Text size="l" view="secondary" as="p">
-          Дизайн-систему можно использовать бесплатно, она распространяется ПАО «Газпром нефть» на
-          условиях открытой 
+          Дизайн-систему можно использовать бесплатно, она распространяется на условиях открытой 
           <Text href={licenceMit} target="_blank" size="l" view="link" as="a">
             лицензии MIT
           </Text>

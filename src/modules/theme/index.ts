@@ -30,7 +30,7 @@ const nTheme = n('theme');
 
 export const presets = [
   {
-    name: 'Газпром нефть',
+    name: 'Компания',
     value: 0,
     brandColor: '#0071B2',
   },

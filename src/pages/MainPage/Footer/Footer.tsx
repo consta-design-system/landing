@@ -5,7 +5,7 @@ import { IconOpenInNew } from '@consta/uikit/IconOpenInNew';
 import { Text } from '@consta/uikit/Text';
 
 // import { FooterForm } from './FooterForm/FooterForm';
-import { constaLandingRepository, email, gazPromNeft, mailTo } from '@/modules/api/links';
+import { constaLandingRepository, email, mailTo } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnFooter = cn('Footer');
@@ -41,12 +41,12 @@ export const Footer: React.FC = () => {
           <Text as="a" href={constaLandingRepository} target="_blank" size="m" view="link">
             Репозиторий этой страницы <IconOpenInNew size="s" />
           </Text>
-          <Text size="m" view="secondary" as="p">
-            © 2020-2021{' '}
+          {/* <Text size="m" view="secondary" as="p">
+            © 2020-2022{' '}
             <Text as="a" href={gazPromNeft} target="_blank" size="m" view="link">
               ПАО «Газпром нефть»
             </Text>
-          </Text>
+          </Text> */}
         </div>
       </div>
     </section>

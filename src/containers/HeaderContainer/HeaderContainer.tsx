@@ -10,7 +10,7 @@ import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
 import IconTelegram from '@/icons/Telegram.icon.svg';
 import ConstaLogo from '@/images/ConstaLogo2.image.svg';
-import GPNLogo from '@/images/GPNLogo.image.svg';
+// import GPNLogo from '@/images/GPNLogo.image.svg';
 import {
   constaGitHub,
   constaTelegram,
@@ -35,13 +35,13 @@ const mapLogoConstaColors: { [key: string]: string } = {
   alt2Display: 'var(--color-typo-primary)',
 };
 
-const logoMap: {
-  [key: string]: React.FunctionComponent<React.SVGProps<SVGSVGElement>> | undefined;
-} = {
-  gpnDefault: GPNLogo,
-  altDefault: GPNLogo,
-  alt2Default: GPNLogo,
-};
+// const logoMap: {
+//   [key: string]: React.FunctionComponent<React.SVGProps<SVGSVGElement>> | undefined;
+// } = {
+//   gpnDefault: GPNLogo,
+//   altDefault: GPNLogo,
+//   alt2Default: GPNLogo,
+// };
 
 export const HeaderContainer: React.FC = () => {
   const fixed = useAtom(fixedAtom);
@@ -56,12 +56,12 @@ export const HeaderContainer: React.FC = () => {
     );
   }, [theme]);
 
-  const VisibleHeadrerLogo = logoMap[theme.color.primary];
+  // const VisibleHeadrerLogo = logoMap[theme.color.primary];
 
   return (
     <HeaderFlexible
       className={cnHeaderContainer()}
-      logo={VisibleHeadrerLogo}
+      // logo={VisibleHeadrerLogo}
       fixebleLogo={ConstaLogo}
       menu={[
         {

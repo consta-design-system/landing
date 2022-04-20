@@ -7,9 +7,7 @@ import {
   constaNPM,
   constaUikit,
   constaUikitDevelopContributors,
-  email,
   licenceMit,
-  mailTo,
   platfortmProfessionals,
 } from '@/modules/api/links';
 
@@ -28,10 +26,10 @@ export const questions = [
         <Text as="p" size="xl" className="decorator decorator_indent-b_m">
           Это может быть продукт, который открывают на ноутбуке, офисном компьютере или видео-стене.
         </Text>
-        <Text as="p" size="xl">
+        {/* <Text as="p" size="xl">
           Дизайн-система разрабатывается для продуктов «Газпром нефти», но на самом деле она
           универсальная: использовать может кто угодно.
-        </Text>
+        </Text> */}
       </>
     ),
   },
@@ -170,9 +168,9 @@ export const questions = [
     answer: (
       <>
         <Text as="p" size="xl" className="decorator decorator_indent-b_m">
-          Дизайн-система распространяется ПАО «Газпром нефть» бесплатно, на условиях открытой
-          лицензии MIT. Это значит, что вы можете свободно использовать код и отдельные элементы
-          дизайн-системы, если сохраните копирайт Gazprom Neft PJSC.
+          Дизайн-система распространяется бесплатно, на условиях открытой лицензии MIT. Это значит,
+          что вы можете свободно использовать код и отдельные элементы дизайн-системы, если
+          сохраните копирайт Gazprom Neft PJSC.
         </Text>
         <Text as="a" view="link" href={licenceMit} target="_blank" size="xl" display="block">
           Посмотреть все условия
@@ -248,24 +246,24 @@ export const questions = [
       </>
     ),
   },
-  {
-    title: 'Кто её разрабатывает и поддерживает?',
-    answer: (
-      <>
-        <Text as="p" size="xl" className="decorator decorator_indent-b_m">
-          Центр дизайна и развития продуктов «Газпром нефти». Мы создаём дизайн-систему внутри
-          компании, поэтому можем общаться с менеджерами продуктов и разработчиками, получать фидбек
-          о работе системы в реальных условиях и дорабатывать по результатам.
-        </Text>
-        <Text as="p" size="xl">
-          Если есть вопросы, пишите нам:{' '}
-          <Text as="a" view="link" href={mailTo} size="xl">
-            {email}
-          </Text>
-        </Text>
-      </>
-    ),
-  },
+  // {
+  //   title: 'Кто её разрабатывает и поддерживает?',
+  //   answer: (
+  //     <>
+  //       <Text as="p" size="xl" className="decorator decorator_indent-b_m">
+  //         Центр дизайна и развития продуктов «Газпром нефти». Мы создаём дизайн-систему внутри
+  //         компании, поэтому можем общаться с менеджерами продуктов и разработчиками, получать фидбек
+  //         о работе системы в реальных условиях и дорабатывать по результатам.
+  //       </Text>
+  //       <Text as="p" size="xl">
+  //         Если есть вопросы, пишите нам:{' '}
+  //         <Text as="a" view="link" href={mailTo} size="xl">
+  //           {email}
+  //         </Text>
+  //       </Text>
+  //     </>
+  //   ),
+  // },
   {
     title: 'Где найти специалистов для работы над проектом?',
     answer: (

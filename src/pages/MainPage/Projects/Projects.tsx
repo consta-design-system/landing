@@ -44,7 +44,7 @@ export const Projects: React.FC = () => {
           label="Посмотреть проекты"
           className={cnProjects('Button')}
         />
-        <Text
+        {/* <Text
           className={cnProjects('Subtext', [
             'decorator decorator_indent-h_auto decorator_indent-t_s',
           ])}
@@ -54,7 +54,7 @@ export const Projects: React.FC = () => {
           align="center"
         >
           Только для сотрудников «Газпром нефти»
-        </Text>
+        </Text> */}
       </div>
     </section>
   );
