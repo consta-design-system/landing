@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { context } from '@reatom/react';
 
+import '@consta/uikit/fonts';
+
 import { App } from './containers/App/App';
 
 import { store } from '@/modules/app';
