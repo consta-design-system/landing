@@ -6,24 +6,12 @@ import { IconThumbUp } from '@consta/uikit/IconThumbUp';
 import { Text } from '@consta/uikit/Text';
 import { useTheme } from '@consta/uikit/Theme';
 
-import { AboutVersionCharts } from './AboutVersionCharts/AboutVersionCharts';
-import { AboutVersionUikit } from './AboutVersionUikit/AboutVersionUikit';
 import { AboutVideo } from './AboutVideo/AboutVideo';
 
 import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
-import ConstaChartsLogo from '@/images/ConstaChartsLogo.image.svg';
-import ConstaUiKitLogo from '@/images/ConstaUiKitLogo.image.svg';
-import {
-  constaChartsBarChart,
-  constaChartsFigma,
-  constaChartsGitHub,
-  constaFigma,
-  constaGitHub,
-  constaUikitButton,
-  licenceMit,
-} from '@/modules/api/links';
+import { constaGitHub, constaUikit, contsaCommunityFigma, licenceMit } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnAbout = cn('About');
@@ -82,34 +70,14 @@ export const About: React.FC = () => {
       </div>
 
       <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_5xl'])}>
-        <Text
-          className={cnAbout('Title', ['decorator decorator_indent-b_2xs'])}
-          size="l"
-          weight="semibold"
-          as="h3"
-          lineHeight="xs"
-          view="ghost"
-        >
-          Библиотека
-        </Text>
-        <ConstaUiKitLogo />
-        <Text
-          className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
-          size="2xl"
-          view="secondary"
-          as="p"
-        >
-          Кнопки, иконки, списки, таблицы — основные элементы, из которых собирается интерфейс.
-        </Text>
         <div className={cnLinks('Cards')}>
           {[
             {
               title: 'Всем-всем',
-              subTitle:
-                'Витрина основных компонентов с подробной документацией и правилами использования.',
+              subTitle: 'Витрина компонентов с подробной документацией и правилами использования.',
               hasVersion: false,
               icon: 'storybook',
-              href: constaUikitButton,
+              href: constaUikit,
               additionalClassNames: themeClassNames.color.accent,
             },
             {
@@ -117,12 +85,12 @@ export const About: React.FC = () => {
               subTitle: 'Правила использования и библиотека компонентов в Figma Community.',
               hasVersion: false,
               icon: 'figma',
-              href: constaFigma,
+              href: contsaCommunityFigma,
               additionalClassNames: themeClassNames.color.invert,
             },
             {
               title: 'Разработчикам',
-              subTitle: 'Библиотека основных компонентов в виде NPM-пакета.',
+              subTitle: 'Репозитории библиоткек на gitHub',
               hasVersion: true,
               icon: 'github',
               href: constaGitHub,
@@ -152,117 +120,8 @@ export const About: React.FC = () => {
                   <Text className={cnLinks('Text')} size="l" as="p">
                     {item.subTitle}
                   </Text>
-                  {item.hasVersion && (
-                    <div
-                      className={cnLinks('Text', [
-                        item.hasVersion ? 'decorator decorator_indent-t_m' : '',
-                      ])}
-                    >
-                      <AboutVersionUikit />
-                    </div>
-                  )}
                 </div>
 
-                <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
-                  {item.icon === 'storybook' && (
-                    <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />
-                  )}
-                  {item.icon === 'figma' && (
-                    <IconFigma size="m" view="primary" className={cnLinks('Logo')} />
-                  )}
-                  {item.icon === 'github' && (
-                    <IconGithub size="m" view="primary" className={cnLinks('Logo')} />
-                  )}
-
-                  {More}
-                </div>
-              </a>
-            </Fragment>
-          ))}
-        </div>
-      </div>
-
-      <div className={cnAbout('Links', [cnLinks(), 'decorator decorator_indent-b_5xl'])}>
-        <Text
-          className={cnAbout('Title', ['decorator decorator_indent-b_2xs'])}
-          size="l"
-          weight="semibold"
-          as="h3"
-          lineHeight="xs"
-          view="ghost"
-        >
-          Библиотека
-        </Text>
-        <ConstaChartsLogo />
-        <Text
-          className={cnAbout('Title', ['decorator decorator_indent-b_xl'])}
-          size="2xl"
-          view="secondary"
-          as="p"
-        >
-          Разные виды диаграмм — линейные, столбчатые, круговые. Всё, чтобы красиво показывать и
-          сравнивать данные.
-        </Text>
-        <div className={cnLinks('Cards')}>
-          {[
-            {
-              title: 'Всем-всем',
-              subTitle: 'Витрина диаграмм с подробной документацией и правилами использования.',
-              hasVersion: false,
-              icon: 'storybook',
-              href: constaChartsBarChart,
-              additionalClassNames: themeClassNames.color.accent,
-            },
-            {
-              title: 'Дизайнерам',
-              subTitle: 'Диаграммы в Figma Community: библиотека и правила использования.',
-              hasVersion: false,
-              icon: 'figma',
-              href: constaChartsFigma,
-              additionalClassNames: themeClassNames.color.invert,
-            },
-            {
-              title: 'Разработчикам',
-              subTitle: 'Библиотека диаграмм в виде NPM-пакета.',
-              hasVersion: true,
-              icon: 'github',
-              href: constaChartsGitHub,
-              additionalClassNames: themeClassNames.color.invert,
-            },
-          ].map((item, index) => (
-            <Fragment key={index}>
-              <a
-                href={item.href}
-                target="_blank"
-                className={cnLinks(
-                  'Item',
-                  { to: `${item.icon[0].toUpperCase()}${item.icon.slice(1)}` },
-                  [item.additionalClassNames],
-                )}
-              >
-                <div>
-                  <Text
-                    className={cnLinks('Title', ['decorator decorator_indent-b_m'])}
-                    size="2xl"
-                    weight="bold"
-                    as="h3"
-                    lineHeight="xs"
-                  >
-                    {item.title}
-                  </Text>
-                  <Text className={cnLinks('Text')} size="l" as="p">
-                    {item.subTitle}
-                  </Text>
-                  {item.hasVersion && (
-                    <div
-                      className={cnLinks('Text', [
-                        item.hasVersion ? 'decorator decorator_indent-t_m' : '',
-                      ])}
-                    >
-                      <AboutVersionCharts />
-                    </div>
-                  )}
-                </div>
                 <div className={cnLinks('Footer', ['decorator decorator_distribute_between'])}>
                   {item.icon === 'storybook' && (
                     <IconStorybook size="m" view="primary" className={cnLinks('Logo')} />

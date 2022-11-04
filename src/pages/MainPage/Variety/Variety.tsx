@@ -3,7 +3,7 @@ import './Variety.css';
 import React from 'react';
 import { Text } from '@consta/uikit/Text';
 
-import { constaUikitButton } from '@/modules/api/links';
+import { constaUikit } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
 const cnVariety = cn('Variety');
@@ -24,7 +24,7 @@ export const Variety: React.FC = () => {
         Основа, из которой легко построить интерфейс — для любых задач. Большой выбор, много
         вариантов, можно менять и дорабатывать. Посмотреть, как выглядят и работают компоненты
         дизайн-системы, можно в нашей{' '}
-        <Text size="2xl" view="link" as="a" href={constaUikitButton} target="_blank">
+        <Text size="2xl" view="link" as="a" href={constaUikit} target="_blank">
           библиотеке
         </Text>
         .

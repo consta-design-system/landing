@@ -18,22 +18,12 @@ type Props = PropsWithJsxAttributes<
     icon: React.FC<IconProps>;
     children?: never;
     hrefKit: string;
-    hrefWidgets: string;
   },
   'div'
 >;
 
 export const LinksCard: React.FC<Props> = (props) => {
-  const {
-    className,
-    view,
-    title,
-    description,
-    icon: Icon,
-    hrefKit,
-    hrefWidgets,
-    ...otherProps
-  } = props;
+  const { className, view, title, description, icon: Icon, hrefKit, ...otherProps } = props;
 
   return (
     <div {...otherProps} className={cnLinksCard({ view }, [className])}>
@@ -65,18 +55,6 @@ export const LinksCard: React.FC<Props> = (props) => {
             as="span"
           >
             Consta Kit
-          </Text>
-          <IconOpenInNew className={cnLinksCard('Arrow')} size="m" view="primary" />
-        </a>
-        <a className={cnLinksCard('Brick')} href={hrefWidgets} target="_blank">
-          <Text
-            className={cnLinksCard('More', [
-              'decorator decorator_distribute_left decorator_vertical-align_center decorator_indent-r_s',
-            ])}
-            size="l"
-            as="span"
-          >
-            Consta Charts
           </Text>
           <IconOpenInNew className={cnLinksCard('Arrow')} size="m" view="primary" />
         </a>

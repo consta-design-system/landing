@@ -4,50 +4,11 @@
   &-Lead {
     align-items: center;
   }
-
-  /* &-Links_withBg {
-    &_uikitLightOverlay {
-      background: linear-gradient(0deg, var(--color-bg-soft), var(--color-bg-soft)),
-        url('../../../images/ConstaUiKitBlockBg.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    &_uikitDarkOverlay {
-      background: linear-gradient(0deg, var(--color-bg-tone), var(--color-bg-tone)),
-        url('../../../images/ConstaUiKitBlockBg.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    &_widgetsLightOverlay {
-      background: linear-gradient(0deg, var(--color-bg-soft), var(--color-bg-soft)),
-        url('../../../images/constaChartsBlockBg.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    &_widgetsDarkOverlay {
-      background: linear-gradient(0deg, var(--color-bg-tone), var(--color-bg-tone)),
-        url('../../../images/constaChartsBlockBg.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  } */
 }
 
 .Consta--LinksToLibrary {
   --radius: 12px;
   overflow: hidden;
-
-  /* padding: var(--space-l); */
-
-  /* border-radius: var(--radius); */
-
-  /* box-shadow: 0 27px 80px rgba(var(--color-nums-shadow), 0.09),
-    0 11px 33px rgba(var(--color-nums-shadow), 0.06),
-    0 6px 18px rgba(var(--color-nums-shadow), 0.05), 0 3px 10px rgba(var(--color-nums-shadow), 0.04),
-    0 1px 5px rgba(var(--color-nums-shadow), 0.03), 0 0.7px 2px rgba(var(--color-nums-shadow), 0.02); */
   font-size: var(--size-text-xl);
 
   & > svg {
@@ -123,23 +84,6 @@
     margin-top: var(--space-2xl);
   }
 
-  &-Title {
-    /* position: relative;
-    display: inline-block; */
-
-    /* &::before {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      width: 100%;
-      height: 3px;
-      background-color: var(--color-typo-ghost);
-      transition: transform 0.3s;
-      transform: scaleX(0);
-      transform-origin: left center;
-    } */
-  }
-
   & &-Logo {
     width: 48px;
     height: 48px;
@@ -161,18 +105,9 @@
   @media (min-width: 720px) {
     --radius: 16px;
 
-    /* padding: var(--space-2xl) var(--space-xl) var(--space-xl) var(--space-xl); */
     & > svg {
       width: 40%;
     }
-
-    /* display: grid; */
-
-    /* grid-template-columns: repeat(2, 1fr); */
-
-    /* display: flex; */
-
-    /* flex-direction: column; */
   }
 }
 

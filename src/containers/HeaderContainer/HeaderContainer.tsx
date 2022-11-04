@@ -14,7 +14,7 @@ import ConstaLogo from '@/images/ConstaLogo2.image.svg';
 import {
   constaGitHub,
   constaTelegram,
-  constaUikitButton,
+  constaUikit,
   contsaCommunityFigma,
   gazPromNeft,
 } from '@/modules/api/links';
@@ -66,7 +66,7 @@ export const HeaderContainer: React.FC = () => {
       menu={[
         {
           label: 'Компоненты',
-          link: constaUikitButton,
+          link: constaUikit,
           icon: IconStorybook,
           onlyIcon: false,
         },

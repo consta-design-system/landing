@@ -10,13 +10,10 @@ import IconFigma from '@/icons/Figma.icon.svg';
 import IconGithub from '@/icons/Github.icon.svg';
 import IconStorybook from '@/icons/Storybook.icon.svg';
 import {
-  constaChartsBarChart,
-  constaChartsFigma,
-  constaChartsGitHub,
-  constaFigma,
   constaGitHub,
   constaTelegram,
-  constaUikitButton,
+  constaUikit,
+  contsaCommunityFigma,
 } from '@/modules/api/links';
 import { cn } from '@/utils/bem';
 
@@ -44,8 +41,7 @@ export const Links: React.FC = () => {
             view="storybook"
             icon={IconStorybook}
             title="Витрина компонентов и документация"
-            hrefKit={constaUikitButton}
-            hrefWidgets={constaChartsBarChart}
+            hrefKit={constaUikit}
             description="Посмотрите, как выглядят компоненты, как они меняются и прочитайте, где и когда их лучше использовать."
           />
           <LinksCard
@@ -53,8 +49,7 @@ export const Links: React.FC = () => {
             view="figma"
             icon={IconFigma}
             title="Библиотека в Figma"
-            hrefKit={constaFigma}
-            hrefWidgets={constaChartsFigma}
+            hrefKit={contsaCommunityFigma}
             description="Набор компонентов для создания макетов проекта в Figma Community. Отправьте эту ссылку дизайнеру — он разберётся."
           />
           <LinksCard
@@ -63,8 +58,7 @@ export const Links: React.FC = () => {
             icon={IconGithub}
             title="React-библиотека"
             hrefKit={constaGitHub}
-            hrefWidgets={constaChartsGitHub}
-            description="NPM-пакет с библиотекой на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
+            description="Репозитории библиоткек на React, TypeScript и PostCSS. Отправьте эту ссылку фронтенд разработчику — он знает, что с ней делать."
           />
         </div>
       </div>
