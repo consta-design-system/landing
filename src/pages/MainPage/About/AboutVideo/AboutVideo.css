@@ -53,10 +53,8 @@
     border-top-right-radius: 30%;
     text-align: left;
     transform: translate(-50%, -50%) rotate(30deg) skewX(-30deg) scale(1, 0.866);
-    filter: drop-shadow(10px 20px 30px rgba(var(--color-nums-shadow), 0.1))
-      drop-shadow(8px 14px 20px rgba(var(--color-nums-shadow), 0.12))
-      drop-shadow(6px 10px 10px rgba(var(--color-nums-shadow), 0.16))
-      drop-shadow(3px 8px 6px rgba(var(--color-nums-shadow), 0.2));
+    filter: drop-shadow(10px 20px 30px rgba(var(--color-shadow-modal-1), 0.1))
+      drop-shadow(8px 14px 20px rgba(var(--color-shadow-modal-2), 0.12));
 
     &::before,
     &::after {

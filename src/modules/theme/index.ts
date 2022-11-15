@@ -12,6 +12,7 @@ import './Theme_space_gpnPromo.css';
 import './Theme_control_gpnPromo.css';
 import './Theme_size_gpnResponsive.css';
 
+import { IconComponent } from '@consta/uikit/Icon';
 import { IconFavorite } from '@consta/uikit/IconFavorite';
 import { IconMoon } from '@consta/uikit/IconMoon';
 import { IconSun } from '@consta/uikit/IconSun';
@@ -28,7 +29,13 @@ import { n } from '@/utils/reatom';
 
 const nTheme = n('theme');
 
-export const presets = [
+export type Preset = {
+  name: string;
+  value: number;
+  brandColor: string;
+};
+
+export const presets: Preset[] = [
   {
     name: 'Компания',
     value: 0,
@@ -45,46 +52,52 @@ export const presets = [
     brandColor: '#730bb8',
   },
 ];
-type Preset = typeof presets[number];
+
 const presetDefault = presets[0];
 
-export const colors = [
+export type Colors = {
+  label: string;
+  icon: IconComponent;
+  value: number;
+};
+
+export const colors: Colors[] = [
   {
-    name: 'Светлая',
+    label: 'Светлая',
     icon: IconSun,
     value: 0,
   },
   {
-    name: 'Тёмная',
+    label: 'Тёмная',
     icon: IconMoon,
     value: 1,
   },
   {
-    name: 'Промо',
+    label: 'Промо',
     icon: IconFavorite,
     value: 2,
   },
 ];
-type Colors = typeof colors[number];
+
 const colorDefault = colors[0];
 
 export const fonts = [
-  { name: 'Промо', value: 'gpnPromo' },
-  { name: 'Системный', value: 'gpnDefault' },
+  { label: 'Промо', value: 'gpnPromo' },
+  { label: 'Системный', value: 'gpnDefault' },
 ];
 type Font = typeof fonts[number];
 const fontDefault = fonts[0];
 
 export const sizes = [
-  { name: 'Крупный', value: 'gpnPromo' },
-  { name: 'Средний', value: 'gpnResponsive' },
+  { label: 'Крупный', value: 'gpnPromo' },
+  { label: 'Средний', value: 'gpnResponsive' },
 ];
 type Size = typeof sizes[number];
 const sizeDefault = sizes[0];
 
 export const spaces = [
-  { name: 'Просторнее', value: 'gpnPromo' },
-  { name: 'Теснее', value: 'gpnDefault' },
+  { label: 'Просторнее', value: 'gpnPromo' },
+  { label: 'Теснее', value: 'gpnDefault' },
 ];
 type Space = typeof spaces[number];
 const spaceDefault = spaces[0];
@@ -176,11 +189,12 @@ export const spaceAtom = declareAtom<Space>(nTheme('space'), spaceDefault, (on) 
 export const themeAtom = map(
   nTheme('theme'),
   combine([presetAtom, colorAtom, fontAtom, sizeAtom, spaceAtom]),
-  ([preset, color, font, size, space]) => ({
+  ([preset, color, font, size, space]): ThemePreset => ({
     color: getColorMod(preset, color),
     control: 'gpnPromo',
     font: font.value,
     size: size.value,
     space: space.value,
+    shadow: 'gpnDefault',
   }),
 );

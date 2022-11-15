@@ -12,7 +12,7 @@
     top: 10%;
     width: 24px;
     height: 80%;
-    background: rgba(var(--color-nums-shadow), 0.3);
+    background: var(--shadow-layer);
     border-radius: 50%;
     filter: blur(16px);
   }

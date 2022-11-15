@@ -1,4 +1,7 @@
 /* stylelint-disable */
+
+$color-base-shadow: #000; /* Цвет тени */
+
 .Theme_color_altDark {
   /* //////////////////////////////
   // Цвета фонов /////////////// */
@@ -32,7 +35,6 @@
   --color-typo-link: hsl(0, 80%, 60%);
   --color-typo-link-minor: hsl(0, 34%, 63%);
   --color-typo-link-hover: hsl(0, 70%, 50%);
-  --color-nums-shadow: 0, 0, 0;
   --color-scroll-bg: rgba(246, 246, 253, 0.06);
   --color-scroll-thumb: rgba(246, 246, 253, 0.24);
   --color-scroll-thumb-hover: rgba(246, 246, 253, 0.32);
@@ -64,5 +66,11 @@
   --color-control-bg-disable: rgba(250, 250, 250, 0.16);
   --color-control-bg-border-disable: rgba(250, 250, 250, 0);
   --color-control-typo-disable: rgba(255, 255, 255, 0.24);
+  --color-shadow-group-1: color($color-base-shadow a(8%));
+  --color-shadow-group-2: color($color-base-shadow a(32%));
+  --color-shadow-layer-1: color($color-base-shadow a(8%));
+  --color-shadow-layer-2: color($color-base-shadow a(32%));
+  --color-shadow-modal-1: color($color-base-shadow a(8%));
+  --color-shadow-modal-2: color($color-base-shadow a(32%));
 }
 /* stylelint-enable */

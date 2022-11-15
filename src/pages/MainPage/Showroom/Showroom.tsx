@@ -3,10 +3,9 @@
 import React, { useState } from 'react';
 import { Avatar } from '@consta/uikit/Avatar';
 import { Badge } from '@consta/uikit/Badge';
-import { BasicSelect } from '@consta/uikit/BasicSelect';
 import { Button } from '@consta/uikit/Button';
 import { ChoiceGroup } from '@consta/uikit/ChoiceGroup';
-import { IconProps } from '@consta/uikit/Icon';
+import { IconComponent } from '@consta/uikit/Icon';
 import { IconAdd } from '@consta/uikit/IconAdd';
 import { IconArrowLeft } from '@consta/uikit/IconArrowLeft';
 import { IconArrowRight } from '@consta/uikit/IconArrowRight';
@@ -25,6 +24,7 @@ import { IconPlay } from '@consta/uikit/IconPlay';
 import { IconSearch } from '@consta/uikit/IconSearch';
 import { IconSelect } from '@consta/uikit/IconSelect';
 import { IconSettings } from '@consta/uikit/IconSettings';
+import { Select } from '@consta/uikit/Select';
 import { Switch } from '@consta/uikit/Switch';
 import { Tag } from '@consta/uikit/Tag';
 import { TextField } from '@consta/uikit/TextField';
@@ -32,27 +32,13 @@ import { User } from '@consta/uikit/User';
 
 import { ShowroomSlider } from './ShowroomSlider/ShowroomSlider';
 
-type SelectOption = {
-  label: string;
-  value: string;
-};
-
-const itemsBS1 = [
-  { label: 'Москва', value: 'moscow' },
-  { label: 'Санкт-Петербург', value: 'spb' },
-  { label: 'Томск', value: 'tomsk' },
-];
-
-const itemsBS2 = [
-  { label: 'Сок', value: 'juice' },
-  { label: 'Воды', value: 'water' },
-  { label: 'Молоко', value: 'milk' },
-];
+const itemsBS1 = ['Москва', 'Санкт-Петербург', 'Томск'];
+const itemsBS2 = ['Сок', 'Воды', 'Молоко'];
 
 type ItemCG = string;
 type ItemCGIcon = {
-  name: string;
-  icon?: React.FC<IconProps>;
+  label: string;
+  icon?: IconComponent;
 };
 
 const CG1 = ['Сегодня', 'Вчера', 'Неделя', 'Месяц'];
@@ -60,16 +46,19 @@ const CG2 = ['Нефть', 'Газ'];
 const CG3 = ['Люди', 'Активы', 'Экология'];
 const CG4 = ['Netback', 'CAPEX', 'OPEX'];
 const CG5 = ['XS', 'S', 'M', 'L', 'XL'];
-const CG6 = [
+const CG6: ItemCGIcon[] = [
   {
-    name: 'Таблица',
+    label: 'Таблица',
     icon: IconList,
   },
   {
-    name: 'Карточки',
+    label: 'Карточки',
     icon: IconBento,
   },
 ];
+
+const getItem = (item: string) => item;
+const mokeOnChange = () => {};
 
 export const Showroom: React.FC = () => {
   const [valueCG1, setValueCG1] = useState<ItemCG | null>(CG1[1]);
@@ -79,8 +68,6 @@ export const Showroom: React.FC = () => {
   const [valueCG5, setValueCG5] = useState<ItemCG | null>(CG5[3]);
   const [valueCG6, setValueCG6] = useState<ItemCGIcon | null>(CG6[1]);
   const [valueCG7, setValueCG7] = useState(false);
-
-  const getItemLabel = (option: SelectOption): string => option.label;
 
   return (
     <>
@@ -94,7 +81,7 @@ export const Showroom: React.FC = () => {
               value={valueCG3}
               onChange={({ value }) => setValueCG3(value)}
               items={CG3}
-              getLabel={(item) => item}
+              getItemLabel={getItem}
               form="round"
               size="l"
               multiple={false}
@@ -115,12 +102,14 @@ export const Showroom: React.FC = () => {
               onlyIcon
             />
             <Button size="l" view="ghost" form="round" label="Продолжить" iconRight={IconForward} />
-            <BasicSelect
+            <Select
               placeholder="Выберите город"
               size="l"
               id="city"
-              options={itemsBS1}
-              getOptionLabel={getItemLabel}
+              items={itemsBS1}
+              getItemLabel={getItem}
+              getItemKey={getItem}
+              onChange={mokeOnChange}
               style={{ minWidth: '300px' }}
             />
             <Button
@@ -161,12 +150,14 @@ export const Showroom: React.FC = () => {
               size="s"
               style={{ width: '260px' }}
             />
-            <BasicSelect
+            <Select
               placeholder="Выберите напиток"
               size="s"
               id="city"
-              options={itemsBS2}
-              getOptionLabel={getItemLabel}
+              items={itemsBS2}
+              getItemLabel={getItem}
+              getItemKey={getItem}
+              onChange={mokeOnChange}
               style={{ width: '200px' }}
             />
             <Tag
@@ -196,12 +187,14 @@ export const Showroom: React.FC = () => {
             <Button label="Проверить" size="xs" iconRight={IconEye} view="secondary" />
           </>,
           <>
-            <BasicSelect
+            <Select
               placeholder="Выберите город"
               size="m"
               id="city"
-              options={itemsBS1}
-              getOptionLabel={getItemLabel}
+              items={itemsBS1}
+              getItemLabel={getItem}
+              getItemKey={getItem}
+              onChange={mokeOnChange}
               style={{ width: '300px' }}
             />
             <ChoiceGroup
@@ -209,7 +202,7 @@ export const Showroom: React.FC = () => {
               value={valueCG1}
               onChange={({ value }) => setValueCG1(value)}
               items={CG1}
-              getLabel={(item) => item}
+              getItemLabel={getItem}
               size="m"
               view="ghost"
               multiple={false}
@@ -227,7 +220,7 @@ export const Showroom: React.FC = () => {
               value={valueCG2}
               onChange={({ value }) => setValueCG2(value)}
               items={CG2}
-              getLabel={(item) => item}
+              getItemLabel={getItem}
               size="m"
               multiple={false}
             />
@@ -254,12 +247,14 @@ export const Showroom: React.FC = () => {
             <Button label="Выбрать" form="brick" view="secondary" />
           </>,
           <>
-            <BasicSelect
+            <Select
               placeholder="Выберите город"
               size="s"
               id="city"
-              options={itemsBS1}
-              getOptionLabel={getItemLabel}
+              items={itemsBS1}
+              getItemLabel={getItem}
+              getItemKey={getItem}
+              onChange={mokeOnChange}
               style={{ width: '300px' }}
             />
             <Switch
@@ -282,7 +277,7 @@ export const Showroom: React.FC = () => {
               value={valueCG4}
               onChange={({ value }) => setValueCG4(value)}
               items={CG4}
-              getLabel={(item) => item}
+              getItemLabel={getItem}
               size="s"
               view="secondary"
               multiple={false}
@@ -313,7 +308,7 @@ export const Showroom: React.FC = () => {
               value={valueCG5}
               onChange={({ value }) => setValueCG5(value)}
               items={CG5}
-              getLabel={(item) => item}
+              getItemLabel={getItem}
               size="xs"
               form="brick"
               multiple={false}
@@ -363,8 +358,6 @@ export const Showroom: React.FC = () => {
               value={valueCG6}
               onChange={({ value }) => setValueCG6(value)}
               items={CG6}
-              getLabel={(item) => item.name}
-              getIcon={(item) => item.icon}
               size="xs"
               view="secondary"
               form="round"
@@ -385,12 +378,14 @@ export const Showroom: React.FC = () => {
               rightSide="₽"
               style={{ width: '160px' }}
             />
-            <BasicSelect
+            <Select
               placeholder="Сделайте выбор"
               size="xs"
               id="city"
-              options={itemsBS2}
-              getOptionLabel={getItemLabel}
+              items={itemsBS2}
+              getItemLabel={getItem}
+              getItemKey={getItem}
+              onChange={mokeOnChange}
               style={{ width: '200px' }}
             />
             <Tag
@@ -418,7 +413,7 @@ export const Showroom: React.FC = () => {
               value={valueCG3}
               onChange={({ value }) => setValueCG3(value)}
               items={CG3}
-              getLabel={(item) => item}
+              getItemLabel={getItem}
               size="xs"
               multiple={false}
             />

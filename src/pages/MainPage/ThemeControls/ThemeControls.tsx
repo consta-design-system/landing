@@ -82,8 +82,6 @@ export const ThemeControls: React.FC = () => {
             value={color}
             onChange={({ value }) => setColor(value)}
             items={colors}
-            getLabel={(item) => item.name}
-            getIcon={(item) => item.icon}
             size="m"
             iconSize="m"
             width="full"
@@ -109,7 +107,6 @@ export const ThemeControls: React.FC = () => {
             value={font}
             onChange={({ value }) => setFont(value)}
             items={fonts}
-            getLabel={(item) => item.name}
             size="m"
             width="full"
             multiple={false}
@@ -132,7 +129,6 @@ export const ThemeControls: React.FC = () => {
             value={size}
             onChange={({ value }) => setSize(value)}
             items={sizes}
-            getLabel={(item) => item.name}
             size="m"
             width="full"
             multiple={false}
@@ -156,7 +152,6 @@ export const ThemeControls: React.FC = () => {
             value={space}
             onChange={({ value }) => setSpace(value)}
             items={spaces}
-            getLabel={(item) => item.name}
             size="m"
             width="full"
             multiple={false}

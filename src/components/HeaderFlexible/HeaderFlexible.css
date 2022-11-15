@@ -23,7 +23,6 @@
       padding: 3vw 5vw;
       background-color: var(--color-bg-default);
       border-bottom: 1px solid var(--color-bg-border);
-      box-shadow: 0 0 0 rgba(var(--color-nums-shadow), 0);
       transition: transform 0.4s;
       transform: translateY(-100%);
       @media (min-width: 600px) {

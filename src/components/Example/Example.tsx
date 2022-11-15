@@ -64,7 +64,7 @@ export const Example: React.FC = () => {
           value={valueCG}
           onChange={({ value }) => setValueCG(value)}
           items={CG}
-          getLabel={(item) => item}
+          getItemLabel={(item) => item}
           view="secondary"
           size="l"
           multiple={false}

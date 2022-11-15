@@ -12,6 +12,24 @@
   --size-text-5xl: 36px;
   --size-text-6xl: 40px;
 
+  /* Межстрочный интервал */
+  --line-height-text-2xs: 1.1em;
+  --line-height-text-xs: 1.2em;
+  --line-height-text-s: 1.4em;
+  --line-height-text-m: 1.5em;
+  --line-height-text-l: 1.6em;
+
+  /* Ширина шрифта */
+  --font-weight-text-thin: 100;
+  --font-weight-text-extralight: 100;
+  --font-weight-text-light: 300;
+  --font-weight-text-regular: normal;
+  --font-weight-text-medium: 500;
+  --font-weight-text-semibold: 600;
+  --font-weight-text-bold: bold;
+  --font-weight-text-extrabold: 800;
+  --font-weight-text-black: 900;
+
   @media screen and (min-width: 720px) {
     --size-text-3xl: 2.5vw;
     --size-text-4xl: 3vw;
@@ -25,11 +43,4 @@
     --size-text-5xl: 72px;
     --size-text-6xl: 96px;
   }
-
-  /* Межстрочный интервал */
-  --line-height-text-2xs: 1em;
-  --line-height-text-xs: 1.2em;
-  --line-height-text-s: 1.4em;
-  --line-height-text-m: 1.5em;
-  --line-height-text-l: 1.6em;
 }

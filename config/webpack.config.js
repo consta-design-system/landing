@@ -117,6 +117,8 @@ module.exports = function (webpackEnv) {
               },
               stage: 3,
             }),
+            require('postcss-simple-vars'),
+            require('postcss-color-function'),
             require('postcss-nested'),
             require('autoprefixer'),
             // Adds PostCSS Normalize as the reset css with default options,
